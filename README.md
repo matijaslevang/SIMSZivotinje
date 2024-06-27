@@ -50,10 +50,10 @@ Gosti - funkcionalnosti:
 
 Clan (registrovani) - funkcionalnosti:
 - salju zahtev volonteru za objavu (ili za izmenu postojece objave)
-- šalju zahtev za pomoć:
-  1. anonimne donacije za lecenje zivotinje (npr. kad su na lecenju na veterinarskoj ustanovi)
-  2. udomljavanje
-  3. privremeno zbrinjavanje (korisnik sam oznacava u kom periodu zeli da se stara o zivotinji)
+- šalju anonimne donacije za lecenje zivotinje (npr. kad su na lecenju na veterinarskoj ustanovi)
+- šalju zahtev za:
+  1. udomljavanje
+  2. privremeno zbrinjavanje (korisnik sam oznacava u kom periodu zeli da se stara o zivotinji)
 - mogu da ocene zivotinju na cuvanju: brojcano 1-5 ili komentar
 - dodaju ocenu i komenatar na objavu o zivotinji, da bi buduci vlasnik imao dodatne info
 - podnosi zahtev za postajanje volontera

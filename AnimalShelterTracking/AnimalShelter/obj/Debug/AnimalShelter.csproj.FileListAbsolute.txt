@@ -1,0 +1,15 @@
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\bin\Debug\AnimalShelter.exe.config
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\bin\Debug\AnimalShelter.exe
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\bin\Debug\AnimalShelter.pdb
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.csproj.AssemblyReference.cache
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\MainWindow.g.cs
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\App.g.cs
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter_MarkupCompile.cache
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter_MarkupCompile.lref
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\MainWindow.baml
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.g.resources
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.Properties.Resources.resources
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.csproj.GenerateResource.cache
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.csproj.CoreCompileInputs.cache
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.exe
+C:\Users\Matijas\Desktop\SIMS Projekat\AnimalShelterTracking\AnimalShelter\obj\Debug\AnimalShelter.pdb

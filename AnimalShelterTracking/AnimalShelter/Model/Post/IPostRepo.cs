@@ -8,7 +8,6 @@ namespace AnimalShelter.Model.Post
 {
     public interface IPostRepo
     {
-        int SetId();
         void Add(Post course);
         Post Get(int id);
         void Update(Post course, Post updatedCourse);

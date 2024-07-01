@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AnimalShelterTracking",
+    "\\AnimalShelterTracking\\AnimalShelter",
+    "\\AnimalShelterTracking\\AnimalShelter\\Model",
+    "\\AnimalShelterTracking\\AnimalShelter\\Model\\Enums",
+    "\\AnimalShelterTracking\\AnimalShelter\\Model\\Pets",
+    "\\AnimalShelterTracking\\AnimalShelter\\Model\\Post",
+    "\\AnimalShelterTracking\\AnimalShelter\\Model\\Requests",
+    "\\AnimalShelterTracking\\AnimalShelter\\Model\\Users",
+    "\\AnimalShelterTracking\\AnimalShelter\\obj\\Debug"
+  ],
+  "PreviewInSolutionExplorer": false
+}

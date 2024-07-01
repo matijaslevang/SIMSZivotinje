@@ -1,13 +1,12 @@
 ﻿using AnimalShelter.Model.Users;
 using AnimalShelter.Model.Utilities;
 using System.Collections.Generic;
-using System.Security.Permissions;
-using System.Windows.Documents;
 
-namespace AnimalShelter.Model
+namespace AnimalShelter.Model.Associations
 {
     public class Association
     {
+        public int Id { get; set; }
         public Address Address { get; set; }
         public Contact Contact { get; set; }
         public List<Volunteer> Volunteers { get; set; }

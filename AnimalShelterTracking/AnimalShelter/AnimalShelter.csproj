@@ -143,6 +143,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GUI\ViewModel\Guest\GuestWindowVM.cs" />
+    <Compile Include="GUI\ViewModel\Helper\Borders.cs" />
     <Compile Include="GUI\View\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -239,6 +241,12 @@
     <None Include="Data\Posts.json" />
     <None Include="Data\Species.json" />
     <None Include="Data\Users.json" />
+    <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\What-Breed-Are-Black-Cats.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -248,8 +256,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

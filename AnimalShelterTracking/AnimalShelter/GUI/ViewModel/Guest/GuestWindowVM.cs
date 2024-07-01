@@ -8,6 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows;
+using AnimalShelter.GUI.ViewModel.Helper;
 
 namespace AnimalShelter.GUI.ViewModel.Guest
 {
@@ -24,8 +27,20 @@ namespace AnimalShelter.GUI.ViewModel.Guest
             }
         }
 
-        public GuestWindowVM()
+        public GuestWindowVM(Borders borders)
         {
+            borders.HideAllBorders();
+            PostService postService = new PostService();
+            Posts = new ObservableCollection<Post>(postService.GetAll());
+            for (int i = 0; i < Posts.Count; i++)
+            {
+                borders.Show(i);
+                if (!Posts[i].Pet.IsAdopted)
+                {
+                    borders.NotAdopted(i);
+                }
+            }
+
         }
 
 
@@ -35,5 +50,6 @@ namespace AnimalShelter.GUI.ViewModel.Guest
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
 }

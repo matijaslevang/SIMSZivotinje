@@ -6,7 +6,7 @@ namespace AnimalShelter.Model.Post
     public class PostService
     {
         private readonly IRepository<Post> _repository;
-        private const string filePath = "..../Data/Posts.json";
+        private const string filePath = "..\\..\\Data\\Posts.json";
 
         public PostService()
         {

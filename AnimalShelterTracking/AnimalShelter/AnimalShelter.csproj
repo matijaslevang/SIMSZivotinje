@@ -97,9 +97,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Association.cs" />
+    <Compile Include="Model\Breed.cs" />
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
-    <Compile Include="Model\Member\Member.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\Pet.cs" />
     <Compile Include="Model\Post\IPostRepo.cs" />
     <Compile Include="Model\Post\IPostService.cs" />
     <Compile Include="Model\Post\Post.cs" />
@@ -109,12 +112,18 @@
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\RegistrationRequest.cs" />
     <Compile Include="Model\Requests\TemporaryCareRequest.cs" />
+    <Compile Include="Model\Species.cs" />
     <Compile Include="Model\Users\Account.cs" />
     <Compile Include="Model\Users\Administrator.cs" />
     <Compile Include="Model\Users\Member.cs" />
     <Compile Include="Model\Users\User.cs" />
+    <Compile Include="Model\Users\UserService.cs" />
     <Compile Include="Model\Users\Volunteer.cs" />
     <Compile Include="Model\Utilities\Address.cs" />
+    <Compile Include="Model\Utilities\Contact.cs" />
+    <Compile Include="Model\Utilities\MultimediaContent.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\JSONRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,6 +142,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Data\Posts.json" />
+    <None Include="Data\Users.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Pet\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

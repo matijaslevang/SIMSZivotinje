@@ -2,12 +2,15 @@
 {
     public class Breed
     {
+        public int Id { get; set; }
+        public int SpeciesId { get; set; }
         public string Name { get; set; }
 
         public Breed() { }
 
-        public Breed(string name)
+        public Breed(int speciesId, string name)
         {
+            SpeciesId = speciesId;
             Name = name;
         }
     }

@@ -6,6 +6,7 @@ namespace AnimalShelter.Model.Pets
 {
     public class Pet
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public HealthStatus HealthStatus { get; set; }
         public string HealthDescription { get; set; }

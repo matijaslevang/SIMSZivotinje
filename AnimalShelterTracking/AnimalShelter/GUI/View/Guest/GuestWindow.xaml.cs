@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View
 {
-    /// <summary>
-    /// Interaction logic for GuestWindow.xaml
-    /// </summary>
     public partial class GuestWindow : Window
     {
         public GuestWindow()

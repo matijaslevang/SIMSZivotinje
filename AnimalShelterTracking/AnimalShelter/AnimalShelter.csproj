@@ -189,8 +189,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Enums\Gender.cs" />
+    <Compile Include="Model\Enums\HealthStatus.cs" />
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
+    <Compile Include="Model\JovanaPet\Breed.cs" />
+    <Compile Include="Model\JovanaPet\BreedService.cs" />
+    <Compile Include="Model\JovanaPet\Pet.cs" />
+    <Compile Include="Model\JovanaPet\PetService.cs" />
+    <Compile Include="Model\JovanaPet\Species.cs" />
+    <Compile Include="Model\JovanaPet\SpeciesService.cs" />
     <Compile Include="Model\Post\Post.cs" />
     <Compile Include="Model\Post\PostService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
@@ -225,7 +232,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Associations.json" />
+    <None Include="Data\Breeds.json" />
+    <None Include="Data\Payments.json" />
+    <None Include="Data\Pets.json" />
     <None Include="Data\Posts.json" />
+    <None Include="Data\Species.json" />
     <None Include="Data\Users.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -237,7 +249,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Pet\" />
+    <Folder Include="GUI\Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using AnimalShelter.Model.Enums;
+using AnimalShelter.Model.Pets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,17 @@ namespace AnimalShelter.GUI.View.Member
             InitializeComponent();
             gender.Items.Add(Gender.MALE);
             gender.Items.Add(Gender.FEMALE);
+            BreedService breedService = new BreedService();
+            SpeciesService speciesService = new SpeciesService();
+
+            foreach (Species species in speciesService.GetAll())
+            {
+                speciesList.Items.Add(species);
+            }
+            foreach (Breed breed in breedService.GetAll())
+            {
+                breedList.Items.Add(breed);
+            }
             this.Show();
         }
 

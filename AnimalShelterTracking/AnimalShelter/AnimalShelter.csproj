@@ -143,6 +143,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GUI\ViewModel\Guest\GuestWindowVM.cs" />
+    <Compile Include="GUI\ViewModel\Helper\Borders.cs" />
     <Compile Include="GUI\View\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -189,8 +191,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Enums\Gender.cs" />
+    <Compile Include="Model\Enums\HealthStatus.cs" />
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
+    <Compile Include="Model\JovanaPet\Breed.cs" />
+    <Compile Include="Model\JovanaPet\BreedService.cs" />
+    <Compile Include="Model\JovanaPet\Pet.cs" />
+    <Compile Include="Model\JovanaPet\PetService.cs" />
+    <Compile Include="Model\JovanaPet\Species.cs" />
+    <Compile Include="Model\JovanaPet\SpeciesService.cs" />
     <Compile Include="Model\Post\Post.cs" />
     <Compile Include="Model\Post\PostService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
@@ -225,8 +234,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Associations.json" />
+    <None Include="Data\Breeds.json" />
+    <None Include="Data\Payments.json" />
+    <None Include="Data\Pets.json" />
     <None Include="Data\Posts.json" />
+    <None Include="Data\Species.json" />
     <None Include="Data\Users.json" />
+    <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\What-Breed-Are-Black-Cats.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,8 +256,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Pet\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

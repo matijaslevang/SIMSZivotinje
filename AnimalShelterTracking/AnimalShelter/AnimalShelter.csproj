@@ -83,8 +83,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Interfaces\IUserRepository.cs" />
-    <Compile Include="Repositories\UserJSONRepository.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,7 +99,6 @@
   <ItemGroup>
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
-    <Compile Include="Model\Member\Member.cs" />
     <Compile Include="Model\Post\IPostRepo.cs" />
     <Compile Include="Model\Post\IPostService.cs" />
     <Compile Include="Model\Post\Post.cs" />
@@ -117,6 +114,8 @@
     <Compile Include="Model\Users\User.cs" />
     <Compile Include="Model\Users\Volunteer.cs" />
     <Compile Include="Model\Utilities\Address.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\JSONRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

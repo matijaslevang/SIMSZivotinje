@@ -83,6 +83,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GUI\View\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Member\AdoptionRequestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Guest\GuestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Member\MemberWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Guest\RegistrationRequestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Member\PostRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Member\TemporaryCareRequestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Volunteer\Homepage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Volunteer\MemberListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Volunteer\RequestsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Volunteer\VotingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Volunteer\VolunteerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -91,28 +143,60 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GUI\View\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Member\AdoptionRequestWindow.xaml.cs">
+      <DependentUpon>AdoptionRequestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Guest\GuestWindow.xaml.cs">
+      <DependentUpon>GuestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Member\MemberWindow.xaml.cs">
+      <DependentUpon>MemberWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Guest\RegistrationRequestWindow.xaml.cs">
+      <DependentUpon>RegistrationRequestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Member\PostRequest.xaml.cs">
+      <DependentUpon>PostRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Member\TemporaryCareRequestWindow.xaml.cs">
+      <DependentUpon>TemporaryCareRequestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Volunteer\Homepage.xaml.cs">
+      <DependentUpon>Homepage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Volunteer\MemberListPage.xaml.cs">
+      <DependentUpon>MemberListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Volunteer\RequestsPage.xaml.cs">
+      <DependentUpon>RequestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Volunteer\VotingPage.xaml.cs">
+      <DependentUpon>VotingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Volunteer\VolunteerWindow.xaml.cs">
+      <DependentUpon>VolunteerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Association.cs" />
-    <Compile Include="Model\Breed.cs" />
+    <Compile Include="Model\Enums\Gender.cs" />
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
-    <Compile Include="Model\Payment.cs" />
-    <Compile Include="Model\Pet.cs" />
-    <Compile Include="Model\Post\IPostRepo.cs" />
-    <Compile Include="Model\Post\IPostService.cs" />
     <Compile Include="Model\Post\Post.cs" />
-    <Compile Include="Model\Post\PostRepo.cs" />
     <Compile Include="Model\Post\PostService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\RegistrationRequest.cs" />
     <Compile Include="Model\Requests\TemporaryCareRequest.cs" />
-    <Compile Include="Model\Species.cs" />
     <Compile Include="Model\Users\Account.cs" />
     <Compile Include="Model\Users\Administrator.cs" />
     <Compile Include="Model\Users\Member.cs" />

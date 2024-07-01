@@ -37,6 +37,5 @@ namespace AnimalShelter.Model.Payment
         {
             return _repository.GetAll();
         }
-
     }
 }

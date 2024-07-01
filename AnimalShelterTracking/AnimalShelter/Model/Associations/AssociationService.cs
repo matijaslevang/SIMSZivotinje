@@ -3,37 +3,37 @@ using System.Collections.Generic;
 
 namespace AnimalShelter.Model.Associations
 {
-    internal class AssociationService
+    public class AssociationService
     {
-        private readonly IRepository<Payment> _repository;
-        private const string filePath = "..../Data/Payments.json";
+        private readonly IRepository<Association> _repository;
+        private const string filePath = "..../Data/Associations.json";
 
-        public PaymentService()
+        public AssociationService()
         {
-            _repository = new JSONRepository<Payment>(filePath);
+            _repository = new JSONRepository<Association>(filePath);
         }
 
-        public void Add(Payment newPayment)
+        public void Add(Association newAssociation)
         {
-            _repository.Add(newPayment);
+            _repository.Add(newAssociation);
         }
 
-        public void Update(int paymentId, Payment newPayment)
+        public void Update(int associationId, Association newAssociation)
         {
-            _repository.Update(paymentId, newPayment);
+            _repository.Update(associationId, newAssociation);
         }
 
-        public Payment Get(int paymentId)
+        public Association Get(int associationId)
         {
-            return _repository.Get(paymentId);
+            return _repository.Get(associationId);
         }
 
-        public void Delete(int paymentId)
+        public void Delete(int associationId)
         {
-            _repository.Delete(paymentId);
+            _repository.Delete(associationId);
         }
 
-        public List<Payment> GetAll()
+        public List<Association> GetAll()
         {
             return _repository.GetAll();
         }

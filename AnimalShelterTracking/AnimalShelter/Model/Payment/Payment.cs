@@ -1,9 +1,10 @@
 ﻿using AnimalShelter.Model.Enums;
 
-namespace AnimalShelter.Model
+namespace AnimalShelter.Model.Payment
 {
     public class Payment
     { 
+        public int Id { get; set; }
         public PaymentStatus Status { get; set; }
         public double Amount { get; set; }
         public string Reason { get; set; }

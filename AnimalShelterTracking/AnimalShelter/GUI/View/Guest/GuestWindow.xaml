@@ -186,7 +186,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" Style="{DynamicResource AddButton}" Width="100" Content="LOG IN" FontSize="15"/>
+                <Button Grid.Column="1" Style="{DynamicResource AddButton}" Width="100" Content="LOG IN" FontSize="15" Click="Login_Click"/>
                 <Button Grid.Column="2" Style="{DynamicResource CancelButton}" Width="100" Content="SIGN IN" FontSize="15"/>
                 <TextBlock Grid.Column="4" Text="Guest" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>

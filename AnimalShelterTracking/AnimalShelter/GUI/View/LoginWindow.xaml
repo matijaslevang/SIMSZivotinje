@@ -7,6 +7,41 @@
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"></RowDefinition>
+            <RowDefinition Height="220*"></RowDefinition>
+            <RowDefinition Height="47*"></RowDefinition>
+            <RowDefinition Height="122*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="133" Width="400" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Width="400" Margin="0,20,0,20" >
+                <TextBlock Text="Email: " FontSize="20"></TextBlock>
+                <TextBox FontSize="18"  Width="338" TextAlignment="Center" Name="emailTextBox" Text="{Binding Path=ViewModel.ViewModel.Login.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Margin="0,20,0,20" >
+                <TextBlock Text="Password: " FontSize="20"></TextBlock>
+                <PasswordBox FontSize="18" Width="303"  Name="passwordTextBox"/>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="24" >
+            <TextBlock FontSize="18" TextAlignment="Center" VerticalAlignment="Center" Width="399"
+                Text="{Binding Path=ViewModel.Login.Error, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Foreground="Red" Name="validationTextBlock">
+            </TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="3" Margin="0,1,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Content="Log In" FontSize="24" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="LoginClick"/>
+
+        </Grid>
     </Grid>
 </Window>

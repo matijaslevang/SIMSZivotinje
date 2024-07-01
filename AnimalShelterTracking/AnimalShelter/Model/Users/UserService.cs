@@ -8,7 +8,7 @@ namespace AnimalShelter.Model.Users
     public class UserService
     {
         private readonly IRepository<User> _repository;
-        private const string filePath = "..../Data/Users.json";
+        private const string filePath = "..\\..\\Data\\Users.json";
 
         public UserService()
         {

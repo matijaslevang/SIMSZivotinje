@@ -8,6 +8,33 @@ namespace AnimalShelter.Model.Post
 {
     public class PostService : IPostService
     {
+
+        private readonly IPostRepo _postRepo;
         public PostService() { }
+
+        public void Add(Post post)
+        {
+            _postRepo.Add(post);
+        }
+
+        public void Delete(Post post)
+        {
+            _postRepo.Delete(post);
+        }
+
+        public Post Get(int id)
+        {
+            return _postRepo.Get(id);
+        }
+
+        public List<Post> GetAll()
+        {
+            return _postRepo.GetAll();
+        }
+
+        public void Update(Post post, Post updatedPost)
+        {
+            _postRepo.Update(post, updatedPost);
+        }
     }
 }

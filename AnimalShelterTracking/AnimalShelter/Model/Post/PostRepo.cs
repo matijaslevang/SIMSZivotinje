@@ -25,10 +25,10 @@ namespace AnimalShelter.Model.Post
                 return 0;
             }
         }
-        public void Add(Post course)
+        public void Add(Post post)
         {
-            course.Id = SetId();
-            PostMap.Add(course.Id, course);
+            post.Id = SetId();
+            PostMap.Add(post.Id, post);
             Serialize();
         }
 
@@ -37,15 +37,15 @@ namespace AnimalShelter.Model.Post
             return PostMap[id];
         }
 
-        public void Update(Post course, Post updatedCourse)
+        public void Update(Post post, Post updatedPost)
         {
-            updatedCourse.Id = course.Id;
-            PostMap[course.Id] = updatedCourse;
+            updatedPost.Id = post.Id;
+            PostMap[post.Id] = updatedPost;
             Serialize();
         }
-        public void Delete(Post course, bool isDean)
+        public void Delete(Post post)
         {
-            PostMap.Remove(course.Id);
+            PostMap.Remove(post.Id);
             Serialize();
             return;
         }

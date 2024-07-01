@@ -8,10 +8,10 @@ namespace AnimalShelter.Model.Post
 {
     public interface IPostRepo
     {
-        void Add(Post course);
+        void Add(Post post);
         Post Get(int id);
-        void Update(Post course, Post updatedCourse);
-        void Delete(Post course, bool isDean);
+        void Update(Post post, Post updatedPost);
+        void Delete(Post post);
         List<Post> GetAll();
         void Serialize();
         void Deserialize();

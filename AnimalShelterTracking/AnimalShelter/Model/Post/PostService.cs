@@ -10,7 +10,10 @@ namespace AnimalShelter.Model.Post
     {
 
         private readonly IPostRepo _postRepo;
-        public PostService() { }
+        public PostService(IPostRepo postRepo)
+        {
+            _postRepo = postRepo;
+        }
 
         public void Add(Post post)
         {

@@ -99,7 +99,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
+    <Compile Include="Model\Member\Member.cs" />
+    <Compile Include="Model\Post\IPostRepo.cs" />
+    <Compile Include="Model\Post\IPostService.cs" />
+    <Compile Include="Model\Post\Post.cs" />
+    <Compile Include="Model\Post\PostRepo.cs" />
+    <Compile Include="Model\Post\PostService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\RegistrationRequest.cs" />
@@ -127,6 +134,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Posts.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

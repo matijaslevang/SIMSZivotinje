@@ -13,5 +13,6 @@ namespace AnimalShelter.Model.Post
         void Update(Post post, Post updatedPost);
         void Delete(Post post);
         List<Post> GetAll();
+        bool IsAuthorVolunteer(Post post);
     }
 }

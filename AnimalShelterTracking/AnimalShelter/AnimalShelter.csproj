@@ -99,7 +99,10 @@
   <ItemGroup>
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
+    <Compile Include="Model\Member\IMemberService.cs" />
     <Compile Include="Model\Member\Member.cs" />
+    <Compile Include="Model\Member\MemberRepo.cs" />
+    <Compile Include="Model\Member\MemberService.cs" />
     <Compile Include="Model\Post\IPostRepo.cs" />
     <Compile Include="Model\Post\IPostService.cs" />
     <Compile Include="Model\Post\Post.cs" />

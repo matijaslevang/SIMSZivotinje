@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelter.Model.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace AnimalShelter.Model.Post
 
         public void Add(Post post)
         {
+            post.Status = Enums.PostStatus.POSTED;
             _postRepo.Add(post);
         }
 
@@ -38,6 +40,11 @@ namespace AnimalShelter.Model.Post
         public void Update(Post post, Post updatedPost)
         {
             _postRepo.Update(post, updatedPost);
+        }
+
+        public bool IsAuthorVolunteer(Post post)
+        {
+            return post.Author is Volunteer;
         }
     }
 }

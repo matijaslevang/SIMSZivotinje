@@ -1,5 +1,6 @@
 ﻿using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Posts;
+using AnimalShelter.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

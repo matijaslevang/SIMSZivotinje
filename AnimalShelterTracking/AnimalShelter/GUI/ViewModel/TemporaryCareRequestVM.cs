@@ -18,22 +18,24 @@ namespace AnimalShelter.GUI.ViewModel
     {
         public Pet Pet;
         public Member Member { get; set; }
+        private DateTime _startDate;
         public DateTime StartDate
         {
-            get { return StartDate; }
+            get { return _startDate; }
             set
             {
-                StartDate = value;
+                _startDate = value;
                 OnPropertyChanged(nameof(StartDate));
             }
         }
+        private DateTime _endDate;
         public DateTime EndDate
         {
-            get { return EndDate; }
+            get { return _endDate; }
             set
             {
-                EndDate = value;
-                OnPropertyChanged(nameof(EndDate)); 
+                _endDate = value;
+                OnPropertyChanged(nameof(EndDate));
             }
         }
         public TemporaryCareRequestWindow Window { get; set; }

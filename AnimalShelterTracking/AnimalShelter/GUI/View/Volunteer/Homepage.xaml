@@ -60,8 +60,8 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like1"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment1"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" x:Name="adopt1" Command="{Binding AdoptCommand}" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" x:Name="temporaryCare1" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="0" x:Name="adopt1" Command="{Binding AdoptCommand}" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="0" x:Name="temporaryCare1" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -110,15 +110,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="1" x:Name="adopt2" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="1" x:Name="temporaryCare2" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete2" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update2" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete2" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="1"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update2" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="1"/>
                 </Grid>
             </Grid>
         </Border>
@@ -159,15 +159,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="2" x:Name="adopt3" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="2" x:Name="temporaryCare3" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete3" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update3" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete3" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="2"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update3" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="2"/>
                 </Grid>
             </Grid>
         </Border>
@@ -210,15 +210,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="3" x:Name="adopt4" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="3" x:Name="temporaryCare4" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete4" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update4" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete4" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="3"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update4" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="3"/>
                 </Grid>
             </Grid>
         </Border>
@@ -259,15 +259,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="4" x:Name="adopt5" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="4" x:Name="temporaryCare5" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete5" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update5" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete5" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="4"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update5" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="4"/>
                 </Grid>
             </Grid>
         </Border>
@@ -308,15 +308,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="5" x:Name="adopt6" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="5" x:Name="temporaryCare6" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete6" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update6" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete6" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="5"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update6" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="5"/>
                 </Grid>
             </Grid>
         </Border>
@@ -358,15 +358,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="6" x:Name="adopt7" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="6" x:Name="temporaryCare7" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete7" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update7" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete7" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="6"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update7" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="6"/>
                 </Grid>
             </Grid>
         </Border>
@@ -407,15 +407,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="7" x:Name="adopt8" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="7" x:Name="temporaryCare8" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete8" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update8" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete8" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="7"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update8" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="7"/>
                 </Grid>
             </Grid>
         </Border>
@@ -456,15 +456,15 @@
                 </Grid>
                 <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
                 <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
-                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
-                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="8" x:Name="adopt9" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="8" x:Name="temporaryCare9" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete9" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
-                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update9" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete9" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="8"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update9" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="8"/>
                 </Grid>
             </Grid>
         </Border>

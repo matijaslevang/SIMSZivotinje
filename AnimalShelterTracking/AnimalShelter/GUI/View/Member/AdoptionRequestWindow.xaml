@@ -45,7 +45,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="2" Command="{Binding AcceptCommand}" Content="Send request" Style="{DynamicResource CancelButton}" Click="Button_Click"/>
+            <Button Grid.Column="2" Command="{Binding AcceptCommand}" Content="Send request" Style="{DynamicResource CancelButton}" BorderBrush="#876849"/>
             <Button Grid.Column="0" Command="{Binding CancelCommand}" Content="Cancel" Style="{DynamicResource AddButton}" BorderBrush="#876849"/>
         </Grid>
     </Grid>

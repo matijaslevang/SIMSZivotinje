@@ -37,5 +37,15 @@ namespace AnimalShelter.Model.Posts
         {
             return _repository.GetAll();
         }
+
+        public List<ICommentable> GetAllCommentsAndRatingsForPostId(int postId) 
+        {
+            List<ICommentable> commentables = new List<ICommentable>();
+
+            commentables.AddRange(new CommentService().GetAllForPostId(postId));
+            commentables.AddRange(new RatingService().GetAllForPostId(postId));
+
+            return commentables;
+        }
     }
 }

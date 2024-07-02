@@ -1,4 +1,5 @@
 ﻿using AnimalShelter.GUI.ViewModel.Helper;
+using AnimalShelter.Model.Posts;
 using AnimalShelter.Model.Requests;
 using AnimalShelter.Model.Enums;
 using System;

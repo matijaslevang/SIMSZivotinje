@@ -77,6 +77,21 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -212,8 +227,13 @@
     <Compile Include="Model\Pets\PetService.cs" />
     <Compile Include="Model\Pets\Species.cs" />
     <Compile Include="Model\Pets\SpeciesService.cs" />
+    <Compile Include="Model\Posts\Comment.cs" />
+    <Compile Include="Model\Posts\CommentService.cs" />
+    <Compile Include="Model\Posts\ICommentable.cs" />
     <Compile Include="Model\Posts\Post.cs" />
     <Compile Include="Model\Posts\PostService.cs" />
+    <Compile Include="Model\Posts\Rating.cs" />
+    <Compile Include="Model\Posts\RatingService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\PostRequest.cs" />
@@ -260,15 +280,16 @@
     <None Include="Data\Admins.json" />
     <None Include="Data\Associations.json" />
     <None Include="Data\Breeds.json" />
+    <None Include="Data\Comments.json" />
     <None Include="Data\Members.json" />
     <None Include="Data\Payments.json" />
     <None Include="Data\Pets.json" />
     <None Include="Data\PostRequests.json" />
     <None Include="Data\Posts.json" />
+    <None Include="Data\Ratings.json" />
     <None Include="Data\RegistrationRequests.json" />
     <None Include="Data\Species.json" />
     <None Include="Data\TemporaryCareRequests.json" />
-    <None Include="Data\Users.json" />
     <None Include="Data\Volunteers.json" />
     <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -288,5 +309,4 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions />
 </Project>

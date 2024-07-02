@@ -29,5 +29,6 @@ namespace AnimalShelter.Model.Users
             Gender = gender;
             DateOfJoining = DateTime.Now;
         }
+        public Administrator() { }
     }
 }

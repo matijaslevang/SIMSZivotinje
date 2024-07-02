@@ -34,5 +34,6 @@ namespace AnimalShelter.Model.Users
             IsBlacklisted = false;
             AdoptedPets = new List<int>();
         }
+        public Volunteer() { }
     }
 }

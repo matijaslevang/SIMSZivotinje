@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View
 {
-    public partial class RegistrationRequest : Window
+    public partial class RegistrationRequestWindow : Window
     {
-        public RegistrationRequest()
+        public RegistrationRequestWindow()
         {
             InitializeComponent();
             foreach (Gender gen in Enum.GetValues(typeof(Gender)))

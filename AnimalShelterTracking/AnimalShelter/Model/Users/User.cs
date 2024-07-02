@@ -14,5 +14,7 @@ namespace AnimalShelter.Model.Users
         public DateTime BirthDate { get; set; }
         public Gender Gender { get; set; }
         public DateTime DateOfJoining { get; set; }
+        public User() { }
+
     }
 }

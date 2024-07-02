@@ -31,8 +31,8 @@ namespace AnimalShelter.GUI.ViewModel
         public RequestsVM()//RequestBorders borders)
         {
             AcceptCommand = new RelayCommand(AcceptClick);
-            RequestService requestService = new RequestService();
-            Requests = new ObservableCollection<Request>(requestService.GetAll());
+            RequestController requestController= new RequestController();
+            Requests = new ObservableCollection<Request>(requestController.GetAll());
         }
         private void AcceptClick(object parameter)
         {

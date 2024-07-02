@@ -17,9 +17,9 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View.Member
 {
-    public partial class PostRequest : Window
+    public partial class PostRequestWindow : Window
     {
-        public PostRequest()
+        public PostRequestWindow()
         {
             InitializeComponent();
             gender.Items.Add(Gender.MALE);

@@ -24,8 +24,8 @@ namespace AnimalShelter
             window.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
-            VolunteerWindow volunteerWindow = new VolunteerWindow();
-            volunteerWindow.Show();
+            //VolunteerWindow volunteerWindow = new VolunteerWindow();
+            //volunteerWindow.Show();
             ////MemberWindow memberWindow = new MemberWindow();
             ////memberWindow.Show();
             //Address address = new Address("USA", "Springfield", "123 Main St", "1A", "62704");

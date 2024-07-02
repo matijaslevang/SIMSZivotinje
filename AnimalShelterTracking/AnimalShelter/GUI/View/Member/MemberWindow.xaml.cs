@@ -16,7 +16,8 @@ namespace AnimalShelter.GUI.View
 {
     public partial class MemberWindow : Window
     {
-        public MemberWindow()
+        public Model.Users.Member Member;
+        public MemberWindow(Model.Users.Member member)
         {
             InitializeComponent();
             Homepage homepage = new Homepage();

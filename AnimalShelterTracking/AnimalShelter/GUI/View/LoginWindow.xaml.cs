@@ -1,19 +1,7 @@
 ﻿using AnimalShelter.GUI.ViewModel;
-using AnimalShelter.Model.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using AnimalShelter.Model.Enums;
+using AnimalShelter.Model.Users;
+using System.Windows;
 
 namespace AnimalShelter.GUI.View
 {
@@ -44,19 +32,19 @@ namespace AnimalShelter.GUI.View
                 {
                     if (loggedUser.Account.Role == Role.MEMBER)
                     {
-                        MemberWindow memberWindow = new MemberWindow();
+                        MemberWindow memberWindow = new MemberWindow((Model.Users.Member) loggedUser);
                         memberWindow.Show();
                     }
 
                     else if (loggedUser.Account.Role == Role.VOLUNTEER)
                     {
-                        VolunteerWindow volunteerWindow = new VolunteerWindow();
+                        VolunteerWindow volunteerWindow = new VolunteerWindow((Volunteer) loggedUser);
                         volunteerWindow.Show();
                     }
 
                     else if (loggedUser.Account.Role == Role.ADMINISTRATOR)
                     {
-                        AdminWindow adminWindow = new AdminWindow();
+                        AdminWindow adminWindow = new AdminWindow((Administrator) loggedUser);
                         adminWindow.Show();
                     }
                     Close();

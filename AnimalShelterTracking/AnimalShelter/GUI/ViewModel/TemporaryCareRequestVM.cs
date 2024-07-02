@@ -49,6 +49,7 @@ namespace AnimalShelter.GUI.ViewModel
             RequestController = new RequestController();
             AcceptCommand = new RelayCommand(AcceptClick);
             CancelCommand = new RelayCommand(CancelClick);
+            Member = null; //TO-DO: FIX THIS
         }
         public void AcceptClick(object parameter)
         {

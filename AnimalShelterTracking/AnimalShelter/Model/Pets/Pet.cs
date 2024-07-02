@@ -16,11 +16,11 @@ namespace AnimalShelter.Model.Pets
         public string Location { get; set; }
         public Species Species { get; set; }
         public Breed Breed { get; set; }
-        public List<MultimediaContent> MultimediaContent { get; set; }
+        public List<string> MultimediaContent { get; set; }
 
         public Pet() { }
 
-        public Pet(string name, HealthStatus healthStatus, string healthDescription, int age, bool isAdopted, string color, string location, Species species, Breed breed, List<MultimediaContent> multimediaContent)
+        public Pet(string name, HealthStatus healthStatus, string healthDescription, int age, bool isAdopted, string color, string location, Species species, Breed breed, List<string> multimediaContent)
         {
             Name = name;
             HealthStatus = healthStatus;
@@ -34,7 +34,7 @@ namespace AnimalShelter.Model.Pets
             MultimediaContent = multimediaContent;
         }
 
-        public void AddMultimedia(MultimediaContent multimedia)
+        public void AddMultimedia(string multimedia)
         {
             MultimediaContent.Add(multimedia);
         }

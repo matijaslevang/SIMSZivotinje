@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\Member\PostRequest.xaml">
+    <Page Include="GUI\View\Member\PostRequestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,8 +169,8 @@
     <Compile Include="GUI\View\Guest\RegistrationRequestWindow.xaml.cs">
       <DependentUpon>RegistrationRequestWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\Member\PostRequest.xaml.cs">
-      <DependentUpon>PostRequest.xaml</DependentUpon>
+    <Compile Include="GUI\View\Member\PostRequestWindow.xaml.cs">
+      <DependentUpon>PostRequestWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\Member\TemporaryCareRequestWindow.xaml.cs">
       <DependentUpon>TemporaryCareRequestWindow.xaml</DependentUpon>
@@ -220,7 +220,11 @@
     <Compile Include="Model\Requests\RegistrationRequest.cs" />
     <Compile Include="Model\Requests\Request.cs" />
     <Compile Include="Model\Requests\RequestService.cs" />
-    <Compile Include="Model\Requests\TemporaryCareRequest.cs" />
+    <Compile Include="Model\Requests\TemporaryCareRequestService.cs" />
+    <Compile Include="Model\Requests\RequestController.cs" />
+    <Compile Include="Model\Requests\RegistrationRequestService.cs" />
+    <Compile Include="Model\Requests\PostRequestService.cs" />
+    <Compile Include="Model\Requests\AdoptionRequestService.cs" />
     <Compile Include="Model\Users\Account.cs" />
     <Compile Include="Model\Users\Administrator.cs" />
     <Compile Include="Model\Users\Member.cs" />

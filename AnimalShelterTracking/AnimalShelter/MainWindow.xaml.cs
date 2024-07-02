@@ -10,11 +10,12 @@ namespace AnimalShelter
         {
             //RegistrationRequest regReq = new RegistrationRequest();
             //regReq.Show();
-            PostRequest postReq = new PostRequest();
-            postReq.Show();
+            //PostRequest postReq = new PostRequest();
+            //postReq.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
-
+            VolunteerWindow volunteerWindow = new VolunteerWindow();
+            volunteerWindow.Show();
         }
     }
 }

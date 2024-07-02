@@ -6,7 +6,7 @@ namespace AnimalShelter.Model.Pets
     public class PetService
     {
         private readonly IRepository<Pet> _repository;
-        private const string filePath = "..../Data/Pets.json";
+        private const string filePath = "..\\..\\Data\\Pets.json";
 
         public PetService()
         {

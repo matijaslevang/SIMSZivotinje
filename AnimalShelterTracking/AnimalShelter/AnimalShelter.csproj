@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\Member\PostRequest.xaml">
+    <Page Include="GUI\View\Member\PostRequestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +144,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GUI\ViewModel\LoginViewModel.cs" />
+    <Compile Include="GUI\ViewModel\AdoptionRequestVM.cs" />
+    <Compile Include="GUI\ViewModel\Helper\PostBorders.cs" />
+    <Compile Include="GUI\ViewModel\MembersVM.cs" />
+    <Compile Include="GUI\ViewModel\PostsVM.cs" />
+    <Compile Include="GUI\ViewModel\RelayCommand.cs" />
+    <Compile Include="GUI\ViewModel\RequestsVM.cs" />
+    <Compile Include="GUI\ViewModel\TemporaryCareRequestVM.cs" />
+    <Compile Include="GUI\ViewModel\VotesVM.cs" />
     <Compile Include="GUI\View\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -162,8 +170,8 @@
     <Compile Include="GUI\View\Guest\RegistrationRequestWindow.xaml.cs">
       <DependentUpon>RegistrationRequestWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\Member\PostRequest.xaml.cs">
-      <DependentUpon>PostRequest.xaml</DependentUpon>
+    <Compile Include="GUI\View\Member\PostRequestWindow.xaml.cs">
+      <DependentUpon>PostRequestWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\Member\TemporaryCareRequestWindow.xaml.cs">
       <DependentUpon>TemporaryCareRequestWindow.xaml</DependentUpon>
@@ -189,22 +197,35 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Associations\Association.cs" />
+    <Compile Include="Model\Associations\AssociationService.cs" />
     <Compile Include="Model\Enums\Gender.cs" />
     <Compile Include="Model\Enums\HealthStatus.cs" />
     <Compile Include="Model\Enums\PostStatus.cs" />
     <Compile Include="Model\Enums\Role.cs" />
-    <Compile Include="Model\JovanaPet\Breed.cs" />
-    <Compile Include="Model\JovanaPet\BreedService.cs" />
-    <Compile Include="Model\JovanaPet\Pet.cs" />
-    <Compile Include="Model\JovanaPet\PetService.cs" />
-    <Compile Include="Model\JovanaPet\Species.cs" />
-    <Compile Include="Model\JovanaPet\SpeciesService.cs" />
-    <Compile Include="Model\Post\Post.cs" />
-    <Compile Include="Model\Post\PostService.cs" />
+    <Compile Include="Model\Enums\PaymentStatus.cs" />
+    <Compile Include="Model\Enums\RequestType.cs" />
+    <Compile Include="Model\Payment\Payment.cs" />
+    <Compile Include="Model\Payment\PaymentService.cs" />
+    <Compile Include="Model\Pets\Breed.cs" />
+    <Compile Include="Model\Pets\BreedService.cs" />
+    <Compile Include="Model\Pets\Pet.cs" />
+    <Compile Include="Model\Pets\PetService.cs" />
+    <Compile Include="Model\Pets\Species.cs" />
+    <Compile Include="Model\Pets\SpeciesService.cs" />
+    <Compile Include="Model\Posts\Post.cs" />
+    <Compile Include="Model\Posts\PostService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
+    <Compile Include="Model\Requests\PostRequest.cs" />
     <Compile Include="Model\Requests\RegistrationRequest.cs" />
+    <Compile Include="Model\Requests\Request.cs" />
     <Compile Include="Model\Requests\TemporaryCareRequest.cs" />
+    <Compile Include="Model\Requests\TemporaryCareRequestService.cs" />
+    <Compile Include="Model\Requests\RequestController.cs" />
+    <Compile Include="Model\Requests\RegistrationRequestService.cs" />
+    <Compile Include="Model\Requests\PostRequestService.cs" />
+    <Compile Include="Model\Requests\AdoptionRequestService.cs" />
     <Compile Include="Model\Users\Account.cs" />
     <Compile Include="Model\Users\Administrator.cs" />
     <Compile Include="Model\Users\Member.cs" />
@@ -214,8 +235,11 @@
     <Compile Include="Model\Utilities\Address.cs" />
     <Compile Include="Model\Utilities\Contact.cs" />
     <Compile Include="Model\Utilities\MultimediaContent.cs" />
+    <Compile Include="Model\Votes\Vote.cs" />
+    <Compile Include="Model\Votes\VoteService.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\JSONRepository.cs" />
+    <Compile Include="Repository\UsersJSONRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -233,13 +257,27 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\AdoptionRequests.json" />
+    <None Include="Data\Admins.json" />
     <None Include="Data\Associations.json" />
     <None Include="Data\Breeds.json" />
+    <None Include="Data\Members.json" />
     <None Include="Data\Payments.json" />
     <None Include="Data\Pets.json" />
+    <None Include="Data\PostRequests.json" />
     <None Include="Data\Posts.json" />
+    <None Include="Data\RegistrationRequests.json" />
     <None Include="Data\Species.json" />
+    <None Include="Data\TemporaryCareRequests.json" />
     <None Include="Data\Users.json" />
+    <None Include="Data\Volunteers.json" />
+    <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\What-Breed-Are-Black-Cats.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Reference Include="PresentationFramework.Aero2" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,8 +287,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
 </Project>

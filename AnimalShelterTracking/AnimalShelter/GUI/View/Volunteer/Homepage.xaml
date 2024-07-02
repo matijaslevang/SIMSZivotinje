@@ -3,12 +3,470 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:AnimalShelter.GUI.View"
+      xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:guest="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=guest:PostsVM}"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1200"
       Title="VolunteerHomepage">
+    <Grid Background="#edb57f">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.05*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Homepage" FontSize="40" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#ba8e63"/>
+        <Border x:Name="Border1" Grid.Row="1" Grid.Column="1" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-    <Grid>
-        
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[0].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[0].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[0].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[0].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[0].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[0].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[0].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[0].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[0].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like1"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment1"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Command="{Binding AcceptCommand}" x:Name="adopt1" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" x:Name="temporaryCare1" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete1" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}" CommandParameter="0"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update1" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}" CommandParameter="0"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="/GUI/Images/what-breed-are-black-cats.webp"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[1].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[1].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[1].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[1].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[1].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[1].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[1].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[1].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete2" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update2" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border x:Name="Border3" Grid.Row="1" Grid.Column="3" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[2].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[2].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[2].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[2].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[2].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[2].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[2].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[2].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[2].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete3" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update3" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+
+        <Border x:Name="Border4" Grid.Row="2" Grid.Column="1" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[3].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[3].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[3].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[3].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[3].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[3].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[3].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[3].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[3].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete4" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update4" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border x:Name="Border5" Grid.Row="2" Grid.Column="2" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[4].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[4].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[4].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[4].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[4].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[4].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[4].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[4].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[4].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete5" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update5" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border x:Name="Border6" Grid.Row="2" Grid.Column="3" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[5].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[5].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[5].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[5].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[5].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[5].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[5].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[5].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[5].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete6" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update6" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border x:Name="Border7" Grid.Row="3" Grid.Column="1" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[6].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[6].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[6].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[6].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[6].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[6].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[6].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[6].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[6].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete7" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update7" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border x:Name="Border8" Grid.Row="3" Grid.Column="2" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[7].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[7].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[7].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[7].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[7].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[7].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[7].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[7].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[7].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete8" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update8" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border x:Name="Border9" Grid.Row="3" Grid.Column="3" Background="#faedcd" Margin="10"  CornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[8].Pet.MultimediaContent[0]}"/>
+                <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="#d4a373" Text="{Binding Posts[8].Pet.Name}" FontSize="20" FontWeight="ExtraBold"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Posts[8].Pet.Age}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Posts[8].Pet.Species.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Posts[8].Pet.Breed.Name}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Posts[8].Pet.Location}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Posts[8].Pet.HealthStatus}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[8].Pet.HealthDescription}"/>
+                    <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[8].Pet.Color}"/>
+                </Grid>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
+                <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{DynamicResource NavigationButton}" x:Name="delete9" Content="🗑️" FontSize="25" Foreground="#d4a373" Command="{Binding DeleteCommand}"/>
+                    <Button Grid.Column="1" Style="{DynamicResource NavigationButton}" x:Name="update9" Content="✏️" FontSize="25" Foreground="#d4a373" Command="{Binding UpdateCommand}"/>
+                </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </Page>

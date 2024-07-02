@@ -6,7 +6,7 @@ namespace AnimalShelter.Model.Pets
     public class BreedService
     {
         private readonly IRepository<Breed> _repository;
-        private const string filePath = "..../Data/Breeds.json";
+        private const string filePath = "..\\..\\Data\\Breeds.json";
 
         public BreedService()
         {

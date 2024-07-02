@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnimalShelter.GUI.View"
         mc:Ignorable="d"
-        Title="VolunteerWindow" Height="450" Width="800">
+        Title="VolunteerWindow" Height="800" Width="1200">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="frame"/>
+        <Grid Grid.Row="1" Background="#a17b57">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Style="{DynamicResource NavigationButton}" Grid.Column="1" x:Name="homeButton" Background="Transparent" Foreground="#edb580" BorderBrush="Transparent" Content="🏠" FontSize="30" Click="Button_Home"/>
+            <Button Grid.Column="2" x:Name="requestsButton"  Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="📩" FontSize="30" Click="Button_Requests"/>
+            <Button Grid.Column="3" x:Name="votingButton" Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="🗳️" FontSize="30" Click="Button_Voting"/>
+            <Button Grid.Column="4" x:Name="membersButton" Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="👥" FontSize="30" Click="Button_Members"/>
+            <Button Grid.Column="5" x:Name="profileButton" Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="👤" FontSize="30" Click="Button_Profile"/>
+            <TextBlock Grid.Column="6" Text="Volunteer" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>

@@ -1,0 +1,140 @@
+﻿<Window x:Class="AnimalShelter.GUI.View.Member.PostRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimalShelter.GUI.View.Member"
+        mc:Ignorable="d"
+        Title="PostRequest" Height="600" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="0.3*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Post request" VerticalAlignment="Bottom" TextBlock.FontWeight="Bold" Margin="5" Foreground="#876849" FontSize="30" />
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Name" Style="{DynamicResource Blocks}"  Grid.Column="0" Margin="5 0 0 0"/>
+                <TextBlock Text="Age" Style="{DynamicResource Blocks}" Grid.Column="1"  Margin="5 0 0 0"/>
+                <TextBlock Text="Color" Style="{DynamicResource Blocks}" Grid.Column="2"  Margin="5 0 0 0"/>
+                <TextBlock Text="Gender" Style="{DynamicResource Blocks}"  Grid.Column="3" Margin="5 0 0 0"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="name"  Grid.Column="0" Margin="5"/>
+                <TextBox x:Name="age" Grid.Column="1" Margin="5"/>
+                <TextBox x:Name="color" Grid.Column="2" Margin="5"/>
+                <ListBox x:Name="gender" Grid.Column="3" Margin="5" Padding="20 0 20 0" Foreground="#d4a373" ItemContainerStyle="{DynamicResource ListBoxItemContainerStyle1}"  
+         ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+         BorderBrush="#d4a373" VerticalAlignment="Center" HorizontalAlignment="Center" d:ItemsSource="{d:SampleData ItemCount=3}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Select species" Style="{DynamicResource Blocks}"  Grid.Column="0" Margin="5 0 0 0"/>
+                <TextBlock Text="or add a new one" Style="{DynamicResource Blocks}"  Grid.Column="1" Margin="5 0 0 0"/>
+            </Grid>
+            
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox x:Name="speciesList" SelectionMode="Single" ItemContainerStyle="{DynamicResource ListBoxItemContainerStyle1}"  
+                     BorderBrush="#d4a373" Foreground="#d4a373" Margin="5"/>
+                <TextBox x:Name="species" Grid.Column="1" Margin="5"/>
+            </Grid>
+            
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Select breed" Style="{DynamicResource Blocks}"  Grid.Column="0" Margin="5 0 0 0"/>
+                <TextBlock Text="or add a new one" Style="{DynamicResource Blocks}"  Grid.Column="1" Margin="5 0 0 0"/>
+            </Grid>
+
+            <Grid Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox x:Name="breedList" SelectionMode="Single" ItemContainerStyle="{DynamicResource ListBoxItemContainerStyle1}"  
+                     BorderBrush="#d4a373" Foreground="#d4a373" Margin="5"/>
+                <TextBox x:Name="breed" Grid.Column="1" Margin="5"/>
+            </Grid>
+
+
+            <TextBlock Text="Location" Style="{DynamicResource Blocks}" Grid.Row="7" Margin="5 0 0 0"/>
+            <TextBox x:Name="location" Grid.Row="8" Margin="5"/>
+
+            <TextBlock Text="Health" Style="{DynamicResource Blocks}" Grid.Row="9"  Margin="5 0 0 0"/>
+            <ListBox x:Name="healthStatus"  Grid.Row="10" Foreground="#d4a373" ItemContainerStyle="{DynamicResource ListBoxItemContainerStyle1}"  
+         ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+         BorderBrush="#d4a373" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="100 0 100 0" d:ItemsSource="{d:SampleData ItemCount=3}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+
+            <TextBlock Text="Health description" Style="{DynamicResource Blocks}" Grid.Row="11" Margin="5 0 0 0"/>
+            <TextBox x:Name="healthDescription" Grid.Row="12" Margin="5" Grid.RowSpan="3"/>
+
+            <TextBlock Text="Add multimedia content" Style="{DynamicResource Blocks}" Grid.Row="15" Margin="5 0 0 0"/>
+            <Button Content="Upload Files" Grid.Row="16" Style="{DynamicResource CancelButton}"  Margin="5 0 5 0" Width="auto" Height="auto"/>
+        </Grid>
+        <Grid Background="#d4a373" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="2" Content="Send request" Style="{DynamicResource AddButton}"/>
+            <Button Grid.Column="0" Content="Cancel" Style="{DynamicResource CancelButton}"/>
+        </Grid>
+    </Grid>
+</Window>

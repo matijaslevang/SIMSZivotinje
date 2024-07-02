@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnimalShelter.GUI.View"
         mc:Ignorable="d"
-        Title="MemberWindow" Height="450" Width="800">
+        Title="MemberWindow" Height="800" Width="1200">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="14*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame x:Name="frame"/>
+            <Grid Grid.Row="1" Background="#a17b57">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="2" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="👤" FontSize="30"/>
+                <Button Grid.Column="1" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="🏠" FontSize="30"/>
+                <TextBlock Grid.Column="4" Text="Member" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

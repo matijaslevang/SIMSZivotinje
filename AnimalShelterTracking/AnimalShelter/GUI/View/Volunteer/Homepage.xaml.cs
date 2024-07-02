@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.GUI.ViewModel.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +23,9 @@ namespace AnimalShelter.GUI.View
         public Homepage()
         {
             InitializeComponent();
+            PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, Border9);
+            PostsVM postsVM = new PostsVM(borders);
+            DataContext = postsVM;
         }
     }
 }

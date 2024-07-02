@@ -9,7 +9,7 @@ using System.Windows.Media;
 
 namespace AnimalShelter.GUI.ViewModel.Helper
 {
-    public class Borders
+    public class PostBorders
     {
         public Border Border1 { get; set; }
         public Border Border2 { get; set; }
@@ -21,7 +21,7 @@ namespace AnimalShelter.GUI.ViewModel.Helper
         public Border Border8 { get; set; }
         public Border Border9 { get; set; }
 
-        public Borders(Border border1, Border border2, Border border3, Border border4, Border border5,
+        public PostBorders(Border border1, Border border2, Border border3, Border border4, Border border5,
                              Border border6, Border border7, Border border8, Border border9)
         {
             Border1 = border1;

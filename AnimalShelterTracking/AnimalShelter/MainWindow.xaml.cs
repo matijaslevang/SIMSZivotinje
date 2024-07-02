@@ -12,9 +12,12 @@ namespace AnimalShelter
             //regReq.Show();
             //PostRequest postReq = new PostRequest();
             //postReq.Show();
-            GuestWindow guestWindow = new GuestWindow();
-            guestWindow.Show();
-
+            //GuestWindow guestWindow = new GuestWindow();
+            //guestWindow.Show();
+            VolunteerWindow volunteerWindow = new VolunteerWindow();
+            volunteerWindow.Show();
+            //MemberWindow memberWindow = new MemberWindow();
+            //memberWindow.Show();
         }
     }
 }

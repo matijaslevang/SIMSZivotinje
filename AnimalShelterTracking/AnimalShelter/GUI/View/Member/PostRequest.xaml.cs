@@ -29,11 +29,15 @@ namespace AnimalShelter.GUI.View.Member
 
             foreach (Species species in speciesService.GetAll())
             {
-                speciesList.Items.Add(species);
+                speciesList.Items.Add(species.Name);
             }
             foreach (Breed breed in breedService.GetAll())
             {
-                breedList.Items.Add(breed);
+                breedList.Items.Add(breed.Name);
+            }
+            foreach (HealthStatus status in Enum.GetValues(typeof(HealthStatus)))
+            {
+                healthStatus.Items.Add(status);
             }
             this.Show();
         }

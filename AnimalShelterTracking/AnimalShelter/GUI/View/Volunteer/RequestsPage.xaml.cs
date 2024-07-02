@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelter.GUI.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,13 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View
 {
-    /// <summary>
-    /// Interaction logic for VolunteerRequestsPage.xaml
-    /// </summary>
     public partial class RequestsPage : Page
     {
         public RequestsPage()
         {
             InitializeComponent();
+            RequestsVM requestsVM = new RequestsVM();
+            DataContext = requestsVM;
         }
     }
 }

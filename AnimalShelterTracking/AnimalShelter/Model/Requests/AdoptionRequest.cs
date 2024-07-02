@@ -7,7 +7,7 @@ namespace AnimalShelter.Model.Requests
     public class AdoptionRequest : MemberRequest
     {
         public Pet Pet { get; set; }
-        public AdoptionRequest() { RequestType = RequestType.TEMPORARY_CARE; }
+        public AdoptionRequest() { RequestType = RequestType.ADOPTION; }
 
         public AdoptionRequest(int id, RequestType requestType, Member member, Pet pet)
         {

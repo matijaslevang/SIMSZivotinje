@@ -8,11 +8,13 @@ namespace AnimalShelter.Model.Users
     public class UserService
     {
         private readonly IRepository<User> _repository;
-        private const string filePath = "..\\..\\Data\\Users.json";
+        private const string adminsFilePath = "..\\..\\Data\\Admins.json";
+        private const string membersFilePath = "..\\..\\Data\\Members.json";
+        private const string volunteersFilePath = "..\\..\\Data\\Volunteers.json";
 
         public UserService()
         {
-            _repository = new JSONRepository<User>(filePath);
+            _repository = new UsersJSONRepository(adminsFilePath, membersFilePath, volunteersFilePath);
         }
 
         private bool IsEmailTaken(string email)

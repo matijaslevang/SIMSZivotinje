@@ -2,10 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/AnimalShelterTracking/.vs/AnimalShelterTracking/FileContentIndex
-.vs/
-AnimalShelterTracking/AnimalShelter/obj
-
 # Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,csharp,visualstudio,visualstudiocode,vs,vim,rider,intellij+all,intellij+iml,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,csharp,visualstudio,visualstudiocode,vs,vim,rider,intellij+all,intellij+iml,intellij
 

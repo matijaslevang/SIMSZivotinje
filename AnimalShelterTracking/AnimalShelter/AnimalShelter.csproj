@@ -238,6 +238,7 @@
     <Compile Include="Model\Votes\VoteService.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\JSONRepository.cs" />
+    <Compile Include="Repository\UsersJSONRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -256,8 +257,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Data\AdoptionRequests.json" />
+    <None Include="Data\Admins.json" />
     <None Include="Data\Associations.json" />
     <None Include="Data\Breeds.json" />
+    <None Include="Data\Members.json" />
     <None Include="Data\Payments.json" />
     <None Include="Data\Pets.json" />
     <None Include="Data\PostRequests.json" />
@@ -266,6 +269,7 @@
     <None Include="Data\Species.json" />
     <None Include="Data\TemporaryCareRequests.json" />
     <None Include="Data\Users.json" />
+    <None Include="Data\Volunteers.json" />
     <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

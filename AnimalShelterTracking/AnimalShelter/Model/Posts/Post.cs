@@ -3,7 +3,7 @@ using AnimalShelter.Model.Users;
 using AnimalShelter.Model.Pets;
 using System;
 
-namespace AnimalShelter.Model.Post
+namespace AnimalShelter.Model.Posts
 {
     public class Post
     {

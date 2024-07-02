@@ -2,8 +2,9 @@
 
 namespace AnimalShelter.Model.Requests
 {
-    public abstract class MemberRequest
+    public abstract class MemberRequest : Request
     {
         public Member Requester { get; set; }
+
     }
 }

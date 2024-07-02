@@ -1,7 +1,7 @@
 ﻿using AnimalShelter.Repository;
 using System.Collections.Generic;
 
-namespace AnimalShelter.Model.Post
+namespace AnimalShelter.Model.Posts
 {
     public class PostService
     {

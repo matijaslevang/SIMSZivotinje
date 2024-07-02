@@ -212,8 +212,10 @@
     <Compile Include="Model\Pets\PetService.cs" />
     <Compile Include="Model\Pets\Species.cs" />
     <Compile Include="Model\Pets\SpeciesService.cs" />
+    <Compile Include="Model\Posts\Comment.cs" />
     <Compile Include="Model\Posts\Post.cs" />
     <Compile Include="Model\Posts\PostService.cs" />
+    <Compile Include="Model\Posts\Rating.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\PostRequest.cs" />
@@ -268,7 +270,6 @@
     <None Include="Data\RegistrationRequests.json" />
     <None Include="Data\Species.json" />
     <None Include="Data\TemporaryCareRequests.json" />
-    <None Include="Data\Users.json" />
     <None Include="Data\Volunteers.json" />
     <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -288,5 +289,4 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions />
 </Project>

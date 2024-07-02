@@ -10,41 +10,41 @@ namespace AnimalShelter.GUI.View
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginViewModel viewModel { get; set; }
-        public UserService userService { get; set; }
-        public User loggedUser { get; set; }
+        public LoginViewModel ViewModel { get; set; }
+        public UserService UserService { get; set; }
+        public User LoggedUser { get; set; }
 
         public LoginWindow()
         {
             InitializeComponent();
 
-            viewModel = new LoginViewModel();
-            userService = new UserService();
+            ViewModel = new LoginViewModel();
+            UserService = new UserService();
         }
 
         private void LoginClick(object sender, RoutedEventArgs e)
         {
-            if (viewModel.IsValid)
+            if (ViewModel.IsValid)
             {
-                loggedUser = userService.Login(viewModel.Email, viewModel.Password);
+                LoggedUser = UserService.Login(ViewModel.Email, ViewModel.Password);
 
-                if (loggedUser != null)
+                if (LoggedUser != null)
                 {
-                    if (loggedUser.Account.Role == Role.MEMBER)
+                    if (LoggedUser.Account.Role == Role.MEMBER)
                     {
-                        MemberWindow memberWindow = new MemberWindow((Model.Users.Member) loggedUser);
+                        MemberWindow memberWindow = new MemberWindow((Model.Users.Member) LoggedUser);
                         memberWindow.Show();
                     }
 
-                    else if (loggedUser.Account.Role == Role.VOLUNTEER)
+                    else if (LoggedUser.Account.Role == Role.VOLUNTEER)
                     {
-                        VolunteerWindow volunteerWindow = new VolunteerWindow((Volunteer) loggedUser);
+                        VolunteerWindow volunteerWindow = new VolunteerWindow((Volunteer) LoggedUser);
                         volunteerWindow.Show();
                     }
 
-                    else if (loggedUser.Account.Role == Role.ADMINISTRATOR)
+                    else if (LoggedUser.Account.Role == Role.ADMINISTRATOR)
                     {
-                        AdminWindow adminWindow = new AdminWindow((Administrator) loggedUser);
+                        AdminWindow adminWindow = new AdminWindow((Administrator) LoggedUser);
                         adminWindow.Show();
                     }
                     Close();
@@ -52,7 +52,7 @@ namespace AnimalShelter.GUI.View
 
                 else
                 {
-                    viewModel.Error = "Invalid email or password.";
+                    ViewModel.Error = "Invalid email or password.";
                 }
             }
         }

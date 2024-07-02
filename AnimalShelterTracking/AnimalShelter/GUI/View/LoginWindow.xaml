@@ -18,17 +18,17 @@
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="133" Width="400" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Width="400" Margin="0,20,0,20" >
                 <TextBlock Text="Email: " FontSize="20"></TextBlock>
-                <TextBox FontSize="18"  Width="338" TextAlignment="Center" Name="emailTextBox" Text="{Binding Path=viewModel.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+                <TextBox FontSize="18"  Width="338" TextAlignment="Center" Name="emailTextBox" Text="{Binding Path=ViewModel.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Margin="0,20,0,20" >
                 <TextBlock Text="Password: " FontSize="20"></TextBlock>
-                <TextBox FontSize="18" Width="303"  Name="passwordTextBox" Text="{Binding Path=viewModel.Password, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+                <TextBox FontSize="18" Width="303"  Name="passwordTextBox" Text="{Binding Path=ViewModel.Password, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
             </StackPanel>
 
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="24" >
             <TextBlock FontSize="18" TextAlignment="Center" VerticalAlignment="Center" Width="399"
-                Text="{Binding Path=viewModel.Error, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Foreground="Red" Name="validationTextBlock">
+                Text="{Binding Path=ViewModel.Error, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Foreground="Red" Name="validationTextBlock">
             </TextBlock>
         </StackPanel>
         <Grid Grid.Row="3" Margin="0,1,0,0">

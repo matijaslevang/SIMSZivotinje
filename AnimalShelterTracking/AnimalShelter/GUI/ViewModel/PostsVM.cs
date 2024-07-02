@@ -9,12 +9,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace AnimalShelter.GUI.ViewModel
 {
     public class PostsVM: INotifyPropertyChanged
     {
         private ObservableCollection<Post> _posts;
+        public PostService PostService { get; set; }
+        public ICommand DeleteCommand { get; set; }
+        public ICommand UpdateCommand { get; set; }
+        public PostBorders Borders;
         public ObservableCollection<Post> Posts
         {
             get => _posts;
@@ -25,19 +31,37 @@ namespace AnimalShelter.GUI.ViewModel
             }
         }
 
-        public PostsVM(PostBorders borders)
+        private void UpdateCollection()
         {
-            borders.HideAllBorders();
-            PostService postService = new PostService();
-            Posts = new ObservableCollection<Post>(postService.GetAll());
+            Borders.HideAllBorders();
+            Posts = new ObservableCollection<Post>(PostService.GetAll());
             for (int i = 0; i < Posts.Count; i++)
             {
-                borders.Show(i);
+                Borders.Show(i);
                 if (!Posts[i].Pet.IsAdopted)
                 {
-                    borders.NotAdopted(i);
+                    Borders.NotAdopted(i);
                 }
             }
+        }
+        public PostsVM(PostBorders borders)
+        {
+            this.Borders = borders;
+            this.PostService = new PostService();
+            DeleteCommand = new RelayCommand(DeleteClick);
+            UpdateCommand = new RelayCommand(UpdateClick);
+            UpdateCollection();
+            
+        }
+        public void DeleteClick(object parameter)
+        {
+            int index = int.Parse(parameter.ToString());
+            PostService.Delete(Posts[index].Id);
+            UpdateCollection();
+        }
+        public void UpdateClick(object parameter)
+        {
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

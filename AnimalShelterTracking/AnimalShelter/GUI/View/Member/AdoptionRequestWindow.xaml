@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:guest="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=guest:PostsVM}"
+        xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:guest="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=guest:AdoptionRequestVM}"
         mc:Ignorable="d"
         Title="AdoptionWindow" Height="700" Width="500">
     <Grid>
@@ -27,8 +27,16 @@
             </Grid.RowDefinitions>
 
             <TextBlock Text="You want to give" HorizontalAlignment="Center" Foreground="#876849" FontSize="30" Grid.Row="0"/>
-            <TextBlock  HorizontalAlignment="Center" TextBlock.FontWeight="Bold" Text="{Binding Posts[0].Pet.Name}" Foreground="#876849" FontSize="30" Grid.Column="2" Grid.Row="1" />
+            <TextBlock  HorizontalAlignment="Center" TextBlock.FontWeight="Bold" Text="{Binding Pet.Name}" Foreground="#876849" FontSize="30" Grid.Column="2" Grid.Row="1" />
             <TextBlock Text="a new home." HorizontalAlignment="Center" Foreground="#876849" FontSize="30" Grid.Row="2"/>
+            <TextBlock Grid.Row="3" Text="{Binding Pet.Species}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="4" Text="{Binding Pet.Breed}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="5" Text="{Binding Pet.Color}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="6" Text="{Binding Pet.Location}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="7" Text="{Binding Pet.Age}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="8" Text="{Binding Pet.HealthStatus}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="9" Text="{Binding Pet.Gender}" Foreground="#6d543b"/>
+            <TextBlock Grid.Row="10" Text="{Binding Pet.HealthDescription}" Foreground="#6d543b"/>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>

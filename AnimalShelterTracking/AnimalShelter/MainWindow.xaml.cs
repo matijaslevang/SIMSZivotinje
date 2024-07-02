@@ -16,6 +16,8 @@ namespace AnimalShelter
             //guestWindow.Show();
             VolunteerWindow volunteerWindow = new VolunteerWindow();
             volunteerWindow.Show();
+            //MemberWindow memberWindow = new MemberWindow();
+            //memberWindow.Show();
         }
     }
 }

@@ -21,9 +21,8 @@ namespace AnimalShelter.GUI.View
         public GuestWindow()
         {
             InitializeComponent();
-            PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, Border9);
-            PostsVM postsVM = new PostsVM(borders);
-            DataContext = postsVM;
+            Homepage homepage = new Homepage();
+            frame.Navigate(homepage);
         }
     }
 }

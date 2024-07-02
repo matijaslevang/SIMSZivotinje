@@ -59,15 +59,14 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="3" Text="{Binding Requests[0].Author.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].StartDate}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].EndDate}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept1" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept1" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" Width="100" Content="Accept" FontSize="11"/>
                 <Button  Grid.Column="0" Grid.Row="9" x:Name="deny1" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>

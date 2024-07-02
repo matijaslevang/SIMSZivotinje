@@ -14,14 +14,13 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View
 {
-    /// <summary>
-    /// Interaction logic for MemberWindow.xaml
-    /// </summary>
     public partial class MemberWindow : Window
     {
         public MemberWindow()
         {
             InitializeComponent();
+            Homepage homepage = new Homepage();
+            frame.Navigate(homepage);
         }
     }
 }

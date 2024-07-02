@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelter.GUI.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +15,13 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View
 {
-    /// <summary>
-    /// Interaction logic for AdoptionWindow.xaml
-    /// </summary>
     public partial class AdoptionRequestWindow : Window
     {
         public AdoptionRequestWindow()
         {
             InitializeComponent();
+            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM();
+            DataContext = adoptionRequestVM;
         }
     }
 }

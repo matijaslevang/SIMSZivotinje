@@ -1,9 +1,7 @@
-﻿using AnimalShelter.GUI.ViewModel.Helper;
+﻿using AnimalShelter.Model.Pets;
 using AnimalShelter.Model.Post;
-using AnimalShelter.Model.Users;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,22 +10,15 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter.GUI.ViewModel
 {
-    public class MembersVM: INotifyPropertyChanged
+    public class AdoptionRequestVM: INotifyPropertyChanged
     {
-        private ObservableCollection<Member> _members;
-        public ObservableCollection<Member> Members
-        {
-            get => _members;
-            set
-            {
-                _members = value;
-                OnPropertyChanged();
-            }
-        }
+        public Pet pet;
 
-        public MembersVM()
-        { }
         public event PropertyChangedEventHandler PropertyChanged;
+        public AdoptionRequestVM() 
+        {
+            
+        }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

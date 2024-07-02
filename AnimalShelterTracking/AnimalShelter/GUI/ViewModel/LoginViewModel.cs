@@ -11,14 +11,11 @@ namespace AnimalShelter.GUI.ViewModel
     public class LoginViewModel : INotifyPropertyChanged, IDataErrorInfo
     {
 
-
         private string _email;
         private string _password;
         private string _error;
         private Regex _emailRegex = new Regex("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}");
         private readonly string[] _validatedProperties = { "Password", "Email" };
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public string Error
         {
@@ -136,6 +133,13 @@ namespace AnimalShelter.GUI.ViewModel
                 return true;
             }
         }
+
+        public LoginViewModel()
+        {
+            Error = "";
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string name)
         {

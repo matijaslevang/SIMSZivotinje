@@ -143,9 +143,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GUI\ViewModel\Guest\GuestWindowVM.cs" />
-    <Compile Include="GUI\ViewModel\Helper\Borders.cs" />
-    <Compile Include="GUI\ViewModel\Member\MemberWindowVM.cs" />
+    <Compile Include="GUI\ViewModel\Helper\PostBorders.cs" />
+    <Compile Include="GUI\ViewModel\MembersVM.cs" />
+    <Compile Include="GUI\ViewModel\PostsVM.cs" />
+    <Compile Include="GUI\ViewModel\RequestsVM.cs" />
+    <Compile Include="GUI\ViewModel\VotesVM.cs" />
     <Compile Include="GUI\View\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -248,6 +250,7 @@
     <Resource Include="GUI\Images\What-Breed-Are-Black-Cats.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Reference Include="PresentationFramework.Aero2" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

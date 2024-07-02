@@ -1,5 +1,7 @@
 ﻿using AnimalShelter.GUI.ViewModel.Helper;
+using AnimalShelter.Model.Posts;
 using AnimalShelter.Model.Requests;
+using AnimalShelter.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -28,11 +30,20 @@ namespace AnimalShelter.GUI.ViewModel
             }
         }
 
-        public RequestsVM()//RequestBorders borders)
+        public RequestsVM(PostBorders borders)
         {
+            borders.HideAllBorders();
             AcceptCommand = new RelayCommand(AcceptClick);
             RequestController requestController= new RequestController();
             Requests = new ObservableCollection<Request>(requestController.GetAll());
+            for (int i = 0; i < Requests.Count; i++) 
+            {
+                borders.Show(i);
+                if (Requests[i].RequestType == RequestType.REGISTRATION)
+                {
+                    borders.Registered(i);
+                }
+            }
         }
         private void AcceptClick(object parameter)
         {

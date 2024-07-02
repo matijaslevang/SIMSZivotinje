@@ -180,13 +180,18 @@
 
     </Page.Resources>
     <Grid Background="#faedcd">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="  Member list" FontSize="40" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#ba8e63"/>
         <DataGrid Margin="20" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
-          RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGrid" Grid.Row="1" Foreground="#8385a3" Background="Transparent" AreRowDetailsFrozen="True" 
+          RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGrid" Grid.Row="1" Foreground="#8385a3" Background="Transparent" AreRowDetailsFrozen="True" FontSize="15"
           IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" ItemsSource="{Binding Members}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding Surname}" />
                 <DataGridTextColumn Header="ID Card number" Binding="{Binding IDCardNumber}"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Account.Email}"/>
                 <DataGridTextColumn Header="Birth Date" Binding="{Binding BirthDate}"/>

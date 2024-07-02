@@ -12,16 +12,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AnimalShelter.Model.Posts;
 
 namespace AnimalShelter.GUI.View
 {
     public partial class AdoptionRequestWindow : Window
     {
-        public AdoptionRequestWindow()
+        public AdoptionRequestWindow(Post post)
         {
             InitializeComponent();
-            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM();
+            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM(this, post.Pet);
             DataContext = adoptionRequestVM;
         }
+
     }
 }

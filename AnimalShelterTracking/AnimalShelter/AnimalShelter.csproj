@@ -219,7 +219,7 @@
     <Compile Include="Model\Requests\PostRequest.cs" />
     <Compile Include="Model\Requests\RegistrationRequest.cs" />
     <Compile Include="Model\Requests\Request.cs" />
-    <Compile Include="Model\Requests\RequestService.cs" />
+    <Compile Include="Model\Requests\TemporaryCareRequest.cs" />
     <Compile Include="Model\Requests\TemporaryCareRequestService.cs" />
     <Compile Include="Model\Requests\RequestController.cs" />
     <Compile Include="Model\Requests\RegistrationRequestService.cs" />

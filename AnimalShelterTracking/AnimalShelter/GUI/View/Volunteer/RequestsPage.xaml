@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Request[0].Type}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
@@ -88,7 +88,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Request[0].Type}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>

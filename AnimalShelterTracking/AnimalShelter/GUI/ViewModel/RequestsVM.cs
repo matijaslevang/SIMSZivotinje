@@ -1,5 +1,5 @@
 ﻿using AnimalShelter.GUI.ViewModel.Helper;
-using AnimalShelter.Model.Post;
+using AnimalShelter.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,35 +15,30 @@ namespace AnimalShelter.GUI.ViewModel
 {
     public class RequestsVM : INotifyPropertyChanged
     {
-        //public ICommand AcceptCommand { get; set; }
+        public ICommand AcceptCommand { get; set; }
 
-        //private ObservableCollection<Request> _requests;
-        //public ObservableCollection<Request> Requests
-        //{
-        //    get => _requests;
-        //    set
-        //    {
-        //        _requests = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
+        private ObservableCollection<Request> _requests;
+        public ObservableCollection<Request> Requests
+        {
+            get => _requests;
+            set
+            {
+                _requests = value;
+                OnPropertyChanged();
+            }
+        }
 
-        //public RequestsVM()//RequestBorders borders)
-        //{
-        //    AcceptCommand = new RelayCommand(AcceptClick);
-        //borders.HideAllBorders();
-        //RequestService requestService = new RequestService();
-        //Requests = new ObservableCollection<Post>(requestService.GetAll());
-        //for (int i = 0; i < Requests.Count; i++)
-        //{
-        //    borders.Show(i);
-        //}
-
-        //private void AcceptClick(object parameter)
-        //{
+        public RequestsVM()//RequestBorders borders)
+        {
+            AcceptCommand = new RelayCommand(AcceptClick);
+            RequestService requestService = new RequestService();
+            Requests = new ObservableCollection<Request>(requestService.GetAll());
+        }
+        private void AcceptClick(object parameter)
+        {
 
 
-        //}
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -52,7 +47,6 @@ namespace AnimalShelter.GUI.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        //}
     }
 }
 

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -26,7 +27,10 @@ namespace AnimalShelter.GUI.ViewModel
         }
 
         public MembersVM()
-        { }
+        { 
+            UserService us = new UserService();
+            Members = new ObservableCollection<Member>(us.GetAllMembers());
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

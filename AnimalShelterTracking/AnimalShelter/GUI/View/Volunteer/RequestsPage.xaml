@@ -43,13 +43,13 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
                 <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -58,11 +58,11 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="3" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="3" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].EndDate}"/>
 
@@ -88,15 +88,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -105,12 +105,12 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 
@@ -136,29 +136,29 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
-                <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
-                <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
-                <TextBlock Foreground="#b98e64" Grid.Row="3" Text="ID Card Number: "/>
-                <TextBlock Foreground="#b98e64" Grid.Row="4" Text="Phone Number: "/>
-                <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
-                <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
+                <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
+                <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
+                <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="3" Text="ID Card Number: "/>
+                <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="4" Text="Phone Number: "/>
+                <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="5" Text="Email: "/>
+                <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 
@@ -184,15 +184,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -201,12 +201,12 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 
@@ -232,15 +232,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -249,12 +249,12 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 
@@ -280,15 +280,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -297,12 +297,12 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 
@@ -328,15 +328,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -345,12 +345,12 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 
@@ -376,15 +376,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].Type}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
-                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                <TextBlock Foreground="#d4a373" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="{Binding Requests[0].RequestType}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="1" Text="{Binding Requests[0].Post.Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="2" Text="{Binding Requests[0].Post.Pet.Age}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="3" Text="{Binding Requests[0].Post.Pet.Species.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="4" Text="{Binding Requests[0].Post.Pet.Breed.Name}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="5" Text="{Binding Requests[0].Post.Pet.Location}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
+                <TextBlock Foreground="#d4a373" Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="2" Text="Last Name: "/>
@@ -393,12 +393,12 @@
                 <TextBlock Foreground="#b98e64" Grid.Row="5" Text="Email: "/>
                 <TextBlock Foreground="#b98e64" Grid.Row="6" Text="Gender: "/>
 
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Author.FirstName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Author.LastName}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Author.IDCardNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Author.PhoneNumber}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Author.Email}"/>
-                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Author.Gender}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="1" Text="{Binding Requests[0].Requester.FirstName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="2" Text="{Binding Requests[0].Requester.LastName}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1"  Grid.Row="3" Text="{Binding Requests[0].Requester.IDCardNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[0].Requester.PhoneNumber}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Requester.Email}"/>
+                <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].Requester.Gender}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="7" Text="{Binding Requests[0].StartDate}"/>
                 <TextBlock Foreground="#edb57f" Grid.Column="1" Grid.Row="8" Text="{Binding Requests[0].EndDate}"/>
 

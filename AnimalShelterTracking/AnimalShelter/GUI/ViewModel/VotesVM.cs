@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalShelter.GUI.ViewModel.Member
+namespace AnimalShelter.GUI.ViewModel
 {
-    internal class MemberWindowVM
+    internal class VotesVM
     {
     }
 }

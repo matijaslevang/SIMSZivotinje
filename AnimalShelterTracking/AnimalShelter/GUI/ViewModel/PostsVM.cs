@@ -1,20 +1,18 @@
-﻿using AnimalShelter.Model.Post;
+﻿using AnimalShelter.GUI.ViewModel.Helper;
+using AnimalShelter.Model.Post;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows;
-using AnimalShelter.GUI.ViewModel.Helper;
 
-namespace AnimalShelter.GUI.ViewModel.Guest
+namespace AnimalShelter.GUI.ViewModel
 {
-    public class GuestWindowVM : INotifyPropertyChanged
+    public class PostsVM: INotifyPropertyChanged
     {
         private ObservableCollection<Post> _posts;
         public ObservableCollection<Post> Posts
@@ -27,7 +25,7 @@ namespace AnimalShelter.GUI.ViewModel.Guest
             }
         }
 
-        public GuestWindowVM(Borders borders)
+        public PostsVM(PostBorders borders)
         {
             borders.HideAllBorders();
             PostService postService = new PostService();
@@ -40,9 +38,7 @@ namespace AnimalShelter.GUI.ViewModel.Guest
                     borders.NotAdopted(i);
                 }
             }
-
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -21,7 +21,7 @@ namespace AnimalShelter.GUI.View
         public AdoptionRequestWindow(Post post)
         {
             InitializeComponent();
-            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM(post.Pet);
+            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM(this, post.Pet);
             DataContext = adoptionRequestVM;
         }
 

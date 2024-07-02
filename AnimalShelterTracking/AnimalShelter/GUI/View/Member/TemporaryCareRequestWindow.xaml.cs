@@ -24,7 +24,7 @@ namespace AnimalShelter.GUI.View
         public TemporaryCareRequestWindow(Post post)
         {
             InitializeComponent();
-            TemporaryCareRequestVM temporaryCareRequestVM = new TemporaryCareRequestVM(post.Pet);
+            TemporaryCareRequestVM temporaryCareRequestVM = new TemporaryCareRequestVM(this, post.Pet);
             DataContext = temporaryCareRequestVM;
         }
     }

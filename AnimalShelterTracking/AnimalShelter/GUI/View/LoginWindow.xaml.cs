@@ -39,19 +39,32 @@ namespace AnimalShelter.GUI.View
             if (viewModel.IsValid)
             {
                 loggedUser = userService.Login(viewModel.Email, viewModel.Password);
+
                 if (loggedUser != null)
                 {
-                    if (loggedUser is Model.Users.Member || loggedUser.Account.Password == "matija")
+                    if (loggedUser.Account.Role == Role.MEMBER)
                     {
                         MemberWindow memberWindow = new MemberWindow();
                         memberWindow.Show();
                     }
 
-                    else if (loggedUser is Model.Users.Volunteer || loggedUser.Account.Password == "joca")
+                    else if (loggedUser.Account.Role == Role.VOLUNTEER)
                     {
                         VolunteerWindow volunteerWindow = new VolunteerWindow();
                         volunteerWindow.Show();
                     }
+
+                    else if (loggedUser.Account.Role == Role.ADMINISTRATOR)
+                    {
+                        AdminWindow adminWindow = new AdminWindow();
+                        adminWindow.Show();
+                    }
+                    Close();
+                }
+
+                else
+                {
+                    viewModel.Error = "Invalid email or password.";
                 }
             }
         }

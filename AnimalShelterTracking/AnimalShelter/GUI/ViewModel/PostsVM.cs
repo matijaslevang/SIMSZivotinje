@@ -20,6 +20,8 @@ namespace AnimalShelter.GUI.ViewModel
         public PostService PostService { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
+        public ICommand AcceptCommand { get; set; }
+
         public PostBorders Borders;
         public ObservableCollection<Post> Posts
         {

@@ -1,5 +1,5 @@
 ﻿using AnimalShelter.GUI.ViewModel.Helper;
-using AnimalShelter.Model.Post;
+using AnimalShelter.Model.Posts;
 using AnimalShelter.Model.Users;
 using System;
 using System.Collections.Generic;

@@ -6,5 +6,6 @@ namespace AnimalShelter.Model.Requests
     {
         public int Id { get; set; }
         public RequestType RequestType { get; set; }
+        public Request() { }
     }
 }

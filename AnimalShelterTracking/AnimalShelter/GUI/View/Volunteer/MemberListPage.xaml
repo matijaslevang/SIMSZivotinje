@@ -187,11 +187,10 @@
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
-                <DataGridTextColumn Header="ID Card number" Binding="{Binding IDCardNumber}" />
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" />
-                <DataGridTextColumn Header="Password" Binding="{Binding Password}" />
-                <DataGridTextColumn Header="Birth Date" Binding="{Binding BirthDate}" />
-                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" />
+                <DataGridTextColumn Header="ID Card number" Binding="{Binding IDCardNumber}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Account.Email}"/>
+                <DataGridTextColumn Header="Birth Date" Binding="{Binding BirthDate}"/>
+                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}"/>
                 <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" />
                 <DataGridTextColumn Header="Creation Date" Binding="{Binding DateOfJoining}" />
             </DataGrid.Columns>

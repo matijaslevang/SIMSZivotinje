@@ -217,9 +217,9 @@
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\PostRequest.cs" />
+    <Compile Include="Model\Requests\RegistrationRequest.cs" />
     <Compile Include="Model\Requests\Request.cs" />
     <Compile Include="Model\Requests\RequestService.cs" />
-    <Compile Include="Model\Requests\RegistrationRequest.cs" />
     <Compile Include="Model\Requests\TemporaryCareRequest.cs" />
     <Compile Include="Model\Users\Account.cs" />
     <Compile Include="Model\Users\Administrator.cs" />
@@ -256,6 +256,7 @@
     <None Include="Data\Payments.json" />
     <None Include="Data\Pets.json" />
     <None Include="Data\Posts.json" />
+    <None Include="Data\Requests.json" />
     <None Include="Data\Species.json" />
     <None Include="Data\Users.json" />
     <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">

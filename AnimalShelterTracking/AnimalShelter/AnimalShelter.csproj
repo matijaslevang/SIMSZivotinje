@@ -213,9 +213,12 @@
     <Compile Include="Model\Pets\Species.cs" />
     <Compile Include="Model\Pets\SpeciesService.cs" />
     <Compile Include="Model\Posts\Comment.cs" />
+    <Compile Include="Model\Posts\CommentService.cs" />
+    <Compile Include="Model\Posts\ICommentable.cs" />
     <Compile Include="Model\Posts\Post.cs" />
     <Compile Include="Model\Posts\PostService.cs" />
     <Compile Include="Model\Posts\Rating.cs" />
+    <Compile Include="Model\Posts\RatingService.cs" />
     <Compile Include="Model\Requests\AdoptionRequest.cs" />
     <Compile Include="Model\Requests\MemberRequest.cs" />
     <Compile Include="Model\Requests\PostRequest.cs" />
@@ -262,11 +265,13 @@
     <None Include="Data\Admins.json" />
     <None Include="Data\Associations.json" />
     <None Include="Data\Breeds.json" />
+    <None Include="Data\Comments.json" />
     <None Include="Data\Members.json" />
     <None Include="Data\Payments.json" />
     <None Include="Data\Pets.json" />
     <None Include="Data\PostRequests.json" />
     <None Include="Data\Posts.json" />
+    <None Include="Data\Ratings.json" />
     <None Include="Data\RegistrationRequests.json" />
     <None Include="Data\Species.json" />
     <None Include="Data\TemporaryCareRequests.json" />

@@ -1,2 +1,15 @@
 {
+  "1": {
+    "Id": 1,
+    "Email": "matija@gmail.com",
+    "Password": "matija",
+    "Role": "MEMBER"
+  },
+
+  "2": {
+    "Id": 2,
+    "Email": "joca@gmail.com",
+    "Password": "joca",
+    "Role": "VOLUNTEER"
+  }
 }

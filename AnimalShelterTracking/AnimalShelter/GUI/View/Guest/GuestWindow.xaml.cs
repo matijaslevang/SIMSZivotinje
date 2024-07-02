@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.Model.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +20,7 @@ namespace AnimalShelter.GUI.View
 {
     public partial class GuestWindow : Window
     {
+
         public GuestWindow()
         {
             InitializeComponent();
@@ -49,6 +52,13 @@ namespace AnimalShelter.GUI.View
 
             homepage.delete9.Visibility = Visibility.Collapsed;
             homepage.update9.Visibility = Visibility.Collapsed;
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.DataContext = loginWindow;
+            loginWindow.Show();
         }
     }
 }

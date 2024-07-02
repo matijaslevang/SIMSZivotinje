@@ -145,6 +145,7 @@
     </Compile>
     <Compile Include="GUI\ViewModel\Guest\GuestWindowVM.cs" />
     <Compile Include="GUI\ViewModel\Helper\Borders.cs" />
+    <Compile Include="GUI\ViewModel\Member\MemberWindowVM.cs" />
     <Compile Include="GUI\View\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>

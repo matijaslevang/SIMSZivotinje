@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.Model.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,11 @@ namespace AnimalShelter.GUI.View
     /// </summary>
     public partial class TemporaryCareRequestWindow : Window
     {
-        public TemporaryCareRequestWindow()
+        public TemporaryCareRequestWindow(Post post)
         {
             InitializeComponent();
+            TemporaryCareRequestVM temporaryCareRequestVM = new TemporaryCareRequestVM(post.Pet);
+            DataContext = temporaryCareRequestVM;
         }
     }
 }

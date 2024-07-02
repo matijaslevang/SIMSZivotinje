@@ -11,12 +11,12 @@ namespace AnimalShelter.GUI.ViewModel
 {
     public class TemporaryCareRequestVM: INotifyPropertyChanged
     {
-        public Pet pet;
+        public Pet Pet;
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public TemporaryCareRequestVM()
+        public TemporaryCareRequestVM(Pet pet)
         {
-
+            Pet = pet;
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

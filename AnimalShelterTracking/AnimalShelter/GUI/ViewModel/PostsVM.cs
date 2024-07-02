@@ -1,5 +1,6 @@
-﻿using AnimalShelter.GUI.ViewModel.Helper;
-using AnimalShelter.Model.Post;
+﻿using AnimalShelter.GUI.View;
+using AnimalShelter.GUI.ViewModel.Helper;
+using AnimalShelter.Model.Posts;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,6 +21,8 @@ namespace AnimalShelter.GUI.ViewModel
         public PostService PostService { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
+        public ICommand AdoptCommand { get; set; }
+        public ICommand TemporaryCareCommand { get; set; }
         public PostBorders Borders;
         public ObservableCollection<Post> Posts
         {
@@ -50,6 +53,8 @@ namespace AnimalShelter.GUI.ViewModel
             this.PostService = new PostService();
             DeleteCommand = new RelayCommand(DeleteClick);
             UpdateCommand = new RelayCommand(UpdateClick);
+            AdoptCommand = new RelayCommand(AdoptClick);
+            TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
             UpdateCollection();
             
         }
@@ -62,6 +67,18 @@ namespace AnimalShelter.GUI.ViewModel
         public void UpdateClick(object parameter)
         {
 
+        }
+        public void AdoptClick(object parameter)
+        {
+            int index = int.Parse(parameter.ToString());
+            AdoptionRequestWindow adoptionRequestWindow = new AdoptionRequestWindow(Posts[index]);
+            adoptionRequestWindow.Show();
+        }
+        public void TemporaryCareClick(object parameter)
+        {
+            int index = int.Parse(parameter.ToString());
+            TemporaryCareRequestWindow temporaryCareRequestWindow = new TemporaryCareRequestWindow(Posts[index]);
+            temporaryCareRequestWindow.Show();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

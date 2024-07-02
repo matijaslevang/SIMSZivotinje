@@ -45,7 +45,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="2" Content="Send request" Style="{DynamicResource CancelButton}"/>
+            <Button Grid.Column="2" Content="Send request" Style="{DynamicResource CancelButton}" Click="Button_Click"/>
             <Button Grid.Column="0" Content="Cancel" Style="{DynamicResource AddButton}" BorderBrush="#876849"/>
         </Grid>
     </Grid>

@@ -22,7 +22,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="0.05*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Requests Page" FontSize="40" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#faedcd"/>
+        <TextBlock Text="Requests" FontSize="40" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#faedcd"/>
         <Border x:Name="Border1" Grid.Row="1" Grid.Column="1" Background="#b98e64" Margin="10"  CornerRadius="20">
             <Grid Margin="4">
                 <Grid.RowDefinitions>

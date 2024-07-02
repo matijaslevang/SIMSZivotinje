@@ -28,13 +28,13 @@ namespace AnimalShelter
             ////memberWindow.Show();
             //Address address = new Address("USA", "Springfield", "123 Main St", "1A", "62704");
             //RegistrationRequest rr = new RegistrationRequest("John", "Doe", "123456789", "john.doe@example.com", "password123", "ID123456", address);
-            //Account account = new Account("jane.doe@example.com", "password456", Role.MEMBER);
+            ////Account account = new Account("jane.doe@example.com", "password456", Role.MEMBER);
             //Account account1 = new Account("john.doe@example.com", "password456", Role.MEMBER);
-            //Member author = new Member(account, "Jane", "Doe", "987654321", "ID123456", DateTime.Parse("01-01-2000"), Gender.FEMALE);
+            ////Member author = new Member(account, "Jane", "Doe", "987654321", "ID123456", DateTime.Parse("01-01-2000"), Gender.FEMALE);
             //Member requester = new Member(account1, "John", "Doe", "987654321", "ID123457", DateTime.Parse("01-01-2000"), Gender.MALE);
             //UserService userService = new UserService();
             ////userService.Add(author);
-            ////userService.Add(requester);
+            //userService.Add(requester);
             //Species species = new Species("Dog");
             //Breed breed = new Breed(1, "Chihuahua");
             //Pet pet = new Pet("Buddy", HealthStatus.DISABLED, "missing a leg", 2, false, "blue", "ftn", species, breed, null);

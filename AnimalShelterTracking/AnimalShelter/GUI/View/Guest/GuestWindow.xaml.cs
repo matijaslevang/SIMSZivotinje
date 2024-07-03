@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using AnimalShelter.GUI.ViewModel;
 using AnimalShelter.GUI.ViewModel.Helper;
 using System.Windows.Controls;
 using System.Windows.Data;

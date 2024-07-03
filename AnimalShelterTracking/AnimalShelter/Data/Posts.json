@@ -1,7 +1,7 @@
 {
   "0": {
     "Id": 0,
-    "postDate": "2024-07-02T18:38:15.2639563+02:00",
+    "PostDate": "2024-07-02T18:38:15.2639563+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -20,7 +20,7 @@
       "DateOfJoining": "2024-07-02T18:38:15.2639563+02:00"
     },
     "Status": 0,
-    "LikesNum": 0,
+    "LikedBy": [],
     "Pet": {
       "Id": 0,
       "Name": "Buddy",
@@ -45,7 +45,7 @@
 ,
 "1": {
     "Id": 1,
-    "postDate": "2024-07-03T10:15:00.0000000+02:00",
+    "PostDate": "2024-07-03T10:15:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -64,7 +64,7 @@
       "DateOfJoining": "2024-07-03T10:15:00.0000000+02:00"
     },
     "Status": 1,
-    "LikesNum": 10,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
     "Pet": {
       "Id": 1,
       "Name": "Max",
@@ -88,7 +88,7 @@
   },
   "2": {
     "Id": 2,
-    "postDate": "2024-07-03T11:30:00.0000000+02:00",
+    "PostDate": "2024-07-03T11:30:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -107,7 +107,7 @@
       "DateOfJoining": "2024-07-03T11:30:00.0000000+02:00"
     },
     "Status": 0,
-    "LikesNum": 5,
+    "LikedBy": [0, 1, 2, 3, 4],
     "Pet": {
       "Id": 2,
       "Name": "Whiskers",
@@ -131,7 +131,7 @@
   },
   "3": {
     "Id": 3,
-    "postDate": "2024-07-03T13:45:00.0000000+02:00",
+    "PostDate": "2024-07-03T13:45:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -150,7 +150,7 @@
       "DateOfJoining": "2024-07-03T13:45:00.0000000+02:00"
     },
     "Status": 2,
-    "LikesNum": 8,
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7 ],
     "Pet": {
       "Id": 3,
       "Name": "Spot",
@@ -174,7 +174,7 @@
   },
   "4": {
     "Id": 4,
-    "postDate": "2024-07-03T15:00:00.0000000+02:00",
+    "PostDate": "2024-07-03T15:00:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -193,7 +193,7 @@
       "DateOfJoining": "2024-07-03T15:00:00.0000000+02:00"
     },
     "Status": 1,
-    "LikesNum": 12,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     "Pet": {
       "Id": 4,
       "Name": "Oreo",
@@ -217,7 +217,7 @@
   },
   "5": {
     "Id": 5,
-    "postDate": "2024-07-03T16:30:00.0000000+02:00",
+    "PostDate": "2024-07-03T16:30:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -236,7 +236,7 @@
       "DateOfJoining": "2024-07-03T16:30:00.0000000+02:00"
     },
     "Status": 0,
-    "LikesNum": 3,
+    "LikedBy": [0, 1, 2],
     "Pet": {
       "Id": 5,
       "Name": "Coco",
@@ -260,7 +260,7 @@
   },
   "6": {
     "Id": 6,
-    "postDate": "2024-07-03T18:00:00.0000000+02:00",
+    "PostDate": "2024-07-03T18:00:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -279,7 +279,7 @@
       "DateOfJoining": "2024-07-03T18:00:00.0000000+02:00"
     },
     "Status": 2,
-    "LikesNum": 6,
+    "LikedBy": [0, 1, 2, 3, 4, 5],
     "Pet": {
       "Id": 6,
       "Name": "Milo",
@@ -303,7 +303,7 @@
   },
   "7": {
     "Id": 7,
-    "postDate": "2024-07-03T19:15:00.0000000+02:00",
+    "PostDate": "2024-07-03T19:15:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -322,7 +322,7 @@
       "DateOfJoining": "2024-07-03T19:15:00.0000000+02:00"
     },
     "Status": 1,
-    "LikesNum": 7,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6],
     "Pet": {
       "Id": 7,
       "Name": "Ginger",
@@ -346,7 +346,7 @@
   },
   "8": {
     "Id": 8,
-    "postDate": "2024-07-03T20:30:00.0000000+02:00",
+    "PostDate": "2024-07-03T20:30:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -365,7 +365,7 @@
       "DateOfJoining": "2024-07-03T20:30:00.0000000+02:00"
     },
     "Status": 0,
-    "LikesNum": 4,
+    "LikedBy": [0, 1, 2, 3],
     "Pet": {
       "Id": 8,
       "Name": "Lucky",
@@ -389,7 +389,7 @@
   },
   "9": {
     "Id": 9,
-    "postDate": "2024-07-03T21:45:00.0000000+02:00",
+    "PostDate": "2024-07-03T21:45:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -408,7 +408,7 @@
       "DateOfJoining": "2024-07-03T21:45:00.0000000+02:00"
     },
     "Status": 1,
-    "LikesNum": 9,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8],
     "Pet": {
       "Id": 9,
       "Name": "Misty",
@@ -432,7 +432,7 @@
   },
   "10": {
     "Id": 10,
-    "postDate": "2024-07-03T23:00:00.0000000+02:00",
+    "PostDate": "2024-07-03T23:00:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -451,7 +451,7 @@
       "DateOfJoining": "2024-07-03T23:00:00.0000000+02:00"
     },
     "Status": 2,
-    "LikesNum": 11,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     "Pet": {
       "Id": 10,
       "Name": "Rocky",
@@ -475,7 +475,7 @@
   },
   "11": {
     "Id": 11,
-    "postDate": "2024-07-04T09:15:00.0000000+02:00",
+    "PostDate": "2024-07-04T09:15:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -494,7 +494,7 @@
       "DateOfJoining": "2024-07-04T09:15:00.0000000+02:00"
     },
     "Status": 0,
-    "LikesNum": 6,
+    "LikedBy": [0, 1, 2, 3, 4, 5],
     "Pet": {
       "Id": 11,
       "Name": "Muffin",
@@ -518,7 +518,7 @@
   },
   "12": {
     "Id": 12,
-    "postDate": "2024-07-04T10:30:00.0000000+02:00",
+    "PostDate": "2024-07-04T10:30:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -537,7 +537,7 @@
       "DateOfJoining": "2024-07-04T10:30:00.0000000+02:00"
     },
     "Status": 1,
-    "LikesNum": 8,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7],
     "Pet": {
       "Id": 12,
       "Name": "Spike",
@@ -561,7 +561,7 @@
   },
   "13": {
     "Id": 13,
-    "postDate": "2024-07-04T12:00:00.0000000+02:00",
+    "PostDate": "2024-07-04T12:00:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -580,7 +580,7 @@
       "DateOfJoining": "2024-07-04T12:00:00.0000000+02:00"
     },
     "Status": 0,
-    "LikesNum": 3,
+    "LikedBy": [0, 1, 2],
     "Pet": {
       "Id": 13,
       "Name": "Charlie",
@@ -604,7 +604,7 @@
   },
   "14": {
     "Id": 14,
-    "postDate": "2024-07-04T13:15:00.0000000+02:00",
+    "PostDate": "2024-07-04T13:15:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -623,7 +623,7 @@
       "DateOfJoining": "2024-07-04T13:15:00.0000000+02:00"
     },
     "Status": 2,
-    "LikesNum": 5,
+    "LikedBy": [0, 1, 2, 3, 4],
     "Pet": {
       "Id": 14,
       "Name": "Bella",
@@ -647,7 +647,7 @@
   },
   "15": {
     "Id": 15,
-    "postDate": "2024-07-04T14:30:00.0000000+02:00",
+    "PostDate": "2024-07-04T14:30:00.0000000+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -666,7 +666,7 @@
       "DateOfJoining": "2024-07-04T14:30:00.0000000+02:00"
     },
     "Status": 1,
-    "LikesNum": 7,
+    "LikedBy": [0, 1, 2, 3, 4, 5, 6],
     "Pet": {
       "Id": 15,
       "Name": "Tiger",

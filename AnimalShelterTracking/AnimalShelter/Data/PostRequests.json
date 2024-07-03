@@ -2,7 +2,7 @@
   "0": {
     "Post": {
       "Id": 1,
-      "postDate": "2024-07-02T19:56:31.9540409+02:00",
+      "PostDate": "2024-07-02T19:56:31.9540409+02:00",
       "Author": {
         "IsBlacklisted": false,
         "AdoptedPets": [],
@@ -21,7 +21,7 @@
         "DateOfJoining": "2024-07-02T19:56:31.9540409+02:00"
       },
       "Status": 0,
-      "LikesNum": 0,
+      "LikedBy": [],
       "Pet": {
         "Id": 0,
         "Name": "Buddy",

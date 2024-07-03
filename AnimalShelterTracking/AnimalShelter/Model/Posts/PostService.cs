@@ -47,5 +47,23 @@ namespace AnimalShelter.Model.Posts
 
             return commentables;
         }
+
+        public void ApprovePost(Post post)
+        {
+            post.Status = Enums.PostStatus.APPROVED;
+            Update(post.Id, post);
+        }
+
+        public void DenyPost(Post post)
+        {
+            post.Status = Enums.PostStatus.DENIED;
+            Update(post.Id, post);
+        }
+
+        public void DeletePost(Post post)
+        {
+            post.Status = Enums.PostStatus.DELETED;
+            Update(post.Id, post);
+        }
     }
 }

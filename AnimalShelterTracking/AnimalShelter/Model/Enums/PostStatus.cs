@@ -10,7 +10,7 @@ namespace AnimalShelter.Model.Enums
     {
         PENDING_APPROVAL,
         DENIED,
-        POSTED,
+        APPROVED,
         DELETED
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AnimalShelter.Model.Votes
 {
@@ -34,6 +35,11 @@ namespace AnimalShelter.Model.Votes
             VotesFor = votesFor;
             VotesAgainst = votesAgainst;
             Voters = voters;
+        }
+
+        public bool HasVoted(int volunteerId)
+        {
+            return Voters.Any(v => v == volunteerId);
         }
     }
 }

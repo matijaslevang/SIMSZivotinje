@@ -215,6 +215,7 @@
   <ItemGroup>
     <Compile Include="Model\Associations\Association.cs" />
     <Compile Include="Model\Associations\AssociationService.cs" />
+    <Compile Include="Model\Enums\AdoptionStatus.cs" />
     <Compile Include="Model\Enums\Gender.cs" />
     <Compile Include="Model\Enums\HealthStatus.cs" />
     <Compile Include="Model\Enums\PostStatus.cs" />

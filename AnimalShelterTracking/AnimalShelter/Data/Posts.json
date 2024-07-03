@@ -27,7 +27,7 @@
       "HealthStatus": 3,
       "HealthDescription": "missing a leg",
       "Age": 2,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "blue",
       "Location": "ftn",
       "Species": {
@@ -71,7 +71,7 @@
       "HealthStatus": 2,
       "HealthDescription": "recovering from surgery",
       "Age": 4,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "brown",
       "Location": "hme",
       "Species": {
@@ -114,7 +114,7 @@
       "HealthStatus": 1,
       "HealthDescription": "needs regular check-ups",
       "Age": 6,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "gray",
       "Location": "prk",
       "Species": {
@@ -157,7 +157,7 @@
       "HealthStatus": 3,
       "HealthDescription": "recovered from illness",
       "Age": 3,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "white",
       "Location": "grdn",
       "Species": {
@@ -200,7 +200,7 @@
       "HealthStatus": 2,
       "HealthDescription": "undergoing training",
       "Age": 1,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "black and white",
       "Location": "cty",
       "Species": {
@@ -243,7 +243,7 @@
       "HealthStatus": 1,
       "HealthDescription": "requires special diet",
       "Age": 7,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "brown and white",
       "Location": "trn",
       "Species": {
@@ -286,7 +286,7 @@
       "HealthStatus": 3,
       "HealthDescription": "recovering from surgery",
       "Age": 5,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "orange",
       "Location": "bech",
       "Species": {
@@ -329,7 +329,7 @@
       "HealthStatus": 2,
       "HealthDescription": "regular vaccinations",
       "Age": 2,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "orange tabby",
       "Location": "apt",
       "Species": {
@@ -372,7 +372,7 @@
       "HealthStatus": 3,
       "HealthDescription": "recently adopted",
       "Age": 1,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "black",
       "Location": "hse",
       "Species": {
@@ -415,7 +415,7 @@
       "HealthStatus": 2,
       "HealthDescription": "requires grooming",
       "Age": 8,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "gray and white",
       "Location": "ghs",
       "Species": {
@@ -458,7 +458,7 @@
       "HealthStatus": 3,
       "HealthDescription": "recovering from injury",
       "Age": 4,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "brown and black",
       "Location": "apt",
       "Species": {
@@ -501,7 +501,7 @@
       "HealthStatus": 1,
       "HealthDescription": "special dietary needs",
       "Age": 10,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "gray",
       "Location": "hme",
       "Species": {
@@ -544,7 +544,7 @@
       "HealthStatus": 2,
       "HealthDescription": "energetic and playful",
       "Age": 3,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "black and tan",
       "Location": "prk",
       "Species": {
@@ -587,7 +587,7 @@
       "HealthStatus": 1,
       "HealthDescription": "recently rescued",
       "Age": 2,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "white",
       "Location": "grdn",
       "Species": {
@@ -630,7 +630,7 @@
       "HealthStatus": 3,
       "HealthDescription": "adjusting to new home",
       "Age": 6,
-      "IsAdopted": false,
+      "AdoptionStatus": 0,
       "Color": "brown and white",
       "Location": "cty",
       "Species": {
@@ -673,7 +673,7 @@
       "HealthStatus": 2,
       "HealthDescription": "active and playful",
       "Age": 2,
-      "IsAdopted": true,
+      "AdoptionStatus": 2,
       "Color": "orange tabby",
       "Location": "apt",
       "Species": {

@@ -12,7 +12,7 @@ namespace AnimalShelter.Model.Pets
         public string HealthDescription { get; set; }
         public int Age { get; set; }
         public Gender Gender { get; set; }
-        public bool IsAdopted { get; set; }
+        public AdoptionStatus AdoptionStatus { get; set; }
         public string Color { get; set; }
         public string Location { get; set; }
         public Species Species { get; set; }
@@ -27,13 +27,13 @@ namespace AnimalShelter.Model.Pets
             HealthStatus = healthStatus;
             HealthDescription = healthDescription;
             Age = age;
-            Gender = Gender;
+            Gender = gender;
             Color = color;
             Location = location;
             Species = species;
             Breed = breed;
             MultimediaContent = multimediaContent;
-            IsAdopted = false;
+            AdoptionStatus = AdoptionStatus.NOT_ADOPTED;
         }
 
         public void AddMultimedia(string multimedia)

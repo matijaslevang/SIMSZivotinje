@@ -28,7 +28,7 @@
         "HealthStatus": 3,
         "HealthDescription": "missing a leg",
         "Age": 2,
-        "IsAdopted": false,
+        "AdoptionStatus": 0,
         "Color": "blue",
         "Location": "ftn",
         "Species": {

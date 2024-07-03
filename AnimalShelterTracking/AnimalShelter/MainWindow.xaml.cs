@@ -54,8 +54,8 @@ namespace AnimalShelter
             //window.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
-            VolunteerWindow volunteerWindow = new VolunteerWindow();
-            volunteerWindow.Show();
+            //VolunteerWindow volunteerWindow = new VolunteerWindow();
+            //volunteerWindow.Show();
             //MemberWindow memberWindow = new MemberWindow();
             //memberWindow.Show();
             //Address address = new Address("USA", "Springfield", "123 Main St", "1A", "62704");
@@ -87,6 +87,13 @@ namespace AnimalShelter
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
+        }
+
+        private void Signin_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationRequestWindow window = new RegistrationRequestWindow();
+            window.DataContext = window;
+            window.Show();
         }
     }
 }

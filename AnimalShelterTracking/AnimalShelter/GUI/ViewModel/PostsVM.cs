@@ -19,6 +19,37 @@ namespace AnimalShelter.GUI.ViewModel
 {
     public class PostsVM: INotifyPropertyChanged
     {
+        private const int PAGE_SIZE = 9;
+        private int _totalPages;
+        private int _currentPage = 1;
+
+        public int CurrentPage
+        {
+            get => _currentPage;
+            set
+            {
+                if (_currentPage != value)
+                {
+                    _currentPage = value;
+                    OnPropertyChanged();
+                    UpdateCollection();
+                }
+            }
+        }
+
+        public int TotalPages
+        {
+            get => _totalPages;
+            set
+            {
+                if (_totalPages != value)
+                {
+                    _totalPages = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         private ObservableCollection<Post> _posts;
         public PostService PostService { get; set; }
         public ICommand DeleteCommand { get; set; }
@@ -26,6 +57,8 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand AdoptCommand { get; set; }
         public ICommand TemporaryCareCommand { get; set; }
         public ICommand PostRequestCommand { get; set; }
+        public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
+        public ICommand NextPageCommand => new RelayCommand(NextPage);
         public PostBorders Borders;
         public ObservableCollection<Post> Posts
         {
@@ -40,7 +73,13 @@ namespace AnimalShelter.GUI.ViewModel
         private void UpdateCollection()
         {
             Borders.HideAllBorders();
-            Posts = new ObservableCollection<Post>(PostService.GetAll());
+
+            int startIndex = (CurrentPage - 1) * PAGE_SIZE;
+            Posts = new ObservableCollection<Post>(PostService.GetAll().Skip(startIndex).Take(PAGE_SIZE));
+
+            int totalPostsCount = PostService.GetAll().Count;
+            TotalPages = (int)Math.Ceiling((double)totalPostsCount / PAGE_SIZE);
+
             for (int i = 0; i < Posts.Count; i++)
             {
                 Borders.Show(i);
@@ -50,6 +89,7 @@ namespace AnimalShelter.GUI.ViewModel
                 }
             }
         }
+
         public PostsVM(PostBorders borders)
         {
             this.Borders = borders;
@@ -60,6 +100,7 @@ namespace AnimalShelter.GUI.ViewModel
             TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
             PostRequestCommand = new RelayCommand(PostRequestClick);
 
+
             UpdateCollection();
             
         }
@@ -67,6 +108,11 @@ namespace AnimalShelter.GUI.ViewModel
         {
             int index = int.Parse(parameter.ToString());
             PostService.Delete(Posts[index].Id);
+
+            if (Posts.Count == 1 && CurrentPage > 1)
+            {
+                CurrentPage--;
+            }
             UpdateCollection();
         }
         public void UpdateClick(object parameter)
@@ -90,7 +136,21 @@ namespace AnimalShelter.GUI.ViewModel
             PostRequestWindow postRequestWindow = new PostRequestWindow();
             postRequestWindow.Show();
         }
+        private void PreviousPage(object parameter)
+        {
+            if (CurrentPage > 1)
+            {
+                CurrentPage--;
+            }
+        }
 
+        private void NextPage(object parameter)
+        {
+            if (CurrentPage < TotalPages)
+            {
+                CurrentPage++;
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

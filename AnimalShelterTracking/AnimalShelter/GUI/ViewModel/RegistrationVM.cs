@@ -1,4 +1,7 @@
 ﻿using AnimalShelter.Model.Enums;
+using AnimalShelter.Model.Requests;
+using AnimalShelter.Model.Users;
+using AnimalShelter.Model.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,7 +73,18 @@ namespace AnimalShelter.GUI.ViewModel
                 }
             }
         }
-        public Gender Gender { get => _gender; set => _gender = value; }
+        public Gender Gender
+        {
+            get { return _gender; }
+            set
+            {
+                if (_gender != value)
+                {
+                    _gender = value;
+                    OnPropertyChanged(nameof(Gender));
+                }
+            }
+        }
         public DateTime BirthDate
         {
             get { return _birthDate; }
@@ -213,6 +227,20 @@ namespace AnimalShelter.GUI.ViewModel
         public RegistrationVM()
         {
             Error = "";
+        }
+
+        public Model.Users.Member ToMember()
+        {
+            Account account = new Account(Email, Password, Role.MEMBER);
+            return new Model.Users.Member(Id, account, FirstName, LastName, PhoneNumber, IdCardNumber, BirthDate, Gender);
+        }
+
+        public RegistrationRequest ToRequest()
+        {
+            Address address = new Address("Serbia", "Sid", "Marsala Tita", "103", "22240");
+            RegistrationRequestService service = new RegistrationRequestService();
+            int id = service.GenerateId();
+            return new RegistrationRequest(id, FirstName, LastName, PhoneNumber, Email, Password, IdCardNumber, address, Gender);
         }
 
         protected virtual void OnPropertyChanged(string name)

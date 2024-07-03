@@ -66,5 +66,21 @@ namespace AnimalShelter.Model.Users
         {
             return _repository.GetAll().Find(v => v.Account.Email == email && v.Account.Password == password);
         }
+
+        public int GenerateId()
+        {
+            return _repository.GetAll().Count + 1;
+        }
+
+        public bool CheckExistingEmail(string email)
+        {
+            var users = _repository.GetAll();
+            foreach (var kv in users)
+            {
+                if (kv.Account.Email == email) return true;
+            }
+
+            return false;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AnimalShelter.GUI.ViewModel;
 using AnimalShelter.Model.Enums;
+using AnimalShelter.Model.Requests;
 using AnimalShelter.Model.Users;
 using System;
 using System.Collections.Generic;
@@ -21,11 +22,13 @@ namespace AnimalShelter.GUI.View
     {
         public RegistrationVM ViewModel { get; set; }
         public UserService UserService { get; set; }
+        public RegistrationRequestService RequestService { get; set; }
         public RegistrationRequestWindow()
         {
             InitializeComponent();
             ViewModel = new RegistrationVM();
             UserService = new UserService();
+            RequestService = new RegistrationRequestService();
 
             foreach (Gender gen in Enum.GetValues(typeof(Gender)))
             {
@@ -38,7 +41,16 @@ namespace AnimalShelter.GUI.View
             ViewModel.Error = "";
             if (ViewModel.IsValid)
             {
-                MessageBox.Show(ViewModel.FirstName);
+                if (UserService.CheckExistingEmail(ViewModel.Email))
+                { 
+                    ViewModel.Error = "The email already exists."; 
+                }
+                else
+                {
+                    ViewModel.Id = UserService.GenerateId();
+                    RegistrationRequest request = ViewModel.ToRequest();
+                    RequestService.Add(request);
+                }
             }
             else
             {

@@ -1,6 +1,7 @@
 ﻿using AnimalShelter.Repository;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Markup;
 
 namespace AnimalShelter.Model.Requests
 {
@@ -42,6 +43,15 @@ namespace AnimalShelter.Model.Requests
         public List<RegistrationRequest> GetAll()
         {
             return _repository.GetAll();
+        }
+
+        public int GenerateId()
+        {
+            if (_repository.GetAll().Count != 0)
+            {
+                return _repository.GetAll().Count + 1;
+            }
+            return 0;
         }
     }
 }

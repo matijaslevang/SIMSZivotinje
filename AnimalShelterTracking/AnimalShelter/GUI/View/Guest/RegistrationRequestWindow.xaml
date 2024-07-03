@@ -41,16 +41,19 @@
             <TextBox x:Name="firstName" Text="{Binding Path=ViewModel.FirstName}" Grid.Column="1" Grid.Row="3"/>
             <TextBlock Text="Email" Style="{DynamicResource Blocks}" Grid.Column="1" Grid.Row="4"/>
             <TextBox x:Name="email" Text="{Binding Path=ViewModel.Email}" Grid.Column="1" Grid.Row="5"/>
+            
             <TextBlock Text="Password" Style="{DynamicResource Blocks}"  Grid.Column="1" Grid.Row="6"/>
             <TextBox x:Name="password" Text="{Binding Path=ViewModel.Password}" Grid.Column="1" Grid.Row="7"/>
             <TextBlock Text="Last name" Style="{DynamicResource Blocks}"  Grid.Column="3" Grid.Row="2"/>
             <TextBox x:Name="lastName" Text="{Binding Path=ViewModel.LastName}" Grid.Column="3" Grid.Row="3"/>
+            
             <TextBlock Text="Phone number" Style="{DynamicResource Blocks}"  Grid.Column="3" Grid.Row="4"/>
             <TextBox x:Name="phoneNumber" Text="{Binding Path=ViewModel.PhoneNumber}" Grid.Column="3" Grid.Row="5"/>
             <TextBlock Text="Birth date" Style="{DynamicResource Blocks}"  Grid.Column="3" Grid.Row="6"/>
-            <DatePicker Grid.Column="3" Grid.Row="7" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="birthDate"  BorderBrush="#d4a373" Foreground="#d4a373"/>
+            <DatePicker SelectedDate="{Binding ViewModel.BirthDate}" Grid.Column="3" Grid.Row="7" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="birthDate"  BorderBrush="#d4a373" Foreground="#d4a373"/>
+            
             <TextBlock Text="Gender" Style="{DynamicResource Blocks}"  Grid.Column="1" Grid.Row="8"/>
-            <ListBox x:Name="gender" Grid.Column="1" Grid.Row="9" Foreground="#d4a373" ItemContainerStyle="{DynamicResource ListBoxItemContainerStyle1}"  
+            <ListBox x:Name="gender" SelectedItem="{Binding ViewModel.Gender, Mode=TwoWay}" Grid.Column="1" Grid.Row="9" Foreground="#d4a373" ItemContainerStyle="{DynamicResource ListBoxItemContainerStyle1}"  
                      ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                      BorderBrush="#d4a373" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="80 0 80 0" d:ItemsSource="{d:SampleData ItemCount=3}">
                 <ListBox.ItemsPanel>
@@ -59,9 +62,10 @@
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
             </ListBox>
+            
             <TextBlock Text="Id card number" Style="{DynamicResource Blocks}"  Grid.Column="3" Grid.Row="8"/>
             <TextBox x:Name="idCardNumber" Text="{Binding Path=ViewModel.IdCardNumber}" Grid.Column="3" Grid.Row="9"/>
-            <TextBlock FontSize="14" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" Grid.RowSpan="2"
+            <TextBlock FontSize="13" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" Grid.RowSpan="2"
                 Text="{Binding Path=ViewModel.Error, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Foreground="Red" Name="validationTextBlock">
             </TextBlock>
         </Grid>

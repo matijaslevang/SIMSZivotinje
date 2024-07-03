@@ -5,6 +5,7 @@ namespace AnimalShelter.Model.Requests
 {
     public class RegistrationRequest : Request
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string PhoneNumber { get; set; }
@@ -16,8 +17,9 @@ namespace AnimalShelter.Model.Requests
 
         public RegistrationRequest() { RequestType = RequestType.REGISTRATION; }
 
-        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, Address address, Gender gender)
+        public RegistrationRequest(int id, string name, string surname, string phoneNumber, string email, string password, string idCardNumber, Address address, Gender gender)
         {
+            Id = id;
             Name = name;
             Surname = surname;
             PhoneNumber = phoneNumber;

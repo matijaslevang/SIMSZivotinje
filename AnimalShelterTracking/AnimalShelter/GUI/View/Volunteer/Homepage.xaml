@@ -9,11 +9,12 @@
       Title="VolunteerHomepage">
     <Grid Background="#edb57f">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="211*"/>
+            <RowDefinition Height="211*"/>
+            <RowDefinition Height="211*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.05*"/>
@@ -22,8 +23,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="0.05*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Homepage" FontSize="40" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#ba8e63"/>
-        <Border x:Name="Border1" Grid.Row="1" Grid.Column="1" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <TextBlock Text="Homepage" FontSize="40" Grid.ColumnSpan="4" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#ba8e63" Margin="19,0,387,0" Height="53"/>
+        <Border x:Name="Border1" Grid.Row="1" Grid.Column="1" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -73,7 +74,7 @@
             </Grid>
         </Border>
 
-        <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -122,7 +123,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border3" Grid.Row="1" Grid.Column="3" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border3" Grid.Row="1" Grid.Column="3" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -173,7 +174,7 @@
         </Border>
 
 
-        <Border x:Name="Border4" Grid.Row="2" Grid.Column="1" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border4" Grid.Row="2" Grid.Column="1" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -222,7 +223,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border5" Grid.Row="2" Grid.Column="2" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border5" Grid.Row="2" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -271,7 +272,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border6" Grid.Row="2" Grid.Column="3" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border6" Grid.Row="2" Grid.Column="3" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -321,7 +322,7 @@
             </Grid>
         </Border>
 
-        <Border x:Name="Border7" Grid.Row="3" Grid.Column="1" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border7" Grid.Row="3" Grid.Column="1" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -370,7 +371,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border8" Grid.Row="3" Grid.Column="2" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border8" Grid.Row="3" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -419,7 +420,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border9" Grid.Row="3" Grid.Column="3" Background="#faedcd" Margin="10"  CornerRadius="20">
+        <Border x:Name="Border9" Grid.Row="3" Grid.Column="3" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -468,5 +469,11 @@
                 </Grid>
             </Grid>
         </Border>
+        <Button Content="◀" Style="{DynamicResource NavigationButton}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="84,190,0,7" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63" Command="{Binding PreviousPageCommand}"/>
+        <TextBlock Text="{Binding CurrentPage}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="147,192,0,5" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63"/>
+        <TextBlock Text="/" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="179,191,0,7" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63"/>
+        <TextBlock Text="{Binding TotalPages}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="203,192,0,5" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63" />
+        <Button Content="▶" Style="{DynamicResource NavigationButton}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="224,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="63" Grid.Column="2" Width="63" Command="{Binding NextPageCommand}"/>
     </Grid>
+
 </Page>

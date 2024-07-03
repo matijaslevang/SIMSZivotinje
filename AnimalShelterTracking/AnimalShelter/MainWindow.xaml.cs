@@ -54,10 +54,10 @@ namespace AnimalShelter
             //window.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
-            //VolunteerWindow volunteerWindow = new VolunteerWindow();
-            //volunteerWindow.Show();
-            ////MemberWindow memberWindow = new MemberWindow();
-            ////memberWindow.Show();
+            VolunteerWindow volunteerWindow = new VolunteerWindow();
+            volunteerWindow.Show();
+            //MemberWindow memberWindow = new MemberWindow();
+            //memberWindow.Show();
             //Address address = new Address("USA", "Springfield", "123 Main St", "1A", "62704");
             //RegistrationRequest rr = new RegistrationRequest("John", "Doe", "123456789", "john.doe@example.com", "password123", "ID123456", address);
             ////Account account = new Account("jane.doe@example.com", "password456", Role.MEMBER);
@@ -78,6 +78,8 @@ namespace AnimalShelter
             //rss.Add(rr);
             //PostRequestService postRequestService = new PostRequestService();
             //postRequestService.Add(pr);
+            //PostRequestWindow postRequestWindow = new PostRequestWindow();
+            //postRequestWindow.Show();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)

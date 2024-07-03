@@ -162,6 +162,7 @@
     <Compile Include="GUI\ViewModel\AdoptionRequestVM.cs" />
     <Compile Include="GUI\ViewModel\Helper\PostBorders.cs" />
     <Compile Include="GUI\ViewModel\MembersVM.cs" />
+    <Compile Include="GUI\ViewModel\PostRequestVM.cs" />
     <Compile Include="GUI\ViewModel\PostsVM.cs" />
     <Compile Include="GUI\ViewModel\RelayCommand.cs" />
     <Compile Include="GUI\ViewModel\RequestsVM.cs" />

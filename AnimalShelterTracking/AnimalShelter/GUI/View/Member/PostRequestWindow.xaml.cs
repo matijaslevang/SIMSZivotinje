@@ -1,4 +1,5 @@
-﻿using AnimalShelter.Model.Enums;
+﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.Model.Enums;
 using AnimalShelter.Model.Pets;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace AnimalShelter.GUI.View.Member
         public PostRequestWindow()
         {
             InitializeComponent();
+            PostRequestVM postRequestVM = new PostRequestVM(this);
+            /*
             gender.Items.Add(Gender.MALE);
             gender.Items.Add(Gender.FEMALE);
             BreedService breedService = new BreedService();
@@ -39,6 +42,7 @@ namespace AnimalShelter.GUI.View.Member
             {
                 healthStatus.Items.Add(status);
             }
+            */
             this.Show();
         }
 

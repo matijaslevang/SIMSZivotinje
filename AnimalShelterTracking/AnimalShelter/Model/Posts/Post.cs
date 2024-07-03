@@ -23,5 +23,14 @@ namespace AnimalShelter.Model.Posts
             Status = PostStatus.PENDING_APPROVAL;
             LikesNum = 0;
         }
+        public Post(Member author, Pet pet)
+        {
+            Author = author;
+            Pet = pet;
+            postDate = DateTime.Now;
+            Status = PostStatus.PENDING_APPROVAL;
+            LikesNum = 0;
+        }
+
     }
 }

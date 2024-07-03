@@ -45,7 +45,10 @@ namespace AnimalShelter.GUI.ViewModel.Helper
             Border6.Visibility = Visibility.Collapsed;
             Border7.Visibility = Visibility.Collapsed;
             Border8.Visibility = Visibility.Collapsed;
-            Border9.Visibility = Visibility.Collapsed;
+            if (Border9 != null)
+            {
+                Border9.Visibility = Visibility.Collapsed;
+            }
         }
         public void Show(int placeholder)
         {
@@ -71,6 +74,12 @@ namespace AnimalShelter.GUI.ViewModel.Helper
         {
             Border border = BordersList()[placeholder];
             SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#6f1d1b"));
+            border.Background = brush;
+        }
+        public void Registered(int placeholder)
+        {
+            Border border = BordersList()[placeholder];
+            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffc389"));
             border.Background = brush;
         }
     }

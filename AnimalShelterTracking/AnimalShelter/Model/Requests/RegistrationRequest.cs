@@ -11,11 +11,12 @@ namespace AnimalShelter.Model.Requests
         public Address Address { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public Gender Gender { get; set; }
         public string IdCardNumber { get; set; }
 
         public RegistrationRequest() { RequestType = RequestType.REGISTRATION; }
 
-        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, Address address)
+        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, Address address, Gender gender)
         {
             Name = name;
             Surname = surname;
@@ -25,9 +26,10 @@ namespace AnimalShelter.Model.Requests
             RequestType = RequestType.REGISTRATION;
             IdCardNumber = idCardNumber;
             Address = address;
+            Gender = gender;
         }
 
-        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, RequestType requestType, Address address)
+        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, RequestType requestType, Address address, Gender gender)
         {
             Name = name;
             Surname = surname;
@@ -37,6 +39,7 @@ namespace AnimalShelter.Model.Requests
             RequestType = requestType;
             IdCardNumber = idCardNumber;
             Address = address;
+            Gender = gender;
         }
 
     }

@@ -29,17 +29,17 @@ namespace AnimalShelter.Repository
             int maxAdminId = 0;
             int maxMemberId = 0;
             int maxVolunteerId = 0;
-            if (admins.Keys != null)
+            if (admins.Keys.Count != 0)
             {
-                maxAdminId = admins.Keys.Max();
+                maxAdminId = admins.Keys.Max() + 1;
             }
-            if (members.Keys != null)
+            if (members.Keys.Count != 0)
             {
-                maxMemberId = members.Keys.Max();
+                maxMemberId = members.Keys.Max() + 1;
             }
-            if (volunteers.Keys != null)
+            if (volunteers.Keys.Count != 0)
             {
-                maxVolunteerId = volunteers.Keys.Max();
+                maxVolunteerId = volunteers.Keys.Max() + 1;
             }
             List<int> maxIds = new List<int> { maxAdminId, maxMemberId, maxVolunteerId };
             return maxIds.Max();

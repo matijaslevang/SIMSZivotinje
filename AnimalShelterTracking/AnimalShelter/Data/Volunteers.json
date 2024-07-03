@@ -1,1 +1,17 @@
-{}
+{
+  "0": {
+    "Id": 0,
+    "Account": {
+      "Email": "marry.doe@example.com",
+      "Password": "marry",
+      "Role": 1
+    },
+    "Name": "Marry",
+    "Surname": "Doe",
+    "PhoneNumber": "987654322",
+    "IdCardNumber": "ID123457",
+    "BirthDate": "2000-05-01T00:00:00",
+    "Gender": 1,
+    "DateOfJoining": "2024-07-01T19:56:31.9540409+02:00"
+  }
+}

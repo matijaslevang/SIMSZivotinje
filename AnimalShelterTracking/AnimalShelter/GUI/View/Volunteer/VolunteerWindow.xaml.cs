@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelter.Model.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,10 @@ namespace AnimalShelter.GUI.View
         public Homepage Homepage { get; set; }
         public SolidColorBrush HighlightBrush { get; set; }
         public SolidColorBrush NormalBrush { get; set; }
+
+        public Volunteer Volunteer { get; set; }
         
-        public VolunteerWindow()
+        public VolunteerWindow(Volunteer volunteer)
         {
             InitializeComponent();
             this.MemberListPage = new MemberListPage();
@@ -34,6 +37,7 @@ namespace AnimalShelter.GUI.View
             this.HighlightBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
             this.NormalBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#edb580"));
             homeButton.Foreground = HighlightBrush;
+            this.Volunteer = volunteer;
         }
 
         private void Button_Home(object sender, RoutedEventArgs e)

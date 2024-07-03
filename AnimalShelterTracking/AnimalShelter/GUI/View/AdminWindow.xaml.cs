@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelter.Model.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace AnimalShelter.GUI.View
     /// </summary>
     public partial class AdminWindow : Window
     {
-        public AdminWindow()
+        public Administrator Administrator { get; set; }
+        public AdminWindow(Administrator administrator)
         {
             InitializeComponent();
+            Administrator = administrator;
         }
     }
 }

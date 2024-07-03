@@ -11,7 +11,7 @@ namespace AnimalShelter.Model.Pets
         public HealthStatus HealthStatus { get; set; }
         public string HealthDescription { get; set; }
         public int Age { get; set; }
-        public string Gender { get; set; }
+        public Gender Gender { get; set; }
         public bool IsAdopted { get; set; }
         public string Color { get; set; }
         public string Location { get; set; }
@@ -21,19 +21,19 @@ namespace AnimalShelter.Model.Pets
 
         public Pet() { }
 
-        public Pet(string name, HealthStatus healthStatus, string healthDescription, int age, string gender, bool isAdopted, string color, string location, Species species, Breed breed, List<string> multimediaContent)
+        public Pet(string name, HealthStatus healthStatus, string healthDescription, int age, Gender gender, string color, string location, Species species, Breed breed, List<string> multimediaContent)
         {
             Name = name;
             HealthStatus = healthStatus;
             HealthDescription = healthDescription;
             Age = age;
             Gender = Gender;
-            IsAdopted = isAdopted;
             Color = color;
             Location = location;
             Species = species;
             Breed = breed;
             MultimediaContent = multimediaContent;
+            IsAdopted = false;
         }
 
         public void AddMultimedia(string multimedia)

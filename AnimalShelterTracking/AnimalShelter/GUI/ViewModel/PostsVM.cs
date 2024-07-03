@@ -1,4 +1,5 @@
 ﻿using AnimalShelter.GUI.View;
+using AnimalShelter.GUI.View.Member;
 using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Posts;
 using System;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -23,6 +25,7 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand UpdateCommand { get; set; }
         public ICommand AdoptCommand { get; set; }
         public ICommand TemporaryCareCommand { get; set; }
+        public ICommand PostRequestCommand { get; set; }
         public PostBorders Borders;
         public ObservableCollection<Post> Posts
         {
@@ -55,6 +58,8 @@ namespace AnimalShelter.GUI.ViewModel
             UpdateCommand = new RelayCommand(UpdateClick);
             AdoptCommand = new RelayCommand(AdoptClick);
             TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
+            PostRequestCommand = new RelayCommand(PostRequestClick);
+
             UpdateCollection();
             
         }
@@ -79,6 +84,11 @@ namespace AnimalShelter.GUI.ViewModel
             int index = int.Parse(parameter.ToString());
             TemporaryCareRequestWindow temporaryCareRequestWindow = new TemporaryCareRequestWindow(Posts[index]);
             temporaryCareRequestWindow.Show();
+        }
+        public void PostRequestClick(object parameter)
+        {
+            PostRequestWindow postRequestWindow = new PostRequestWindow();
+            postRequestWindow.Show();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

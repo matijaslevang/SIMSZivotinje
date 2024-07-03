@@ -13,5 +13,9 @@
             SpeciesId = speciesId;
             Name = name;
         }
+        public Breed(string name)
+        {
+            Name = name;
+        }
     }
 }

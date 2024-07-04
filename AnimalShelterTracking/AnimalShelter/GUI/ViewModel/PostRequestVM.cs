@@ -8,6 +8,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AnimalShelter.GUI.ViewModel
 {
@@ -16,8 +18,8 @@ namespace AnimalShelter.GUI.ViewModel
         private string _name;
         private int _age;
         private string _color;
-        private Species _species;
-        private Breed _breed;
+        private SpeciesWrapper _selectedSpecies;
+        private BreedWrapper _selectedBreed;
         private string _newSpecies;
         private string _newBreed;
         private string _location;
@@ -43,16 +45,21 @@ namespace AnimalShelter.GUI.ViewModel
             set { _color = value; OnPropertyChanged(); }
         }
 
-        public Species Species
+        public SpeciesWrapper SelectedSpecies
         {
-            get { return _species; }
-            set { _species = value; OnPropertyChanged(); }
+            get { return _selectedSpecies; }
+            set
+            {
+                _selectedSpecies = value;
+                OnPropertyChanged();
+                UpdateBreedOptions();
+            }
         }
 
-        public Breed Breed
+        public BreedWrapper SelectedBreed
         {
-            get { return _breed; }
-            set { _breed = value; OnPropertyChanged(); }
+            get { return _selectedBreed; }
+            set { _selectedBreed = value; OnPropertyChanged(); }
         }
 
         public string Location
@@ -66,6 +73,7 @@ namespace AnimalShelter.GUI.ViewModel
             get { return _healthDescription; }
             set { _healthDescription = value; OnPropertyChanged(); }
         }
+
         public Gender SelectedGender
         {
             get { return _selectedGender; }
@@ -77,53 +85,104 @@ namespace AnimalShelter.GUI.ViewModel
             get { return _selectedHealthStatus; }
             set { _selectedHealthStatus = value; OnPropertyChanged(); }
         }
+
         public string NewSpecies
         {
             get { return _newSpecies; }
             set { _newSpecies = value; OnPropertyChanged(); }
         }
+
         public string NewBreed
         {
             get { return _newBreed; }
             set { _newBreed = value; OnPropertyChanged(); }
         }
+
         public Member Member { get; set; }
-        PostRequestWindow Window { get; set; }
-        public ObservableCollection<Gender> GenderOptions { get; set; }
-        public ObservableCollection<HealthStatus> HealthStatusOptions { get; set; }
-        public ObservableCollection<Species> SpeciesOptions { get; set; }
-        public ObservableCollection<Breed> BreedOptions { get; set; }
+        public PostRequestWindow Window { get; set; }
+
+        public ObservableCollection<GenderWrapper> GenderOptions { get; set; }
+        public ObservableCollection<HealthStatusWrapper> HealthStatusOptions { get; set; }
+        public ObservableCollection<SpeciesWrapper> SpeciesOptions { get; set; }
+        public ObservableCollection<BreedWrapper> BreedOptions { get; set; }
+        SpeciesService SpeciesService { get; set; }
+        BreedService BreedService { get; set; }
+        PostRequestService PostRequestService { get; set; }
 
         public ICommand SendRequestCommand { get; set; }
         public ICommand CancelCommand { get; set; }
 
-        public PostRequestVM(PostRequestWindow window)
+        public PostRequestVM(PostRequestWindow window, Member member)
         {
             Window = window;
-            GenderOptions = new ObservableCollection<Gender> { Gender.MALE, Gender.FEMALE};
-            HealthStatusOptions = new ObservableCollection<HealthStatus> { HealthStatus.CHRONICALLY_ILL, HealthStatus.ILL, HealthStatus.DISABLED, HealthStatus.HEALTHY };
-            SpeciesOptions = new ObservableCollection<Species>(); //TO-DO: POPUNITI PODACIMA
-            BreedOptions = new ObservableCollection<Breed>(); //TO-DO: POPUNITI PODACIMA
+            Member = member;
+
+            GenderOptions = new ObservableCollection<GenderWrapper>
+            {
+                new GenderWrapper { Value = Gender.MALE, DisplayName = Gender.MALE.Name() },
+                new GenderWrapper { Value = Gender.FEMALE, DisplayName = Gender.FEMALE.Name() },
+                new GenderWrapper { Value = Gender.OTHER, DisplayName = Gender.OTHER.Name() }
+            };
+
+            HealthStatusOptions = new ObservableCollection<HealthStatusWrapper>
+            {
+                new HealthStatusWrapper { Value = HealthStatus.HEALTHY, DisplayName = HealthStatus.HEALTHY.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.ILL, DisplayName = HealthStatus.ILL.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.CHRONICALLY_ILL, DisplayName = HealthStatus.CHRONICALLY_ILL.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.DISABLED, DisplayName = HealthStatus.DISABLED.Name() }
+            };
+
+            SpeciesService = new SpeciesService();
+            BreedService = new BreedService();
+            PostRequestService = new PostRequestService();
+
+            List<Species> speciesList = SpeciesService.GetAll();
+            SpeciesOptions = new ObservableCollection<SpeciesWrapper>(speciesList.Select(s => new SpeciesWrapper(s)));
+
+            BreedOptions = new ObservableCollection<BreedWrapper>();
+            UpdateBreedOptions();
 
             SendRequestCommand = new RelayCommand(SendRequestClick);
             CancelCommand = new RelayCommand(CancelClick);
         }
 
+        private void UpdateBreedOptions()
+        {
+            if (SelectedSpecies != null)
+            {
+                BreedService breedService = new BreedService();
+                List<Breed> breeds = breedService.GetBySpeciesId(SelectedSpecies.Species.Id); 
+
+                BreedOptions.Clear();
+                foreach (var breed in breeds)
+                {
+                    BreedOptions.Add(new BreedWrapper(breed));
+                }
+            }
+            else
+            {
+                BreedOptions.Clear();
+            }
+        }
+
         private void SendRequestClick(object parameter)
         {
-            if (NewSpecies != null || NewSpecies != "")
+            if (!string.IsNullOrEmpty(NewSpecies))
             {
-                Species = new Species(NewSpecies);
+                SelectedSpecies = new SpeciesWrapper(new Species(NewSpecies));
+                SpeciesService.Add(SelectedSpecies.Species);
             }
 
-            if (NewBreed != null || NewBreed != "")
+            if (!string.IsNullOrEmpty(NewBreed))
             {
-                Breed = new Breed(NewBreed);
+                SelectedBreed = new BreedWrapper(new Breed(NewBreed));
+                BreedService.Add(SelectedBreed.Breed);
             }
 
-            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, Species, Breed, null);
+            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, null);
             Model.Posts.Post post = new Model.Posts.Post(Member, pet);
             PostRequest postRequest = new PostRequest(Member, post);
+            PostRequestService.Add(postRequest);
             MessageBox.Show("Post request sent successfully.");
             Window.Close();
         }

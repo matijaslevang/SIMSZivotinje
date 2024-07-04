@@ -62,6 +62,7 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
         public ICommand NextPageCommand => new RelayCommand(NextPage);
         public PostBorders Borders;
+        public Model.Users.Member Member;
         public ObservableCollection<Post> Posts
         {
             get => _posts;
@@ -92,10 +93,11 @@ namespace AnimalShelter.GUI.ViewModel
             }
         }
 
-        public PostsVM(PostBorders borders)
+        public PostsVM(PostBorders borders, Model.Users.Member member)
         {
             this.Borders = borders;
             this.PostService = new PostService();
+            this.Member = member;
             DeleteCommand = new RelayCommand(DeleteClick);
             UpdateCommand = new RelayCommand(UpdateClick);
             AdoptCommand = new RelayCommand(AdoptClick);
@@ -130,18 +132,18 @@ namespace AnimalShelter.GUI.ViewModel
         public void AdoptClick(object parameter)
         {
             int index = int.Parse(parameter.ToString());
-            AdoptionRequestWindow adoptionRequestWindow = new AdoptionRequestWindow(Posts[index]);
+            AdoptionRequestWindow adoptionRequestWindow = new AdoptionRequestWindow(Posts[index], Member);
             adoptionRequestWindow.Show();
         }
         public void TemporaryCareClick(object parameter)
         {
             int index = int.Parse(parameter.ToString());
-            TemporaryCareRequestWindow temporaryCareRequestWindow = new TemporaryCareRequestWindow(Posts[index]);
+            TemporaryCareRequestWindow temporaryCareRequestWindow = new TemporaryCareRequestWindow(Posts[index], Member);
             temporaryCareRequestWindow.Show();
         }
         public void PostRequestClick(object parameter)
         {
-            PostRequestWindow postRequestWindow = new PostRequestWindow();
+            PostRequestWindow postRequestWindow = new PostRequestWindow(Member);
             postRequestWindow.Show();
         }
         private void PreviousPage(object parameter)

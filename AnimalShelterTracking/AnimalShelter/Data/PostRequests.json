@@ -28,6 +28,7 @@
         "HealthStatus": 3,
         "HealthDescription": "missing a leg",
         "Age": 2,
+        "Gender": 0,
         "AdoptionStatus": 0,
         "Color": "blue",
         "Location": "ftn",
@@ -61,6 +62,71 @@
       "DateOfJoining": "2024-07-02T19:56:31.9540409+02:00"
     },
     "Id": 0,
+    "RequestType": 3
+  },
+  "1": {
+    "Post": {
+      "Id": 0,
+      "PostDate": "2024-07-04T17:19:00.6593918+02:00",
+      "Author": {
+        "IsBlacklisted": false,
+        "AdoptedPets": [],
+        "Id": 0,
+        "Account": {
+          "Email": "haha@",
+          "Password": "12345678",
+          "Role": 0
+        },
+        "Name": "Haha",
+        "Surname": "Hahaovic",
+        "PhoneNumber": "123456789",
+        "IdCardNumber": "8124768125675",
+        "BirthDate": "0001-01-01T00:00:00",
+        "Gender": 1,
+        "DateOfJoining": "2024-07-04T17:18:42.3464412+02:00"
+      },
+      "Status": 0,
+      "LikedBy": [],
+      "Pet": {
+        "Id": 0,
+        "Name": "Corgi",
+        "HealthStatus": 0,
+        "HealthDescription": "OK",
+        "Age": 2,
+        "Gender": 0,
+        "AdoptionStatus": 0,
+        "Color": "Orange",
+        "Location": "My house",
+        "Species": {
+          "Id": 1,
+          "Name": "Dog"
+        },
+        "Breed": {
+          "Id": 0,
+          "SpeciesId": 1,
+          "Name": "Corgi"
+        },
+        "MultimediaContent": null
+      }
+    },
+    "Requester": {
+      "IsBlacklisted": false,
+      "AdoptedPets": [],
+      "Id": 0,
+      "Account": {
+        "Email": "haha@",
+        "Password": "12345678",
+        "Role": 0
+      },
+      "Name": "Haha",
+      "Surname": "Hahaovic",
+      "PhoneNumber": "123456789",
+      "IdCardNumber": "8124768125675",
+      "BirthDate": "0001-01-01T00:00:00",
+      "Gender": 1,
+      "DateOfJoining": "2024-07-04T17:18:42.3464412+02:00"
+    },
+    "Id": 1,
     "RequestType": 3
   }
 }

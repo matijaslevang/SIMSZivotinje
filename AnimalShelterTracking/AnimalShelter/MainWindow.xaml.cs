@@ -99,6 +99,7 @@ namespace AnimalShelter
             //window.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
+            //VolunteerWindow volunteerWindow = new VolunteerWindow();
             //VolunteerWindow volunteerWindow = new VolunteerWindow(volunteer);
             //volunteerWindow.Show();
             //MemberWindow memberWindow = new MemberWindow();
@@ -139,6 +140,13 @@ namespace AnimalShelter
             LoginWindow loginWindow = new LoginWindow(this);
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
+        }
+
+        private void Signin_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationRequestWindow window = new RegistrationRequestWindow();
+            window.DataContext = window;
+            window.Show();
         }
     }
 }

@@ -158,6 +158,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GUI\ViewModel\CommentsVM.cs" />
+    <Compile Include="GUI\ViewModel\Helper\Likes.cs" />
     <Compile Include="GUI\ViewModel\Helper\PollReasons.cs" />
     <Compile Include="GUI\ViewModel\LoginViewModel.cs" />
     <Compile Include="GUI\ViewModel\AdoptionRequestVM.cs" />

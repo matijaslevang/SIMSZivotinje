@@ -1,17 +1,1 @@
-{
-  "0": {
-    "Id": 0,
-    "Account": {
-      "Email": "matthew.doe@example.com",
-      "Password": "matthew",
-      "Role": 2
-    },
-    "Name": "Matthew",
-    "Surname": "Doe",
-    "PhoneNumber": "987654323",
-    "IdCardNumber": "ID123458",
-    "BirthDate": "2000-05-02T00:00:00",
-    "Gender": 0,
-    "DateOfJoining": "2024-06-30T19:56:31.9540409+02:00"
-  }
-}
+{"0":{"Id":0,"Account":{"Email":"matthew.doe@example.com","Password":"matthew","Role":2},"Name":"Matthew","Surname":"Doe","PhoneNumber":"987654323","IdCardNumber":"ID123458","BirthDate":"2000-05-02T00:00:00","Gender":0,"DateOfJoining":"2024-06-30T19:56:31.9540409+02:00"}}

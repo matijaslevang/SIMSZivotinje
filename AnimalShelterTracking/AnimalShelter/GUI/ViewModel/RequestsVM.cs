@@ -14,13 +14,47 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using AnimalShelter.Model.Users;
 using System.Windows;
+using System.Windows.Media;
 
 namespace AnimalShelter.GUI.ViewModel
 {
     public class RequestsVM : INotifyPropertyChanged
     {
+        private const int PAGE_SIZE = 8;
+        private int _totalPages;
+        private int _currentPage = 1;
+
+        public int CurrentPage
+        {
+            get => _currentPage;
+            set
+            {
+                if (_currentPage != value)
+                {
+                    _currentPage = value;
+                    OnPropertyChanged();
+                    UpdateCollection();
+                }
+            }
+        }
+
+        public int TotalPages
+        {
+            get => _totalPages;
+            set
+            {
+                if (_totalPages != value)
+                {
+                    _totalPages = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         public ICommand AcceptCommand { get; set; }
         public ICommand DeniedCommand { get; set; }
+        public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
+        public ICommand NextPageCommand => new RelayCommand(NextPage);
         public PostBorders Borders { get; set; }
         public RequestController requestController { get; set; }
 
@@ -35,6 +69,30 @@ namespace AnimalShelter.GUI.ViewModel
             }
         }
 
+        private void UpdateCollection()
+        {
+            Borders.HideAllBorders();
+
+            int startIndex = (CurrentPage - 1) * PAGE_SIZE;
+            Requests = new ObservableCollection<Request>(new RequestController().GetAll().Skip(startIndex).Take(PAGE_SIZE));
+
+            int totalRequestsCount = new RequestController().GetAll().Count;
+            TotalPages = (int)Math.Ceiling((double)totalRequestsCount / PAGE_SIZE);
+
+            for (int i = 0; i < Requests.Count; i++)
+            {
+                Borders.Show(i);
+                if (Requests[i].RequestType == RequestType.REGISTRATION)
+                {
+                    Borders.Registered(i);
+                }
+                else
+                {
+                    Borders.NotRegistered(i);
+                }
+            }
+        }
+
         public RequestsVM(PostBorders borders)
         {
             Borders = borders;
@@ -43,15 +101,8 @@ namespace AnimalShelter.GUI.ViewModel
             DeniedCommand = new RelayCommand(DeniedClick);
 
             requestController = new RequestController();
-            Requests = new ObservableCollection<Request>(requestController.GetAll());
-            for (int i = 0; i < Requests.Count; i++)
-            {
-                borders.Show(i);
-                if (Requests[i].RequestType == RequestType.REGISTRATION)
-                {
-                    borders.Registered(i);
-                }
-            }
+
+            UpdateCollection();
 
         }
         private void AcceptClick(object parameter)
@@ -130,9 +181,24 @@ namespace AnimalShelter.GUI.ViewModel
             requestController.Delete(Requests[placeHolder].Id, RequestType.REGISTRATION);
             
             Borders.Hide(placeHolder);
-            MessageBox.Show(Requests[placeHolder].Id.ToString());
 
         }
+        private void PreviousPage(object parameter)
+        {
+            if (CurrentPage > 1)
+            {
+                CurrentPage--;
+            }
+        }
+
+        private void NextPage(object parameter)
+        {
+            if (CurrentPage < TotalPages)
+            {
+                CurrentPage++;
+            }
+        }
+
 
         private void DeletePostRequest(int placeHolder)
         {

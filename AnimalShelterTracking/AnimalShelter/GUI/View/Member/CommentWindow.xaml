@@ -3,10 +3,113 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalShelter.GUI.View.Member"
+        xmlns:local="clr-namespace:AnimalShelter.GUI.View.Member" xmlns:viewmodel="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CommentsVM}"
         mc:Ignorable="d"
         Title="CommentWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#d4a373">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border x:Name="Border1" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[0].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[0].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[0].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[0].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1" x:Name="Border2" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[1].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[1].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[1].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[1].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0" x:Name="Border3" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[2].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[2].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[2].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[2].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" x:Name="Border4" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[3].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[3].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[3].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[3].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="0" x:Name="Border5" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[4].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[4].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[4].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[4].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1" x:Name="Border6" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[5].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[5].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[5].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[5].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="0" x:Name="Border7" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[6].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[6].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[6].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[6].Content}"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="1" x:Name="Border8" CornerRadius="10" Background="White" Margin="10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Comments[7].Commenter.Name}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[7].Commenter.Surname}" Margin="5" Foreground="Gray"  />
+                        <TextBlock Text="{Binding Comments[7].DatePosted}" Margin="5" Foreground="DarkGray"/>
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Comments[7].Content}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" Background="#d4a373">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="2" Command="{Binding BackCommand}" Content="Send comment" Style="{DynamicResource AddButton}" BorderBrush="#876849"/>
+            <Button Grid.Column="0" Command="{Binding CommentCommand}" Content="Back" Style="{DynamicResource CancelButton}" BorderBrush="#876849"/>
+        </Grid>
     </Grid>
 </Window>

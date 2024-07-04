@@ -80,7 +80,19 @@ namespace AnimalShelter.GUI.ViewModel.Helper
         public void NotAdopted(int placeholder)
         {
             Border border = BordersList()[placeholder];
-            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#6f1d1b"));
+            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#a74e47"));
+            border.Background = brush;
+        }
+        public void Adopted(int placeholder)
+        {
+            Border border = BordersList()[placeholder];
+            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5c9962"));
+            border.Background = brush;
+        }
+        public void TemporaryCare(int placeholder)
+        {
+            Border border = BordersList()[placeholder];
+            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
             border.Background = brush;
         }
         public void Registered(int placeholder)

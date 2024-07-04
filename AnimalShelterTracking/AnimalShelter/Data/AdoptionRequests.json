@@ -1,1 +1,70 @@
-{"0":{"Pet":{"Id":0,"Name":"Buddy","HealthStatus":3,"HealthDescription":"missing a leg","Age":2,"Gender":0,"AdoptionStatus":0,"Color":"blue","Location":"ftn","Species":{"Id":0,"Name":"Dog"},"Breed":{"Id":0,"SpeciesId":1,"Name":"Chihuahua"},"MultimediaContent":["/GUI/Images/domestic-dog_thumb_square.webp"]},"Requester":null,"Id":0,"RequestType":1}}
+{
+  "0": {
+    "Pet": {
+      "Id": 4,
+      "Name": "Oreo",
+      "HealthStatus": 2,
+      "HealthDescription": "undergoing training",
+      "Age": 1,
+      "Gender": 0,
+      "AdoptionStatus": 0,
+      "Color": "black and white",
+      "Location": "cty",
+      "Species": {
+        "Id": 2,
+        "Name": "Dog"
+      },
+      "Breed": {
+        "Id": 4,
+        "SpeciesId": 1,
+        "Name": "Golden Retriever"
+      },
+      "MultimediaContent": null
+    },
+    "Requester": null,
+    "Id": 0,
+    "RequestType": 1
+  },
+  "1": {
+    "Pet": {
+      "Id": 6,
+      "Name": "Milo",
+      "HealthStatus": 3,
+      "HealthDescription": "recovering from surgery",
+      "Age": 5,
+      "Gender": 0,
+      "AdoptionStatus": 0,
+      "Color": "orange",
+      "Location": "bech",
+      "Species": {
+        "Id": 2,
+        "Name": "Dog"
+      },
+      "Breed": {
+        "Id": 6,
+        "SpeciesId": 1,
+        "Name": "Dachshund"
+      },
+      "MultimediaContent": null
+    },
+    "Requester": {
+      "IsBlacklisted": false,
+      "AdoptedPets": [],
+      "Id": 0,
+      "Account": {
+        "Email": "haha@",
+        "Password": "12345678",
+        "Role": 0
+      },
+      "Name": "Haha",
+      "Surname": "Hahaovic",
+      "PhoneNumber": "123456789",
+      "IdCardNumber": "8124768125675",
+      "BirthDate": "0001-01-01T00:00:00",
+      "Gender": 1,
+      "DateOfJoining": "2024-07-04T14:54:58.8531409+02:00"
+    },
+    "Id": 1,
+    "RequestType": 1
+  }
+}

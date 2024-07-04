@@ -18,10 +18,10 @@ namespace AnimalShelter.GUI.View
 {
     public partial class AdoptionRequestWindow : Window
     {
-        public AdoptionRequestWindow(Post post)
+        public AdoptionRequestWindow(Post post, Model.Users.Member member)
         {
             InitializeComponent();
-            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM(this, post.Pet);
+            AdoptionRequestVM adoptionRequestVM = new AdoptionRequestVM(this, post.Pet, member);
             DataContext = adoptionRequestVM;
         }
 

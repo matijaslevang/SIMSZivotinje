@@ -25,14 +25,14 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand CancelCommand { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public AdoptionRequestVM(AdoptionRequestWindow window, Pet pet) 
+        public AdoptionRequestVM(AdoptionRequestWindow window, Pet pet, Member member) 
         {
             Window = window;
             Pet = pet;
+            Member = member;
             RequestController = new RequestController();
             AcceptCommand = new RelayCommand(AcceptClick);
             CancelCommand = new RelayCommand(CancelClick);
-            Member = null; //TO-DO: FIX THIS
         }
         public void AcceptClick(object parameter)
         {

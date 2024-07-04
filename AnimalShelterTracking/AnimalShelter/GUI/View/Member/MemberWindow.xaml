@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:viewmodel="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:PostRequestVM}"
+        xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:viewmodel="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:PostsVM}"
         mc:Ignorable="d"
         Title="MemberWindow" Height="800" Width="1200">
     <Grid>
@@ -22,8 +22,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="3" Style="{DynamicResource CancelButton}" Content="LOG OUT" Width="80"/>
-                <Button Grid.Column="2" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="📝" FontSize="30" Command="{Binding PostRequestCommand}"/>
-                <Button Grid.Column="1" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="⬆️" FontSize="35" Command="{Binding PostRequestCommand}"/>
+                <Button Grid.Column="2" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="📝" FontSize="30" Command="{Binding PostRequestCommand}" CommandParameter="0" />
+                <Button Grid.Column="1" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="⬆️" FontSize="35" Command="{Binding VoteCommand}" CommandParameter="0" />
                 <TextBlock Grid.Column="4" Text="Member" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Grid>

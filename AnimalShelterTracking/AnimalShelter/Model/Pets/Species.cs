@@ -12,4 +12,14 @@
             Name = name;
         }
     }
+    public class SpeciesWrapper
+    {
+        public Species Species { get; set; }
+        public string Name => Species.Name;
+
+        public SpeciesWrapper(Species species)
+        {
+            Species = species;
+        }
+    }
 }

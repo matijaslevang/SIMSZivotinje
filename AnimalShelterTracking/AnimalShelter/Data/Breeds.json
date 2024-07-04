@@ -1,1 +1,17 @@
-{}
+{
+  "0": {
+    "Id": 0,
+    "SpeciesId": 1,
+    "Name": "Corgi"
+  },
+  "1": {
+    "Id": 1,
+    "SpeciesId": 2,
+    "Name": "Persian"
+  },
+  "2": {
+    "Id": 2,
+    "SpeciesId": 1,
+    "Name": "Labrador"
+  }
+}

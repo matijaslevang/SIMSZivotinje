@@ -100,7 +100,6 @@ namespace AnimalShelter.GUI.ViewModel
             requestController.Delete(Requests[placeHolder].Id, RequestType.REGISTRATION);
             
             Borders.Hide(placeHolder);
-            MessageBox.Show(Requests[placeHolder].Id.ToString());
 
         }
 

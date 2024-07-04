@@ -124,15 +124,30 @@ namespace AnimalShelter.GUI.ViewModel
         {
             int index = int.Parse(parameter.ToString());
             PostService postService = new PostService();
-            Posts[index].AddLike(Member.Id);
-            postService.Update(Posts[index].Id,Posts[index]);
-            Likes.RedHeart(index);
+            if (Member != null && !Posts[index].IsLikedByUser(Member.Id))
+            {
+                Posts[index].AddLike(Member.Id);
+                postService.Update(Posts[index].Id, Posts[index]);
+                Likes.RedHeart(index);
+            }
+            else if (Member != null && Posts[index].IsLikedByUser(Member.Id))
+            {
+                Posts[index].RemoveLike(Member.Id);
+                postService.Update(Posts[index].Id, Posts[index]);
+                Likes.RemoveRedHeart(index);
+            }
+            UpdateCollection();
+
+           
         }
         public void CommentClick(object parameter)
         {
-            int index = int.Parse(parameter.ToString());
-            CommentWindow commentWindow = new CommentWindow();
-            commentWindow.Show();
+            if (Member != null)
+            {
+                int index = int.Parse(parameter.ToString());
+                CommentWindow commentWindow = new CommentWindow();
+                commentWindow.Show();
+            }
         }
         public void DeleteClick(object parameter)
         {

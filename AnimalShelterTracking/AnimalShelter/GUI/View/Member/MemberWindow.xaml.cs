@@ -25,7 +25,8 @@ namespace AnimalShelter.GUI.View
             frame.Navigate(homepage);
             PostBorders borders = new PostBorders(homepage.Border1, homepage.Border2, homepage.Border3, homepage.Border4,
                 homepage.Border5, homepage.Border6, homepage.Border7, homepage.Border8, homepage.Border9);
-            PostsVM postsVM = new PostsVM(borders, member);
+            Likes likes = new Likes(homepage.like1, homepage.like2, homepage.like3, homepage.like4, homepage.like5, homepage.like6, homepage.like7, homepage.like8, homepage.like9);
+            PostsVM postsVM = new PostsVM(borders, member, likes);
             homepage.delete1.Visibility = Visibility.Collapsed;
             homepage.update1.Visibility = Visibility.Collapsed;
 

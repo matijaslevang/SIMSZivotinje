@@ -17,13 +17,14 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.05*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="345*"/>
+            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="19*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Homepage" FontSize="40" Grid.ColumnSpan="4" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#ba8e63" Margin="19,0,387,0" Height="53"/>
+        <TextBlock Text="Homepage" FontSize="40" Grid.ColumnSpan="5" VerticalAlignment="Center" FontWeight="ExtraBold" Foreground="#ba8e63" Margin="19,0,387,0" Height="53"/>
         <Border x:Name="Border1" Grid.Row="1" Grid.Column="1" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -80,7 +81,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
+        <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20" Grid.ColumnSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -136,7 +137,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border3" Grid.Row="1" Grid.Column="3" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
+        <Border x:Name="Border3" Grid.Row="1" Grid.Column="4" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -248,7 +249,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border5" Grid.Row="2" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
+        <Border x:Name="Border5" Grid.Row="2" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20" Grid.ColumnSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -304,7 +305,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border6" Grid.Row="2" Grid.Column="3" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
+        <Border x:Name="Border6" Grid.Row="2" Grid.Column="4" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -416,7 +417,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border8" Grid.Row="3" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
+        <Border x:Name="Border8" Grid.Row="3" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20" Grid.ColumnSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -462,7 +463,7 @@
                 </Grid>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="7" x:Name="adopt8" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="7" x:Name="temporaryCare8" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
-                
+
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -473,7 +474,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border x:Name="Border9" Grid.Row="3" Grid.Column="3" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
+        <Border x:Name="Border9" Grid.Row="3" Grid.Column="4" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -529,7 +530,7 @@
                 </Grid>
             </Grid>
         </Border>
-        <Grid Grid.Row="4" Grid.Column="2">
+        <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" Margin="387,211,387,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>

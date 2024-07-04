@@ -93,6 +93,15 @@ namespace AnimalShelter.GUI.ViewModel
                 {
                     Borders.NotAdopted(i);
                 }
+                else if (Posts[i].Pet.AdoptionStatus == AdoptionStatus.ADOPTED)
+                {
+                    Borders.Adopted(i);
+                }
+                else if (Posts[i].Pet.AdoptionStatus == AdoptionStatus.IN_TEMPORARY_CARE)
+                {
+                    Borders.TemporaryCare(i);
+                }
+
                 if (Member != null && Posts[i].IsLikedByUser(Member.Id))
                 {
                     Likes.RedHeart(i);
@@ -137,9 +146,8 @@ namespace AnimalShelter.GUI.ViewModel
                 Likes.RemoveRedHeart(index);
             }
             UpdateCollection();
-
-           
         }
+
         public void CommentClick(object parameter)
         {
             if (Member != null)

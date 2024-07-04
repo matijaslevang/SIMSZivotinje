@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.GUI.ViewModel.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +16,14 @@ using System.Windows.Shapes;
 
 namespace AnimalShelter.GUI.View.Member
 {
-    /// <summary>
-    /// Interaction logic for CommentWindow.xaml
-    /// </summary>
     public partial class CommentWindow : Window
     {
         public CommentWindow()
         {
             InitializeComponent();
+            PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, null);
+            CommentsVM vm = new CommentsVM(borders, this); 
+            DataContext = vm;
         }
     }
 }

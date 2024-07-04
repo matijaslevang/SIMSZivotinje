@@ -136,7 +136,7 @@ namespace AnimalShelter
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow(this, null);
+            LoginWindow loginWindow = new LoginWindow(this);
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
         }

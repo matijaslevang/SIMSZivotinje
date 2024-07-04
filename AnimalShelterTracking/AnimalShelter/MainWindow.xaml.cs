@@ -70,25 +70,25 @@ namespace AnimalShelter
             homepage.temporaryCare8.Visibility = Visibility.Collapsed;
             homepage.temporaryCare9.Visibility = Visibility.Collapsed;
 
-            homepage.like1.Visibility = Visibility.Collapsed;
-            homepage.like2.Visibility = Visibility.Collapsed;
-            homepage.like3.Visibility = Visibility.Collapsed;
-            homepage.like4.Visibility = Visibility.Collapsed;
-            homepage.like5.Visibility = Visibility.Collapsed;
-            homepage.like6.Visibility = Visibility.Collapsed;
-            homepage.like7.Visibility = Visibility.Collapsed;
-            homepage.like8.Visibility = Visibility.Collapsed;
-            homepage.like9.Visibility = Visibility.Collapsed;
+            //homepage.like1.Visibility = Visibility.Collapsed;
+            //homepage.like2.Visibility = Visibility.Collapsed;
+            //homepage.like3.Visibility = Visibility.Collapsed;
+            //homepage.like4.Visibility = Visibility.Collapsed;
+            //homepage.like5.Visibility = Visibility.Collapsed;
+            //homepage.like6.Visibility = Visibility.Collapsed;
+            //homepage.like7.Visibility = Visibility.Collapsed;
+            //homepage.like8.Visibility = Visibility.Collapsed;
+            //homepage.like9.Visibility = Visibility.Collapsed;
 
-            homepage.comment1.Visibility = Visibility.Collapsed;
-            homepage.comment2.Visibility = Visibility.Collapsed;
-            homepage.comment3.Visibility = Visibility.Collapsed;
-            homepage.comment4.Visibility = Visibility.Collapsed;
-            homepage.comment5.Visibility = Visibility.Collapsed;
-            homepage.comment6.Visibility = Visibility.Collapsed;
-            homepage.comment7.Visibility = Visibility.Collapsed;
-            homepage.comment8.Visibility = Visibility.Collapsed;
-            homepage.comment9.Visibility = Visibility.Collapsed;
+            //homepage.comment1.Visibility = Visibility.Collapsed;
+            //homepage.comment2.Visibility = Visibility.Collapsed;
+            //homepage.comment3.Visibility = Visibility.Collapsed;
+            //homepage.comment4.Visibility = Visibility.Collapsed;
+            //homepage.comment5.Visibility = Visibility.Collapsed;
+            //homepage.comment6.Visibility = Visibility.Collapsed;
+            //homepage.comment7.Visibility = Visibility.Collapsed;
+            //homepage.comment8.Visibility = Visibility.Collapsed;
+            //homepage.comment9.Visibility = Visibility.Collapsed;
 
 
             //RegistrationRequest regReq = new RegistrationRequest();

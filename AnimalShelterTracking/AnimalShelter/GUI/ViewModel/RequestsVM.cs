@@ -15,6 +15,7 @@ using System.Windows.Input;
 using AnimalShelter.Model.Users;
 using System.Windows;
 using System.Windows.Media;
+using AnimalShelter.Model.Pets;
 
 namespace AnimalShelter.GUI.ViewModel
 {
@@ -86,6 +87,10 @@ namespace AnimalShelter.GUI.ViewModel
                 {
                     Borders.Registered(i);
                 }
+                else
+                {
+                    Borders.NotRegistered(i);
+                }
             }
         }
 
@@ -112,8 +117,34 @@ namespace AnimalShelter.GUI.ViewModel
                     MessageBox.Show("The member successfully registered.", "Announcement");
                     break;
 
+                case RequestType.POST:
+                    if (Requests[i].Id == -1)
+                    {
+                        ToPost((PostRequest)Requests[i], true);
+                        MessageBox.Show("The post has successfully been posted.", "Announcement");
+                    }
+                    else
+                    {
+                        ToPost((PostRequest)Requests[i], false);
+                        MessageBox.Show("The post has successfully been updated.", "Announcement");
+                    }
+
+                    DeletePostRequest(i);
+                    break;
+                case RequestType.ADOPTION:
+                    ToAdoption((AdoptionRequest)Requests[i]);
+                    DeleteAdoptionRequest(i);
+                    MessageBox.Show("The adoption request successfully accepted.", "Announcement");
+                    break;
+                case RequestType.TEMPORARY_CARE:
+                    ToTemporaryCare((TemporaryCareRequest)Requests[i]);
+                    DeleteTemporaryRequest(i);
+                    MessageBox.Show("The temporary care request successfully accepted.", "Announcement");
+                    break;
+
                 default: break;
             }
+            UpdateCollection();
 
         }
 
@@ -126,9 +157,21 @@ namespace AnimalShelter.GUI.ViewModel
                     DeleteRequest(i);
                     MessageBox.Show("The user successfully denied.", "Announcement");
                     break;
-
+                case RequestType.POST:
+                    DeletePostRequest(i);
+                    MessageBox.Show("The post request successfully denied.", "Announcement");
+                    break;
+                case RequestType.ADOPTION:
+                    DeleteAdoptionRequest(i);
+                    MessageBox.Show("The adoption request successfully denied.", "Announcement");
+                    break;
+                case RequestType.TEMPORARY_CARE:
+                    DeleteTemporaryRequest(i);
+                    MessageBox.Show("The temporary care request successfully denied.", "Announcement");
+                    break;
                 default: break;
             }
+            UpdateCollection();
         }
 
         private void ToMember(RegistrationRequest request)
@@ -142,12 +185,70 @@ namespace AnimalShelter.GUI.ViewModel
             
         }
 
+        private void ToPost(PostRequest request, bool Add)
+        {
+            PostService service = new PostService();
+            if (Add)
+            {
+                service.Add(request.Post);
+            }
+            else {
+                service.Update(request.Post.Id, request.Post);
+            }
+        }
+
+        private void ToAdoption(AdoptionRequest request)
+        {
+            PetService service = new PetService();
+            PostService postService = new PostService();
+            Post post = FindPostByPet(request.Pet);
+            request.Pet.AdoptionStatus = AdoptionStatus.ADOPTED;
+            post.Pet = request.Pet;
+            service.Update(request.Pet.Id, request.Pet);
+            postService.Update(post.Id, post);
+        }
+        private void ToTemporaryCare(TemporaryCareRequest request)
+        {
+            PetService service = new PetService();
+            PostService postService = new PostService();
+            Post post = FindPostByPet(request.Pet);
+            request.Pet.AdoptionStatus = AdoptionStatus.IN_TEMPORARY_CARE;
+            post.Pet = request.Pet;
+            service.Update(request.Pet.Id, request.Pet);
+            postService.Update(post.Id, post);
+        }
+        private Post FindPostByPet(Pet pet)
+        {
+            PostService postService = new PostService();
+            List<Post> posts = postService.GetAll();
+            foreach (Post p in posts)
+            {
+                if (p.Pet.Id.Equals(pet.Id))
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        private void DeleteAdoptionRequest(int placeHolder)
+        {
+            requestController.Delete(Requests[placeHolder].Id, RequestType.ADOPTION);
+
+            Borders.Hide(placeHolder);
+        }
+        private void DeleteTemporaryRequest(int placeHolder)
+        {
+            requestController.Delete(Requests[placeHolder].Id, RequestType.TEMPORARY_CARE);
+
+            Borders.Hide(placeHolder);
+        }
+
         private void DeleteRequest(int placeHolder)
         {
             requestController.Delete(Requests[placeHolder].Id, RequestType.REGISTRATION);
             
             Borders.Hide(placeHolder);
-
         }
         private void PreviousPage(object parameter)
         {
@@ -166,6 +267,12 @@ namespace AnimalShelter.GUI.ViewModel
         }
 
 
+        private void DeletePostRequest(int placeHolder)
+        {
+            requestController.Delete(Requests[placeHolder].Id, RequestType.POST);
+
+            Borders.Hide(placeHolder);
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

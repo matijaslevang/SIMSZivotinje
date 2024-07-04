@@ -108,8 +108,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="2" Command="{Binding BackCommand}" Content="Send comment" Style="{DynamicResource AddButton}" BorderBrush="#876849"/>
-            <Button Grid.Column="0" Command="{Binding CommentCommand}" Content="Back" Style="{DynamicResource CancelButton}" BorderBrush="#876849"/>
+            <Button Grid.Column="2" Command="{Binding CommentCommand}" Content="Send comment" Style="{DynamicResource AddButton}" BorderBrush="#876849"/>
+            <Button Grid.Column="0" Command="{Binding BackCommand}" Content="Back" Style="{DynamicResource CancelButton}" BorderBrush="#876849"/>
         </Grid>
     </Grid>
 </Window>

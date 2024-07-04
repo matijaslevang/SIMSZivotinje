@@ -10,11 +10,16 @@ using System.Windows;
 using System.Windows.Input;
 using System.Collections.Generic;
 using System.Linq;
+using AnimalShelter.Model.Posts;
+using Microsoft.Win32;
 
 namespace AnimalShelter.GUI.ViewModel
 {
     public class PostRequestVM : INotifyPropertyChanged
     {
+        private const string IMAGE_FOLDER_PATH = "/GUI/Images/";
+
+        private int _id;
         private string _name;
         private int _age;
         private string _color;
@@ -26,6 +31,7 @@ namespace AnimalShelter.GUI.ViewModel
         private string _healthDescription;
         private Gender _selectedGender;
         private HealthStatus _selectedHealthStatus;
+        private string _uploadedFilePath;
 
         public string Name
         {
@@ -97,7 +103,15 @@ namespace AnimalShelter.GUI.ViewModel
             get { return _newBreed; }
             set { _newBreed = value; OnPropertyChanged(); }
         }
-
+        public string UploadedFilePath
+        {
+            get { return _uploadedFilePath; }
+            set
+            {
+                _uploadedFilePath = value;
+                OnPropertyChanged(nameof(UploadedFilePath));
+            }
+        }
         public Member Member { get; set; }
         public PostRequestWindow Window { get; set; }
 
@@ -111,9 +125,12 @@ namespace AnimalShelter.GUI.ViewModel
 
         public ICommand SendRequestCommand { get; set; }
         public ICommand CancelCommand { get; set; }
+        public ICommand UploadFileCommand { get; private set; }
+
 
         public PostRequestVM(PostRequestWindow window, Member member)
         {
+            _id = -1;
             Window = window;
             Member = member;
 
@@ -144,6 +161,53 @@ namespace AnimalShelter.GUI.ViewModel
 
             SendRequestCommand = new RelayCommand(SendRequestClick);
             CancelCommand = new RelayCommand(CancelClick);
+            UploadFileCommand = new RelayCommand(UploadFile);
+        }
+
+        public PostRequestVM(PostRequestWindow window, Member member, Post post)
+        {
+            _id = post.Id;
+            Window = window;
+            Member = member;
+
+            GenderOptions = new ObservableCollection<GenderWrapper>
+            {
+                new GenderWrapper { Value = Gender.MALE, DisplayName = Gender.MALE.Name() },
+                new GenderWrapper { Value = Gender.FEMALE, DisplayName = Gender.FEMALE.Name() },
+                new GenderWrapper { Value = Gender.OTHER, DisplayName = Gender.OTHER.Name() }
+            };
+
+            HealthStatusOptions = new ObservableCollection<HealthStatusWrapper>
+            {
+                new HealthStatusWrapper { Value = HealthStatus.HEALTHY, DisplayName = HealthStatus.HEALTHY.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.ILL, DisplayName = HealthStatus.ILL.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.CHRONICALLY_ILL, DisplayName = HealthStatus.CHRONICALLY_ILL.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.DISABLED, DisplayName = HealthStatus.DISABLED.Name() }
+            };
+
+            SpeciesService = new SpeciesService();
+            BreedService = new BreedService();
+            PostRequestService = new PostRequestService();
+
+            List<Species> speciesList = SpeciesService.GetAll();
+            SpeciesOptions = new ObservableCollection<SpeciesWrapper>(speciesList.Select(s => new SpeciesWrapper(s)));
+
+            BreedOptions = new ObservableCollection<BreedWrapper>();
+            UpdateBreedOptions();
+
+            SendRequestCommand = new RelayCommand(SendRequestClick);
+            CancelCommand = new RelayCommand(CancelClick);
+
+            _name = post.Pet.Name;
+            _age = post.Pet.Age;
+            _color = post.Pet.Color;
+            SelectedSpecies = new SpeciesWrapper(post.Pet.Species);
+            SelectedBreed = new BreedWrapper(post.Pet.Breed);
+            _location = post.Pet.Location;
+            _healthDescription = post.Pet.HealthDescription;
+            SelectedGender = post.Pet.Gender;
+            SelectedHealthStatus = post.Pet.HealthStatus;
+
         }
 
         private void UpdateBreedOptions()
@@ -179,10 +243,23 @@ namespace AnimalShelter.GUI.ViewModel
                 BreedService.Add(SelectedBreed.Breed);
             }
 
-            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, null);
+            if (UploadedFilePath == null)
+            {
+                UploadedFilePath = IMAGE_FOLDER_PATH + "DefaultImage.jpg";
+            }
+
+            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, UploadedFilePath);
             Model.Posts.Post post = new Model.Posts.Post(Member, pet);
             PostRequest postRequest = new PostRequest(Member, post);
-            PostRequestService.Add(postRequest);
+            if (_id == -1)
+            {
+                PostRequestService.Add(postRequest);
+            }
+            else
+            {
+                postRequest.Post.Id = _id;
+                PostRequestService.Add(postRequest);
+            }
             MessageBox.Show("Post request sent successfully.");
             Window.Close();
         }
@@ -190,6 +267,18 @@ namespace AnimalShelter.GUI.ViewModel
         private void CancelClick(object parameter)
         {
             Window.Close();
+        }
+        private void UploadFile(object parameter)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string[] imageSplit = openFileDialog.FileName.Split('\\');
+                string image = imageSplit[imageSplit.Length - 1];
+
+                UploadedFilePath = IMAGE_FOLDER_PATH + image;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

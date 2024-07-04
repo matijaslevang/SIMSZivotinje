@@ -21,7 +21,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="3" Style="{DynamicResource CancelButton}" Content="LOG OUT" Width="80"/>
+                <Button Grid.Column="3" Style="{DynamicResource CancelButton}" Content="LOG OUT" Width="80" Click="Button_Click"/>
                 <Button Grid.Column="2" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="📝" FontSize="30" Command="{Binding PostRequestCommand}" CommandParameter="0" />
                 <Button Grid.Column="1" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="⬆️" FontSize="35" Command="{Binding PromoteCommand}" CommandParameter="0" />
                 <TextBlock Grid.Column="4" Text="Member" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>

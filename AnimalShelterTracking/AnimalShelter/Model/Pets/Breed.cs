@@ -17,6 +17,11 @@
         {
             Name = name;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
     public class BreedWrapper
     {

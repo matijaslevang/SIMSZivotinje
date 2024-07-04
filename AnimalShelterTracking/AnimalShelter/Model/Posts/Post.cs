@@ -64,5 +64,10 @@ namespace AnimalShelter.Model.Posts
             return LikedBy.Any(v => v == userId);
         }
 
+        public bool CanRate(int userId)
+        {
+            Member member = (Member) new UserService().Get(userId);
+            return member.AdoptedPets.Any(v => v == Pet.Id);
+        }
     }
 }

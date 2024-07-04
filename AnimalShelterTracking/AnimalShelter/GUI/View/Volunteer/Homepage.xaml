@@ -5,16 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:guest="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=guest:PostsVM}"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1200"
+      d:DesignHeight="750" d:DesignWidth="1200"
       Title="VolunteerHomepage">
     <Grid Background="#edb57f">
         <Grid.RowDefinitions>
-            <RowDefinition Height="105*"/>
+            <RowDefinition Height="80*"/>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="55*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="19*"/>

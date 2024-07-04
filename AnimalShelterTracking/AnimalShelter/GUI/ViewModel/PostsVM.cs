@@ -147,7 +147,9 @@ namespace AnimalShelter.GUI.ViewModel
         }
         public void UpdateClick(object parameter)
         {
-
+            int index = int.Parse(parameter.ToString());
+            PostRequestWindow postRequestWindow = new PostRequestWindow(Posts[index], Member);
+            postRequestWindow.Show();
         }
         public void AdoptClick(object parameter)
         {

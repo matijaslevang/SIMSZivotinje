@@ -1,5 +1,6 @@
 ﻿using AnimalShelter.GUI.View;
 using AnimalShelter.GUI.View.Member;
+using AnimalShelter.Model.Users;
 using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Posts;
 using AnimalShelter.Model.Enums;
@@ -59,10 +60,12 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand TemporaryCareCommand { get; set; }
         public ICommand PostRequestCommand { get; set; }
         public ICommand CommentCommand { get; set; }
+        public ICommand LikeCommand { get; set; }
         public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
         public ICommand NextPageCommand => new RelayCommand(NextPage);
         public PostBorders Borders;
-        public Model.Users.Member Member;
+        public Likes Likes { get; set; }
+        public Member Member;
         public ObservableCollection<Post> Posts
         {
             get => _posts;
@@ -76,7 +79,7 @@ namespace AnimalShelter.GUI.ViewModel
         private void UpdateCollection()
         {
             Borders.HideAllBorders();
-
+            
             int startIndex = (CurrentPage - 1) * PAGE_SIZE;
             Posts = new ObservableCollection<Post>(PostService.GetAll().Skip(startIndex).Take(PAGE_SIZE));
 
@@ -90,12 +93,21 @@ namespace AnimalShelter.GUI.ViewModel
                 {
                     Borders.NotAdopted(i);
                 }
+                if (Member != null && Posts[i].IsLikedByUser(Member.Id))
+                {
+                    Likes.RedHeart(i);
+                }
+                if (Member != null && !Posts[i].IsLikedByUser(Member.Id))
+                {
+                    Likes.RemoveRedHeart(i);
+                }
             }
         }
 
-        public PostsVM(PostBorders borders, Model.Users.Member member)
+        public PostsVM(PostBorders borders, Member member, Likes likes)
         {
             this.Borders = borders;
+            this.Likes = likes;
             this.PostService = new PostService();
             this.Member = member;
             DeleteCommand = new RelayCommand(DeleteClick);
@@ -104,9 +116,17 @@ namespace AnimalShelter.GUI.ViewModel
             TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
             PostRequestCommand = new RelayCommand(PostRequestClick);
             CommentCommand = new RelayCommand(CommentClick);
-
+            LikeCommand = new RelayCommand(LikeClick);
             UpdateCollection();
             
+        }
+        public void LikeClick(object parameter)
+        {
+            int index = int.Parse(parameter.ToString());
+            PostService postService = new PostService();
+            Posts[index].AddLike(Member.Id);
+            postService.Update(Posts[index].Id,Posts[index]);
+            Likes.RedHeart(index);
         }
         public void CommentClick(object parameter)
         {

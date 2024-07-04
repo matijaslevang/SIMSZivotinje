@@ -24,7 +24,8 @@ namespace AnimalShelter.GUI.View
         {
             InitializeComponent();
             PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, Border9);
-            PostsVM postsVM = new PostsVM(borders, member);
+            Likes likes = new Likes(like1, like2, like3, like4, like5, like6, like7, like8, like9);
+            PostsVM postsVM = new PostsVM(borders, member, likes);
             DataContext = postsVM;
         }
     }

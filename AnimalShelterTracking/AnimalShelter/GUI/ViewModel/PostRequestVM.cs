@@ -10,11 +10,13 @@ using System.Windows;
 using System.Windows.Input;
 using System.Collections.Generic;
 using System.Linq;
+using AnimalShelter.Model.Posts;
 
 namespace AnimalShelter.GUI.ViewModel
 {
     public class PostRequestVM : INotifyPropertyChanged
     {
+        private int _id;
         private string _name;
         private int _age;
         private string _color;
@@ -114,6 +116,7 @@ namespace AnimalShelter.GUI.ViewModel
 
         public PostRequestVM(PostRequestWindow window, Member member)
         {
+            _id = -1;
             Window = window;
             Member = member;
 
@@ -144,6 +147,52 @@ namespace AnimalShelter.GUI.ViewModel
 
             SendRequestCommand = new RelayCommand(SendRequestClick);
             CancelCommand = new RelayCommand(CancelClick);
+        }
+
+        public PostRequestVM(PostRequestWindow window, Member member, Post post)
+        {
+            _id = post.Id;
+            Window = window;
+            Member = member;
+
+            GenderOptions = new ObservableCollection<GenderWrapper>
+            {
+                new GenderWrapper { Value = Gender.MALE, DisplayName = Gender.MALE.Name() },
+                new GenderWrapper { Value = Gender.FEMALE, DisplayName = Gender.FEMALE.Name() },
+                new GenderWrapper { Value = Gender.OTHER, DisplayName = Gender.OTHER.Name() }
+            };
+
+            HealthStatusOptions = new ObservableCollection<HealthStatusWrapper>
+            {
+                new HealthStatusWrapper { Value = HealthStatus.HEALTHY, DisplayName = HealthStatus.HEALTHY.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.ILL, DisplayName = HealthStatus.ILL.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.CHRONICALLY_ILL, DisplayName = HealthStatus.CHRONICALLY_ILL.Name() },
+                new HealthStatusWrapper { Value = HealthStatus.DISABLED, DisplayName = HealthStatus.DISABLED.Name() }
+            };
+
+            SpeciesService = new SpeciesService();
+            BreedService = new BreedService();
+            PostRequestService = new PostRequestService();
+
+            List<Species> speciesList = SpeciesService.GetAll();
+            SpeciesOptions = new ObservableCollection<SpeciesWrapper>(speciesList.Select(s => new SpeciesWrapper(s)));
+
+            BreedOptions = new ObservableCollection<BreedWrapper>();
+            UpdateBreedOptions();
+
+            SendRequestCommand = new RelayCommand(SendRequestClick);
+            CancelCommand = new RelayCommand(CancelClick);
+
+            _name = post.Pet.Name;
+            _age = post.Pet.Age;
+            _color = post.Pet.Color;
+            SelectedSpecies = new SpeciesWrapper(post.Pet.Species);
+            SelectedBreed = new BreedWrapper(post.Pet.Breed);
+            _location = post.Pet.Location;
+            _healthDescription = post.Pet.HealthDescription;
+            SelectedGender = post.Pet.Gender;
+            SelectedHealthStatus = post.Pet.HealthStatus;
+
         }
 
         private void UpdateBreedOptions()
@@ -179,10 +228,18 @@ namespace AnimalShelter.GUI.ViewModel
                 BreedService.Add(SelectedBreed.Breed);
             }
 
-            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, null);
+            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, new List<string>());
             Model.Posts.Post post = new Model.Posts.Post(Member, pet);
             PostRequest postRequest = new PostRequest(Member, post);
-            PostRequestService.Add(postRequest);
+            if (_id == -1)
+            {
+                PostRequestService.Add(postRequest);
+            }
+            else
+            {
+                postRequest.Post.Id = _id;
+                PostRequestService.Add(postRequest);
+            }
             MessageBox.Show("Post request sent successfully.");
             Window.Close();
         }

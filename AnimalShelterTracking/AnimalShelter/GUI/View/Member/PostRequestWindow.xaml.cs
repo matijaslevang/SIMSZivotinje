@@ -1,6 +1,7 @@
 ﻿using AnimalShelter.GUI.ViewModel;
 using AnimalShelter.Model.Enums;
 using AnimalShelter.Model.Pets;
+using AnimalShelter.Model.Posts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,32 @@ namespace AnimalShelter.GUI.View.Member
         {
             InitializeComponent();
             PostRequestVM postRequestVM = new PostRequestVM(this, member);
+            /*
+            gender.Items.Add(Gender.MALE);
+            gender.Items.Add(Gender.FEMALE);
+            BreedService breedService = new BreedService();
+            SpeciesService speciesService = new SpeciesService();
+
+            foreach (Species species in speciesService.GetAll())
+            {
+                speciesList.Items.Add(species.Name);
+            }
+            foreach (Breed breed in breedService.GetAll())
+            {
+                breedList.Items.Add(breed.Name);
+            }
+            foreach (HealthStatus status in Enum.GetValues(typeof(HealthStatus)))
+            {
+                healthStatus.Items.Add(status);
+            }
+            */
+            DataContext = postRequestVM;
+        }
+
+        public PostRequestWindow(Post post, Model.Users.Member member)
+        {
+            InitializeComponent();
+            PostRequestVM postRequestVM = new PostRequestVM(this, member, post);
             /*
             gender.Items.Add(Gender.MALE);
             gender.Items.Add(Gender.FEMALE);

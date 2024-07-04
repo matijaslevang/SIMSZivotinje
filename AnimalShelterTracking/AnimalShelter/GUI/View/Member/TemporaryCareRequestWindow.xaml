@@ -16,24 +16,18 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="You want to give" HorizontalAlignment="Center" Foreground="#876849" FontSize="30" Grid.Row="0"/>
-                <TextBlock  HorizontalAlignment="Center" TextBlock.FontWeight="Bold" Text="{Binding Pet}" Foreground="#876849" FontSize="30" Grid.Column="2" Grid.Row="1" />
-                <TextBlock Text="a temporery home." HorizontalAlignment="Center" Foreground="#876849" FontSize="30" Grid.Row="2"/>
-                <DatePicker HorizontalAlignment="Center" SelectedDate="{Binding StartDate, Mode=TwoWay}" Margin="0,28,0,0" Grid.Row="6" VerticalAlignment="Top" Height="26" Grid.RowSpan="2"/>
-                <DatePicker HorizontalAlignment="Center" SelectedDate="{Binding EndDate, Mode=TwoWay}" Margin="0,21,0,0" Grid.Row="8" VerticalAlignment="Top" Height="26" Grid.RowSpan="2"/>
-                <TextBlock HorizontalAlignment="Left" Height="19" Margin="352,9,0,0" Grid.Row="6" TextWrapping="Wrap" Foreground="#876849" FontSize="15" Text="Start Date:" VerticalAlignment="Top" Width="99"/>
-                <TextBlock HorizontalAlignment="Left" Height="19" Margin="352,2,0,0" Grid.Row="8" TextWrapping="Wrap" Foreground="#876849" FontSize="15" Text="End Date:" VerticalAlignment="Top" Width="99"/>
+                <TextBlock Text="a temporery home." HorizontalAlignment="Center" Foreground="#876849" FontSize="30" Grid.Row="1"/>
+                <DatePicker HorizontalAlignment="Center" SelectedDate="{Binding StartDate, Mode=TwoWay}" Grid.Row="3" Height="30" Width="120"/>
+                <DatePicker HorizontalAlignment="Center" SelectedDate="{Binding EndDate, Mode=TwoWay}" Grid.Row="5" Height="30" Width="120"/>
+                <TextBlock HorizontalAlignment="Center" Height="19"  Grid.Row="2" TextWrapping="Wrap" Foreground="#876849" FontSize="15" Text="Start Date:" VerticalAlignment="Bottom" />
+                <TextBlock HorizontalAlignment="Center" Height="19" Grid.Row="4" TextWrapping="Wrap" Foreground="#876849" FontSize="15" Text="End Date:" VerticalAlignment="Bottom" />
 
             </Grid>
             <Grid Grid.Row="2">

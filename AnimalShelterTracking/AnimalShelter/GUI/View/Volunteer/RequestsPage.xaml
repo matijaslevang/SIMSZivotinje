@@ -461,5 +461,10 @@
                 <Button  Grid.Column="0" Grid.Row="9" x:Name="deny8" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="7" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
+        <Button Content="◀" Style="{DynamicResource NavigationButton}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="84,20,0,7" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63" Command="{Binding PreviousPageCommand}"/>
+        <TextBlock Text="{Binding CurrentPage}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="147,20,0,5" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63"/>
+        <TextBlock Text="/" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="185,20,0,7" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63"/>
+        <TextBlock Text="{Binding TotalPages}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="203,20,0,5" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Width="63" />
+        <Button Content="▶" Style="{DynamicResource NavigationButton}" Foreground="#d4a373" FontSize="30" HorizontalAlignment="Left" Margin="250,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="63" Grid.Column="2" Width="63" Command="{Binding NextPageCommand}"/>
     </Grid>
 </Page>

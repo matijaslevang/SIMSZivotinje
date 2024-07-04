@@ -44,8 +44,6 @@ namespace AnimalShelter.GUI.View.Member
             }
             */
             DataContext = postRequestVM;
-            this.Show();
         }
-
     }
 }

@@ -22,7 +22,7 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="2" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="👤" FontSize="30"/>
                 <Button Grid.Column="1" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="🏠" FontSize="30"/>
-                <Button Grid.Column="0" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="📝" FontSize="30" Command="{Binding PostRequestCommand}" Margin="900,0,0,0"/>
+                <Button Grid.Column="0" Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="📝" FontSize="30" Command="{Binding PostRequestCommand}" CommandParameter="0" Margin="900,0,0,0"/>
                 <TextBlock Grid.Column="4" Text="Member" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Grid>

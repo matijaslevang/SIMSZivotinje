@@ -59,7 +59,7 @@ namespace AnimalShelter.GUI.ViewModel
 
             int i = (int)parameter;
             Polls[i].VotesFor++;
-            Polls[i].Voters.Add(Voter.Id);
+            Polls[i].VoterIdsFor.Add(Voter.Id);
             pollService.Update(Polls[i].Id, Polls[i]);
         }
 

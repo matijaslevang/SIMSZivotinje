@@ -22,7 +22,7 @@ namespace AnimalShelter.GUI.View
         public MemberWindow(Model.Users.Member member)
         {
             InitializeComponent();
-            Homepage homepage = new Homepage();
+            Homepage homepage = new Homepage(member);
             frame.Navigate(homepage);
             //PostBorders borders = new PostBorders(homepage.Border1, homepage.Border2, homepage.Border3, homepage.Border4,
             //    homepage.Border5, homepage.Border6, homepage.Border7, homepage.Border8, homepage.Border9);

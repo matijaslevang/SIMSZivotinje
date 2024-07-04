@@ -97,9 +97,10 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand SendRequestCommand { get; set; }
         public ICommand CancelCommand { get; set; }
 
-        public PostRequestVM(PostRequestWindow window)
+        public PostRequestVM(PostRequestWindow window, Member member)
         {
             Window = window;
+            Member = member;
             GenderOptions = new ObservableCollection<Gender> { Gender.MALE, Gender.FEMALE};
             HealthStatusOptions = new ObservableCollection<HealthStatus> { HealthStatus.CHRONICALLY_ILL, HealthStatus.ILL, HealthStatus.DISABLED, HealthStatus.HEALTHY };
             SpeciesOptions = new ObservableCollection<Species>(); //TO-DO: POPUNITI PODACIMA

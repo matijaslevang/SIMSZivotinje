@@ -39,7 +39,7 @@ namespace AnimalShelter.Model.Posts
             Author = author;
             Pet = pet;
             PostDate = DateTime.Now;
-            Status = PostStatus.POSTED;
+            Status = PostStatus.APPROVED;
             LikedBy = new List<int>();
         }
 

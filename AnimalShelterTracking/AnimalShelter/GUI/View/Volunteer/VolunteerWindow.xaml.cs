@@ -32,7 +32,7 @@ namespace AnimalShelter.GUI.View
             this.MemberListPage = new MemberListPage();
             this.RequestsPage = new RequestsPage();
             this.VotingPage = new VotingPage();
-            this.Homepage = new Homepage();
+            this.Homepage = new Homepage(volunteer);
             frame.Navigate(Homepage);
             this.HighlightBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
             this.NormalBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#edb580"));

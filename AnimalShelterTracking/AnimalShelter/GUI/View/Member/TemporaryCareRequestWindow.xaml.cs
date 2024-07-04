@@ -21,10 +21,10 @@ namespace AnimalShelter.GUI.View
     /// </summary>
     public partial class TemporaryCareRequestWindow : Window
     {
-        public TemporaryCareRequestWindow(Post post)
+        public TemporaryCareRequestWindow(Post post, Model.Users.Member member)
         {
             InitializeComponent();
-            TemporaryCareRequestVM temporaryCareRequestVM = new TemporaryCareRequestVM(this, post.Pet);
+            TemporaryCareRequestVM temporaryCareRequestVM = new TemporaryCareRequestVM(this, post.Pet, member);
             DataContext = temporaryCareRequestVM;
         }
     }

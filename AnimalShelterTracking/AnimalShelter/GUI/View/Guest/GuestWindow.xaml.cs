@@ -23,7 +23,7 @@ namespace AnimalShelter.GUI.View
         public GuestWindow()
         {
             InitializeComponent();
-            Homepage homepage = new Homepage();
+            Homepage homepage = new Homepage(null);
             frame.Navigate(homepage);
             homepage.delete1.Visibility = Visibility.Collapsed;
             homepage.update1.Visibility = Visibility.Collapsed;

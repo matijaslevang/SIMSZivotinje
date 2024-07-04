@@ -20,11 +20,11 @@ namespace AnimalShelter.GUI.View
 
     public partial class Homepage : Page
     {
-        public Homepage()
+        public Homepage(Model.Users.Member member)
         {
             InitializeComponent();
             PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, Border9);
-            PostsVM postsVM = new PostsVM(borders);
+            PostsVM postsVM = new PostsVM(borders, member);
             DataContext = postsVM;
         }
     }

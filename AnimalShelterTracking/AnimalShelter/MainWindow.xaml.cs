@@ -17,7 +17,7 @@ namespace AnimalShelter
         public MainWindow()
         {
             InitializeComponent();
-            Homepage homepage = new Homepage();
+            Homepage homepage = new Homepage(null);
             frame.Navigate(homepage);
             homepage.delete1.Visibility = Visibility.Collapsed;
             homepage.update1.Visibility = Visibility.Collapsed;
@@ -54,10 +54,13 @@ namespace AnimalShelter
             //window.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
-            VolunteerWindow volunteerWindow = new VolunteerWindow();
-            volunteerWindow.Show();
-            //MemberWindow memberWindow = new MemberWindow();
-            //memberWindow.Show();
+            //Volunteer v = new Volunteer();
+            //VolunteerWindow volunteerWindow = new VolunteerWindow(v);
+            //volunteerWindow.Show();
+            Account acc = new Account("haha@", "12345678", Role.MEMBER);
+            Member m = new Member(acc, "Haha", "Hahaovic", "123456789", "8124768125675", new DateTime(), Gender.FEMALE);
+            MemberWindow memberWindow = new MemberWindow(m);
+            memberWindow.Show();
             //Address address = new Address("USA", "Springfield", "123 Main St", "1A", "62704");
             //RegistrationRequest rr = new RegistrationRequest("John", "Doe", "123456789", "john.doe@example.com", "password123", "ID123456", address);
             ////Account account = new Account("jane.doe@example.com", "password456", Role.MEMBER);

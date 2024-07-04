@@ -1,5 +1,6 @@
 ﻿using AnimalShelter.Repository;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AnimalShelter.Model.Pets
 {
@@ -28,6 +29,7 @@ namespace AnimalShelter.Model.Pets
             return _repository.Get(breedId);
         }
 
+
         public void Delete(int breedId)
         {
             _repository.Delete(breedId);
@@ -36,6 +38,10 @@ namespace AnimalShelter.Model.Pets
         public List<Breed> GetAll()
         {
             return _repository.GetAll();
+        }
+        public List<Breed> GetBySpeciesId(int speciesId)
+        {
+            return _repository.GetAll().Where(b => b.SpeciesId == speciesId).ToList();
         }
     }
 }

@@ -20,10 +20,10 @@ namespace AnimalShelter.GUI.View.Member
 {
     public partial class PostRequestWindow : Window
     {
-        public PostRequestWindow()
+        public PostRequestWindow(Model.Users.Member member)
         {
             InitializeComponent();
-            PostRequestVM postRequestVM = new PostRequestVM(this);
+            PostRequestVM postRequestVM = new PostRequestVM(this, member);
             /*
             gender.Items.Add(Gender.MALE);
             gender.Items.Add(Gender.FEMALE);
@@ -43,8 +43,7 @@ namespace AnimalShelter.GUI.View.Member
                 healthStatus.Items.Add(status);
             }
             */
-            this.Show();
+            DataContext = postRequestVM;
         }
-
     }
 }

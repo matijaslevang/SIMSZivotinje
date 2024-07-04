@@ -18,4 +18,15 @@
             Name = name;
         }
     }
+    public class BreedWrapper
+    {
+        public Breed Breed { get; set; }
+        public string Name => Breed.Name;
+
+        public BreedWrapper(Breed breed)
+        {
+            Breed = breed;
+        }
+    }
+
 }

@@ -140,7 +140,8 @@
             <TextBox x:Name="healthDescription" Text="{Binding HealthDescription, Mode=TwoWay}" Grid.Row="12" Margin="5" Grid.RowSpan="3"/>
 
             <TextBlock Text="Add multimedia content" Style="{DynamicResource Blocks}" Grid.Row="15" Margin="5 0 0 0"/>
-            <Button Content="Upload File" Grid.Row="16" Style="{DynamicResource CancelButton}"  Margin="5 0 5 0" Width="auto" Height="auto"/>
+            <Button Content="Upload File" Grid.Row="16" Style="{DynamicResource CancelButton}"  Margin="5 0 5 0" Width="auto" Height="auto" Command="{Binding UploadFileCommand}"/>
+            <TextBox x:Name="uploadedFilePathTextBox" Text="{Binding UploadedFilePath, Mode=TwoWay}" Grid.Row="17" Margin="5"/>
         </Grid>
         <Grid Background="#d4a373" Grid.Row="2">
             <Grid.ColumnDefinitions>

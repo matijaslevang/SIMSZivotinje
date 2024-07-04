@@ -298,12 +298,18 @@
     <None Include="Data\TemporaryCareRequests.json" />
     <None Include="Data\Volunteers.json" />
     <Resource Include="GUI\Images\domestic-dog_thumb_square.webp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="GUI\Images\What-Breed-Are-Black-Cats.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Reference Include="PresentationFramework.Aero2" />
+    <Resource Include="GUI\Images\cute-dogs-pembroke-welsh-corgi.avif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\Gen-the-Corgi-with-funny-face-6.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -313,6 +319,49 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="GUI\Images\360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\54369563e20e94dcab5fc7f40cf7e8d6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\960bdcc09173f2387affcc0e01d0c512.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\9ccc4941d8f9b9d21cadda79a514feac.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\ai-generated-cute-and-orange-hamster-on-white-background-photo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\catcat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\corgihihi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\cute-cat-photos-1593441022.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\CuteDoggy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\d4b72aa44e7fff0ef0dbb7036ffe5fd1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\DefaultImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\moment-of-meow-2.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GUI\Images\parrot.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GUI\Images\doggybow.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,7 +38,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[0].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[0].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -87,7 +87,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="/GUI/Images/what-breed-are-black-cats.webp"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[1].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -136,7 +136,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[2].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[2].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -185,7 +185,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[3].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[3].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -234,7 +234,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[4].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[4].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -283,7 +283,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[5].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[5].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -332,7 +332,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[6].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[6].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -381,7 +381,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[7].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[7].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>
@@ -430,7 +430,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[8].Pet.MultimediaContent[0]}"/>
+                <Image Width="120" HorizontalAlignment="Left" Grid.RowSpan="3" Source="{Binding Posts[8].Pet.MultimediaContent}"/>
                 <Grid  Grid.RowSpan="3" Grid.Column="1" Margin="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.5*"/>

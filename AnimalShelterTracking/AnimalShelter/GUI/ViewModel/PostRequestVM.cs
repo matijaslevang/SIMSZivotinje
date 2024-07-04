@@ -10,11 +10,14 @@ using System.Windows;
 using System.Windows.Input;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Win32;
 
 namespace AnimalShelter.GUI.ViewModel
 {
     public class PostRequestVM : INotifyPropertyChanged
     {
+        private const string IMAGE_FOLDER_PATH = "/GUI/Images/";
+
         private string _name;
         private int _age;
         private string _color;
@@ -26,6 +29,7 @@ namespace AnimalShelter.GUI.ViewModel
         private string _healthDescription;
         private Gender _selectedGender;
         private HealthStatus _selectedHealthStatus;
+        private string _uploadedFilePath;
 
         public string Name
         {
@@ -97,7 +101,15 @@ namespace AnimalShelter.GUI.ViewModel
             get { return _newBreed; }
             set { _newBreed = value; OnPropertyChanged(); }
         }
-
+        public string UploadedFilePath
+        {
+            get { return _uploadedFilePath; }
+            set
+            {
+                _uploadedFilePath = value;
+                OnPropertyChanged(nameof(UploadedFilePath));
+            }
+        }
         public Member Member { get; set; }
         public PostRequestWindow Window { get; set; }
 
@@ -111,6 +123,8 @@ namespace AnimalShelter.GUI.ViewModel
 
         public ICommand SendRequestCommand { get; set; }
         public ICommand CancelCommand { get; set; }
+        public ICommand UploadFileCommand { get; private set; }
+
 
         public PostRequestVM(PostRequestWindow window, Member member)
         {
@@ -144,6 +158,7 @@ namespace AnimalShelter.GUI.ViewModel
 
             SendRequestCommand = new RelayCommand(SendRequestClick);
             CancelCommand = new RelayCommand(CancelClick);
+            UploadFileCommand = new RelayCommand(UploadFile);
         }
 
         private void UpdateBreedOptions()
@@ -179,7 +194,12 @@ namespace AnimalShelter.GUI.ViewModel
                 BreedService.Add(SelectedBreed.Breed);
             }
 
-            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, null);
+            if (UploadedFilePath == null)
+            {
+                UploadedFilePath = IMAGE_FOLDER_PATH + "DefaultImage.jpg";
+            }
+
+            Pet pet = new Pet(Name, SelectedHealthStatus, HealthDescription, Age, SelectedGender, Color, Location, SelectedSpecies.Species, SelectedBreed.Breed, UploadedFilePath);
             Model.Posts.Post post = new Model.Posts.Post(Member, pet);
             PostRequest postRequest = new PostRequest(Member, post);
             PostRequestService.Add(postRequest);
@@ -190,6 +210,18 @@ namespace AnimalShelter.GUI.ViewModel
         private void CancelClick(object parameter)
         {
             Window.Close();
+        }
+        private void UploadFile(object parameter)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string[] imageSplit = openFileDialog.FileName.Split('\\');
+                string image = imageSplit[imageSplit.Length - 1];
+
+                UploadedFilePath = IMAGE_FOLDER_PATH + image;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

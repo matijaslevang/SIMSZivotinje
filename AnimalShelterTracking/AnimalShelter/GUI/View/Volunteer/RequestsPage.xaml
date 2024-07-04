@@ -73,8 +73,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[0].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[0].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept1" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny1" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept1" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="0" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny1" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="0" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -128,8 +128,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[1].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[1].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept2" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny2" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept2" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="1" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny2" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="1" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border3" Grid.Row="1" Grid.Column="3" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -183,8 +183,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[2].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[2].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept3" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny3" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept3" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="2" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny3" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="2" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border4" Grid.Row="1" Grid.Column="4" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -237,8 +237,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="4" Text="{Binding Requests[3].Email}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[3].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[3].IdCardNumber}"/>
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept4" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny4" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept4" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="3" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny4" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="3" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border5" Grid.Row="2" Grid.Column="1" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -292,8 +292,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[4].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[4].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept5" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny5" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept5" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="4" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny5" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="4" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border6" Grid.Row="2" Grid.Column="2" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -347,8 +347,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[5].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[5].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept6" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny6" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept6" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="5" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny6" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="5" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border7" Grid.Row="2" Grid.Column="3" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -402,8 +402,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[6].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[6].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept7" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny7" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept7" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="6" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny7" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="6" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
         <Border x:Name="Border8" Grid.Row="2" Grid.Column="4" Background="#b98e64" Margin="10"  CornerRadius="20">
@@ -457,8 +457,8 @@
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="5" Text="{Binding Requests[7].Gender}"/>
                 <TextBlock Foreground="white" Grid.Column="1" Grid.Row="6" Text="{Binding Requests[7].IdCardNumber}"/>
 
-                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept8" Style="{DynamicResource AddButton}" Width="100" Content="Accept" FontSize="11"/>
-                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny8" Style="{DynamicResource CancelButton}" Width="100" Content="Deny" FontSize="11"/>
+                <Button  Grid.Column="1" Grid.Row="9" x:Name="accept8" Style="{DynamicResource AddButton}" Command="{Binding AcceptCommand}" CommandParameter="7" Width="100" Content="Accept" FontSize="11"/>
+                <Button  Grid.Column="0" Grid.Row="9" x:Name="deny8" Style="{DynamicResource CancelButton}" Command="{Binding DeniedCommand}" CommandParameter="7" Width="100" Content="Deny" FontSize="11"/>
             </Grid>
         </Border>
     </Grid>

@@ -50,6 +50,13 @@ namespace AnimalShelter.GUI.ViewModel.Helper
                 Border9.Visibility = Visibility.Collapsed;
             }
         }
+
+        public void Hide(int placeholder)
+        {
+            Border border = BordersList()[placeholder];
+            border.Visibility = Visibility.Collapsed;
+        }
+
         public void Show(int placeholder)
         {
             Border border = BordersList()[placeholder];

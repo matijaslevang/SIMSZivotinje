@@ -26,8 +26,9 @@ namespace AnimalShelter.Model.Users
             AdoptedPets = adoptedPets;
         }
 
-        public Member(Account account, string name, string surname, string phoneNumber, string idCardNumber, DateTime birthDate, Gender gender)
+        public Member(int id, Account account, string name, string surname, string phoneNumber, string idCardNumber, DateTime birthDate, Gender gender)
         {
+            Id = id;
             Account = account;
             Name = name;
             Surname = surname;

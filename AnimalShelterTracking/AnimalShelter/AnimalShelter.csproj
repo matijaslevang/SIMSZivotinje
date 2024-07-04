@@ -166,6 +166,7 @@
     <Compile Include="GUI\ViewModel\PollsVM.cs" />
     <Compile Include="GUI\ViewModel\PostRequestVM.cs" />
     <Compile Include="GUI\ViewModel\PostsVM.cs" />
+    <Compile Include="GUI\ViewModel\RegistrationVM.cs" />
     <Compile Include="GUI\ViewModel\RelayCommand.cs" />
     <Compile Include="GUI\ViewModel\RequestsVM.cs" />
     <Compile Include="GUI\ViewModel\TemporaryCareRequestVM.cs" />

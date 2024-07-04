@@ -52,7 +52,6 @@ namespace AnimalShelter.GUI.View
 
             homepage.delete9.Visibility = Visibility.Collapsed;
             homepage.update9.Visibility = Visibility.Collapsed;
-
             DataContext = postsVM;
         }
     }

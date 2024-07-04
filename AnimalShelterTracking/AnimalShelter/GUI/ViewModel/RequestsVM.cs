@@ -116,6 +116,21 @@ namespace AnimalShelter.GUI.ViewModel
                     MessageBox.Show("The member successfully registered.", "Announcement");
                     break;
 
+                case RequestType.POST:
+                    if (Requests[i].Id == -1)
+                    {
+                        ToPost((PostRequest)Requests[i], true);
+                        MessageBox.Show("The post has successfully been posted.", "Announcement");
+                    }
+                    else
+                    {
+                        ToPost((PostRequest)Requests[i], false);
+                        MessageBox.Show("The post has successfully been updated.", "Announcement");
+                    }
+
+                    DeletePostRequest(i);
+                    break;
+
                 default: break;
             }
 
@@ -130,7 +145,10 @@ namespace AnimalShelter.GUI.ViewModel
                     DeleteRequest(i);
                     MessageBox.Show("The user successfully denied.", "Announcement");
                     break;
-
+                case RequestType.POST:
+                    DeletePostRequest(i);
+                    MessageBox.Show("The post request successfully denied.", "Announcement");
+                    break;
                 default: break;
             }
         }
@@ -144,6 +162,18 @@ namespace AnimalShelter.GUI.ViewModel
             Model.Users.Member member = new Model.Users.Member(id, account, request.Name, request.Surname, request.PhoneNumber, request.IdCardNumber, request.BirthDate, request.Gender);
             service.Add(member);
             
+        }
+
+        private void ToPost(PostRequest request, bool Add)
+        {
+            PostService service = new PostService();
+            if (Add)
+            {
+                service.Add(request.Post);
+            }
+            else {
+                service.Update(request.Post.Id, request.Post);
+            }
         }
 
         private void DeleteRequest(int placeHolder)
@@ -170,6 +200,13 @@ namespace AnimalShelter.GUI.ViewModel
         }
 
 
+        private void DeletePostRequest(int placeHolder)
+        {
+            requestController.Delete(Requests[placeHolder].Id, RequestType.POST);
+
+            Borders.Hide(placeHolder);
+            MessageBox.Show(Requests[placeHolder].Id.ToString());
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

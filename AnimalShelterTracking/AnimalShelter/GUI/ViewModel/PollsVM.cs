@@ -52,15 +52,50 @@ namespace AnimalShelter.GUI.ViewModel
                 }
             }
 
+            YesCommand = new RelayCommand(YesClick);
+            NoCommand = new RelayCommand(NoClick);
+
         }
 
         private void YesClick(object parameter)
         {
+            int i = Convert.ToInt32(parameter);
+            int id = Polls[i].Id;
+            Poll poll = Polls[i];
 
-            int i = (int)parameter;
-            Polls[i].VotesFor++;
-            Polls[i].VoterIdsFor.Add(Voter.Id);
-            pollService.Update(Polls[i].Id, Polls[i]);
+            if (!poll.VoterIdsFor.Contains(Voter.Id))
+            {
+                poll.VoterIdsFor.Add(Voter.Id);
+                pollService.Update(id, poll);
+                poll.OnPropertyChanged(nameof(poll.VoterIdsFor));
+            }
+
+            if (poll.VoterIdsAgainst.Contains(Voter.Id))
+            {
+                poll.VoterIdsAgainst.Remove(Voter.Id);
+                pollService.Update(id, poll);
+                poll.OnPropertyChanged(nameof(poll.VoterIdsFor));
+            }
+        }
+
+        private void NoClick(object parameter)
+        {
+            int i = Convert.ToInt32(parameter);
+            int id = Polls[i].Id;
+            Poll poll = Polls[i];
+
+
+            if (!poll.VoterIdsAgainst.Contains(Voter.Id))
+            {
+                poll.VoterIdsAgainst.Add(Voter.Id);
+                pollService.Update(id, poll);
+            }
+
+            if (poll.VoterIdsFor.Contains(Voter.Id))
+            {
+                poll.VoterIdsFor.Remove(Voter.Id);
+                pollService.Update(id, poll);
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

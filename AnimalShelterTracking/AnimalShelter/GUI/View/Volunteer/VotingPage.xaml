@@ -78,12 +78,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[1].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[1].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst2" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor2" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[1].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst2" Text="{Binding Polls[1].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor2" Text="{Binding Polls[1].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="1" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="1"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
@@ -109,12 +109,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[2].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[2].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst3" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor3" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[2].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst3" Text="{Binding Polls[2].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor3" Text="{Binding Polls[2].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="2" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="2"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
@@ -140,12 +140,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[3].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[3].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst4" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor4" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[3].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst4" Text="{Binding Polls[3].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor4" Text="{Binding Polls[3].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="3" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="3"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
@@ -171,12 +171,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[4].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[4].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst5" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor5" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[4].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst5" Text="{Binding Polls[4].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor5" Text="{Binding Polls[4].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="4" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="4"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
@@ -202,12 +202,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[5].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[5].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst6" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor6" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[5].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst6" Text="{Binding Polls[5].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor6" Text="{Binding Polls[5].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="5" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="5"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
@@ -233,12 +233,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[6].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[6].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst7" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor7" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[6].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst7" Text="{Binding Polls[6].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor7" Text="{Binding Polls[6].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="6" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="6"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
@@ -264,12 +264,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Polls[0].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Polls[0].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Polls[7].VotingFor.Name}" FontSize="20" Foreground="#655636" Padding="0 0 3 0" HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Polls[7].VotingFor.Surname}" FontSize="20" Padding="3 0 0 0" Foreground="#655636" HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Time limit:" HorizontalAlignment="Center"  Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[0].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst8" Text="{Binding Polls[0].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor8" Text="{Binding Polls[0].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Polls[7].TimeLimit}" HorizontalAlignment="Left" Foreground="#ffd288" FontSize="15"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" x:Name="votesAgainst8" Text="{Binding Polls[7].VotesAgainst}" Foreground="DarkRed" FontSize="20"/>
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" x:Name="votesFor8" Text="{Binding Polls[7].VotesFor}" Foreground="DarkGreen" FontSize="20"/>
                         <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource NavigationButton}" Command="{Binding NoCommand}" CommandParameter="7" Content="🙅‍♀️" Foreground="DarkRed" FontSize="25"/>
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="7"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>

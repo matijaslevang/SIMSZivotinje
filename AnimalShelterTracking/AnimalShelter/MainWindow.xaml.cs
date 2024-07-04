@@ -133,11 +133,14 @@ namespace AnimalShelter
             //PollService ps = new PollService();
             //ps.Add(poll);
             //ps.Add(poll2);
+            //Comment comment = new Comment(1, volunteer, "Poor thing!");
+            //CommentService cs = new CommentService(); 
+            //cs.Add(comment);    
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow(this, null);
+            LoginWindow loginWindow = new LoginWindow(this);
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
         }

@@ -58,6 +58,7 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand AdoptCommand { get; set; }
         public ICommand TemporaryCareCommand { get; set; }
         public ICommand PostRequestCommand { get; set; }
+        public ICommand CommentCommand { get; set; }
         public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
         public ICommand NextPageCommand => new RelayCommand(NextPage);
         public PostBorders Borders;
@@ -100,10 +101,16 @@ namespace AnimalShelter.GUI.ViewModel
             AdoptCommand = new RelayCommand(AdoptClick);
             TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
             PostRequestCommand = new RelayCommand(PostRequestClick);
-
+            CommentCommand = new RelayCommand(CommentClick);
 
             UpdateCollection();
             
+        }
+        public void CommentClick(object parameter)
+        {
+            int index = int.Parse(parameter.ToString());
+            CommentWindow commentWindow = new CommentWindow();
+            commentWindow.Show();
         }
         public void DeleteClick(object parameter)
         {

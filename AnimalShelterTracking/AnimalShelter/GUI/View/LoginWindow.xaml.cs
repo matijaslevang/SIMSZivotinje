@@ -10,13 +10,11 @@ namespace AnimalShelter.GUI.View
         public LoginViewModel ViewModel { get; set; }
         public UserService UserService { get; set; }
         public User LoggedUser { get; set; }
-        public GuestWindow GuestWindow { get; set; }
         public MainWindow MainWindow { get; set; }
 
-        public LoginWindow(MainWindow mainWindow, GuestWindow guestWindow)
+        public LoginWindow(MainWindow mainWindow)
         {
             InitializeComponent();
-            GuestWindow = guestWindow;
             MainWindow = mainWindow;
 
             ViewModel = new LoginViewModel();
@@ -49,13 +47,9 @@ namespace AnimalShelter.GUI.View
                         adminWindow.Show();
                     }
                     Close();
-                    if (GuestWindow != null) {
-                        GuestWindow.Close();
-                    }
-                    if (MainWindow != null)
-                    {
-                        MainWindow.Close();
-                    }
+
+                    MainWindow.Close();
+                    
                 }
 
                 else

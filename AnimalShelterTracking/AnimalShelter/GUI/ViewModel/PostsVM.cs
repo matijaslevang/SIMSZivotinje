@@ -3,6 +3,7 @@ using AnimalShelter.GUI.View.Member;
 using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Posts;
 using AnimalShelter.Model.Enums;
+using AnimalShelter.Model.Votes;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -58,6 +59,7 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand AdoptCommand { get; set; }
         public ICommand TemporaryCareCommand { get; set; }
         public ICommand PostRequestCommand { get; set; }
+        public ICommand PromoteCommand { get; set; }
         public ICommand CommentCommand { get; set; }
         public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
         public ICommand NextPageCommand => new RelayCommand(NextPage);
@@ -103,6 +105,7 @@ namespace AnimalShelter.GUI.ViewModel
             AdoptCommand = new RelayCommand(AdoptClick);
             TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
             PostRequestCommand = new RelayCommand(PostRequestClick);
+            PromoteCommand = new RelayCommand(PromoteClick);
             CommentCommand = new RelayCommand(CommentClick);
 
             UpdateCollection();
@@ -146,6 +149,15 @@ namespace AnimalShelter.GUI.ViewModel
             PostRequestWindow postRequestWindow = new PostRequestWindow(Member);
             postRequestWindow.Show();
         }
+
+        public void PromoteClick(object parameter)
+        {
+            Poll poll = new Poll(Member, true);
+            PollService service = new PollService();
+            service.Add(poll);
+            MessageBox.Show("You applicated for a volunteer successfully.", "Announcement");
+        }
+
         private void PreviousPage(object parameter)
         {
             if (CurrentPage > 1)

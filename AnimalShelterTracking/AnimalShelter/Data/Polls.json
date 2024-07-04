@@ -1,1 +1,76 @@
-{"0":{"Id":0,"TimeLimit":"2024-07-11T13:19:31.9459063+02:00","VotesFor":0,"VotesAgainst":0,"VotingFor":{"IsBlacklisted":false,"AdoptedPets":[],"Id":0,"Account":{"Email":"jane.doe@example.com","Password":"password","Role":1},"Name":"Jane","Surname":"Doe","PhoneNumber":"987654321","IdCardNumber":"ID123456","BirthDate":"2000-01-01T00:00:00","Gender":1,"DateOfJoining":"2024-07-04T13:19:31.9459063+02:00"},"IsBeingPromoted":true,"Voters":[]},"1":{"Id":1,"TimeLimit":"2024-07-11T13:19:31.9459063+02:00","VotesFor":0,"VotesAgainst":0,"VotingFor":{"IsBlacklisted":false,"AdoptedPets":[],"Id":0,"Account":{"Email":"jane.doe@example.com","Password":"password","Role":1},"Name":"Jane","Surname":"Doe","PhoneNumber":"987654321","IdCardNumber":"ID123456","BirthDate":"2000-01-01T00:00:00","Gender":1,"DateOfJoining":"2024-07-04T13:19:31.9449104+02:00"},"IsBeingPromoted":false,"Voters":[]}}
+{
+  "0": {
+    "Id": 0,
+    "TimeLimit": "2024-07-11T13:19:31.9459063+02:00",
+    "VotesFor": 0,
+    "VotesAgainst": 0,
+    "VotingFor": {
+      "IsBlacklisted": false,
+      "AdoptedPets": [],
+      "Id": 0,
+      "Account": {
+        "Email": "jane.doe@example.com",
+        "Password": "password",
+        "Role": 1
+      },
+      "Name": "Jane",
+      "Surname": "Doe",
+      "PhoneNumber": "987654321",
+      "IdCardNumber": "ID123456",
+      "BirthDate": "2000-01-01T00:00:00",
+      "Gender": 1,
+      "DateOfJoining": "2024-07-04T13:19:31.9459063+02:00"
+    },
+    "IsBeingPromoted": true,
+    "Voters": []
+  },
+  "1": {
+    "Id": 1,
+    "TimeLimit": "2024-07-11T13:19:31.9459063+02:00",
+    "VotesFor": 0,
+    "VotesAgainst": 0,
+    "VotingFor": {
+      "IsBlacklisted": false,
+      "AdoptedPets": [],
+      "Id": 0,
+      "Account": {
+        "Email": "jane.doe@example.com",
+        "Password": "password",
+        "Role": 1
+      },
+      "Name": "Jane",
+      "Surname": "Doe",
+      "PhoneNumber": "987654321",
+      "IdCardNumber": "ID123456",
+      "BirthDate": "2000-01-01T00:00:00",
+      "Gender": 1,
+      "DateOfJoining": "2024-07-04T13:19:31.9449104+02:00"
+    },
+    "IsBeingPromoted": false,
+    "Voters": []
+  },
+  "2": {
+    "Id": 2,
+    "TimeLimit": "2024-07-11T20:15:31.8174944+02:00",
+    "VotesFor": 0,
+    "VotesAgainst": 0,
+    "VotingFor": {
+      "IsBlacklisted": false,
+      "AdoptedPets": [],
+      "Id": 0,
+      "Account": {
+        "Email": "jane.doe@example.com",
+        "Password": "password456",
+        "Role": 0
+      },
+      "Name": "Jane",
+      "Surname": "Doe",
+      "PhoneNumber": "987654321",
+      "IdCardNumber": "ID123456",
+      "BirthDate": "2000-01-01T00:00:00",
+      "Gender": 1,
+      "DateOfJoining": "2024-07-02T22:04:54.0206993+02:00"
+    },
+    "IsBeingPromoted": true,
+    "Voters": []
+  }}

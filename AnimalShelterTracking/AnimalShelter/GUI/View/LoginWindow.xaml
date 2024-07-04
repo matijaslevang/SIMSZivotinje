@@ -4,24 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
-    <Grid>
+        Title="LoginWindow" Height="400" Width="450">
+    <Grid Background="#ffd288">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*"></RowDefinition>
-            <RowDefinition Height="220*"></RowDefinition>
-            <RowDefinition Height="47*"></RowDefinition>
-            <RowDefinition Height="122*"></RowDefinition>
+            <RowDefinition Height="59*"></RowDefinition>
+            <RowDefinition Height="175*"></RowDefinition>
+            <RowDefinition Height="42*"></RowDefinition>
+            <RowDefinition Height="108*"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="133" Width="400" >
+        <TextBlock Foreground="#a17b57" Text="Welcome back!" FontSize="40" HorizontalAlignment="Center" Width="268" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="133" Width="400" Margin="0,31,0,0" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Width="400" Margin="0,20,0,20" >
-                <TextBlock Text="Email: " FontSize="20"></TextBlock>
+                <TextBlock Foreground="#a17b57" Text="Email: " FontSize="20"></TextBlock>
                 <TextBox FontSize="18"  Width="338" TextAlignment="Center" Name="emailTextBox" Text="{Binding Path=ViewModel.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Margin="0,20,0,20" >
-                <TextBlock Text="Password: " FontSize="20"></TextBlock>
+                <TextBlock Foreground="#a17b57" Text="Password: " FontSize="20"></TextBlock>
                 <TextBox FontSize="18" Width="303"  Name="passwordTextBox" Text="{Binding Path=ViewModel.Password, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
             </StackPanel>
 
@@ -31,16 +32,7 @@
                 Text="{Binding Path=ViewModel.Error, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Foreground="Red" Name="validationTextBlock">
             </TextBlock>
         </StackPanel>
-        <Grid Grid.Row="3" Margin="0,1,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Button Content="Log In" FontSize="24" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="LoginClick"/>
+        <Button Grid.Row="3" Content="Log In" FontSize="24" HorizontalAlignment="Center" Style="{DynamicResource AddButton}"  VerticalAlignment="Center" Click="LoginClick" Height="60"/>
 
-        </Grid>
     </Grid>
 </Window>

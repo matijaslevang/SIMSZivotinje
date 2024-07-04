@@ -9,6 +9,8 @@ using AnimalShelter.Model.Posts;
 using AnimalShelter.Model.Users;
 using AnimalShelter.Model.Utilities;
 using AnimalShelter.Model.Requests;
+using System.Security.Principal;
+using AnimalShelter.Model.Votes;
 
 namespace AnimalShelter
 {
@@ -54,15 +56,13 @@ namespace AnimalShelter
             //window.Show();
             //GuestWindow guestWindow = new GuestWindow();
             //guestWindow.Show();
-            VolunteerWindow volunteerWindow = new VolunteerWindow();
-            volunteerWindow.Show();
+            //VolunteerWindow volunteerWindow = new VolunteerWindow(volunteer);
+            //volunteerWindow.Show();
             //MemberWindow memberWindow = new MemberWindow();
             //memberWindow.Show();
             //Address address = new Address("USA", "Springfield", "123 Main St", "1A", "62704");
             //RegistrationRequest rr = new RegistrationRequest("John", "Doe", "123456789", "john.doe@example.com", "password123", "ID123456", address);
-            ////Account account = new Account("jane.doe@example.com", "password456", Role.MEMBER);
             //Account account1 = new Account("john.doe@example.com", "password456", Role.MEMBER);
-            ////Member author = new Member(account, "Jane", "Doe", "987654321", "ID123456", DateTime.Parse("01-01-2000"), Gender.FEMALE);
             //Member requester = new Member(account1, "John", "Doe", "987654321", "ID123457", DateTime.Parse("01-01-2000"), Gender.MALE);
             //UserService userService = new UserService();
             ////userService.Add(author);
@@ -80,11 +80,20 @@ namespace AnimalShelter
             //postRequestService.Add(pr);
             //PostRequestWindow postRequestWindow = new PostRequestWindow();
             //postRequestWindow.Show();
+
+            //Account account = new Account("jane.doe@example.com", "password", Role.VOLUNTEER);
+            //Volunteer volunteer = new Volunteer(account, "Jane", "Doe", "987654321", "ID123456", DateTime.Parse("01-01-2000"), Gender.FEMALE);
+            //Member author = new Member(account, "Jane", "Doe", "987654321", "ID123456", DateTime.Parse("01-01-2000"), Gender.FEMALE);
+            //Poll poll = new Poll(author, true);
+            //Poll poll2 = new Poll(volunteer, false);
+            //PollService ps = new PollService();
+            //ps.Add(poll);
+            //ps.Add(poll2);
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(this, null);
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
         }

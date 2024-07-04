@@ -55,7 +55,7 @@ namespace AnimalShelter.GUI.View
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(null, this);
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
         }

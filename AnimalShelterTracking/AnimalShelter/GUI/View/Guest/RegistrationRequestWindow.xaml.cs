@@ -47,15 +47,19 @@ namespace AnimalShelter.GUI.View
                 }
                 else
                 {
-                    ViewModel.Id = UserService.GenerateId();
+                    //ViewModel.Id = RequestService.GenerateId();
                     RegistrationRequest request = ViewModel.ToRequest();
                     RequestService.Add(request);
+                    MessageBox.Show("Registration request successfully sent.", "Announcement");
+                    Close();
                 }
             }
-            else
-            {
+        }
 
-            }
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            RequestService.Delete(2);
+            Close();
         }
     }
 }

@@ -12,12 +12,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
+using AnimalShelter.Model.Users;
+using System.Windows;
 
 namespace AnimalShelter.GUI.ViewModel
 {
     public class RequestsVM : INotifyPropertyChanged
     {
         public ICommand AcceptCommand { get; set; }
+        public ICommand DeniedCommand { get; set; }
+        public PostBorders Borders { get; set; }
+        public RequestController requestController { get; set; }
 
         private ObservableCollection<Request> _requests;
         public ObservableCollection<Request> Requests
@@ -32,11 +37,14 @@ namespace AnimalShelter.GUI.ViewModel
 
         public RequestsVM(PostBorders borders)
         {
-            borders.HideAllBorders();
+            Borders = borders;
+            Borders.HideAllBorders();
             AcceptCommand = new RelayCommand(AcceptClick);
-            RequestController requestController= new RequestController();
+            DeniedCommand = new RelayCommand(DeniedClick);
+
+            requestController = new RequestController();
             Requests = new ObservableCollection<Request>(requestController.GetAll());
-            for (int i = 0; i < Requests.Count; i++) 
+            for (int i = 0; i < Requests.Count; i++)
             {
                 borders.Show(i);
                 if (Requests[i].RequestType == RequestType.REGISTRATION)
@@ -44,10 +52,55 @@ namespace AnimalShelter.GUI.ViewModel
                     borders.Registered(i);
                 }
             }
+
         }
         private void AcceptClick(object parameter)
         {
+            int i = Convert.ToInt32(parameter);
+            switch (Requests[i].RequestType)
+            {
+                case RequestType.REGISTRATION:
+                    ToMember((RegistrationRequest) Requests[i]);
+                    DeleteRequest(i);
+                    MessageBox.Show("The member successfully registered.", "Announcement");
+                    break;
 
+                default: break;
+            }
+
+        }
+
+        private void DeniedClick(object parameter)
+        {
+            int i = Convert.ToInt32(parameter);
+            switch (Requests[i].RequestType)
+            {
+                case RequestType.REGISTRATION:
+                    DeleteRequest(i);
+                    MessageBox.Show("The user successfully denied.", "Announcement");
+                    break;
+
+                default: break;
+            }
+        }
+
+        private void ToMember(RegistrationRequest request)
+        {
+            UserService service = new UserService();
+            int id = service.GenerateId();
+            Account account = new Account(request.Email, request.Password, Role.MEMBER);
+
+            Model.Users.Member member = new Model.Users.Member(id, account, request.Name, request.Surname, request.PhoneNumber, request.IdCardNumber, request.BirthDate, request.Gender);
+            service.Add(member);
+            
+        }
+
+        private void DeleteRequest(int placeHolder)
+        {
+            requestController.Delete(Requests[placeHolder].Id, RequestType.REGISTRATION);
+            
+            Borders.Hide(placeHolder);
+            MessageBox.Show(Requests[placeHolder].Id.ToString());
 
         }
 

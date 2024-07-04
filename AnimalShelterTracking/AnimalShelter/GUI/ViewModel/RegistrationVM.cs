@@ -239,8 +239,7 @@ namespace AnimalShelter.GUI.ViewModel
         {
             Address address = new Address("Serbia", "Sid", "Marsala Tita", "103", "22240");
             RegistrationRequestService service = new RegistrationRequestService();
-            int id = service.GenerateId();
-            return new RegistrationRequest(id, FirstName, LastName, PhoneNumber, Email, Password, IdCardNumber, address, Gender);
+            return new RegistrationRequest(FirstName, LastName, PhoneNumber, Email, Password, IdCardNumber, address, Gender, BirthDate);
         }
 
         protected virtual void OnPropertyChanged(string name)

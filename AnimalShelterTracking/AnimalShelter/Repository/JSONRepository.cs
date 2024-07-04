@@ -19,7 +19,7 @@ namespace AnimalShelter.Repository
         }
         private int GenerateId()
         {
-            if (data.Keys.Count != 0 )
+            if (data.Keys.Count() != 0 )
             {
                 return data.Keys.Max() + 1;
             }

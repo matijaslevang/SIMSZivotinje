@@ -45,13 +45,13 @@ namespace AnimalShelter.Model.Requests
             return _repository.GetAll();
         }
 
-        public int GenerateId()
-        {
-            if (_repository.GetAll().Count != 0)
-            {
-                return _repository.GetAll().Count + 1;
-            }
-            return 0;
-        }
+        //public int GenerateId()
+        //{
+        //    if (_repository.GetAll().Count() != 0)
+        //    {
+        //        return _repository.GetAll().Keys.Max() + 1;
+        //    }
+        //    return 0;
+        //}
     }
 }

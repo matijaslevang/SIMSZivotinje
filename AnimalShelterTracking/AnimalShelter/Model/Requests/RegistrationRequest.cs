@@ -1,11 +1,11 @@
 ﻿using AnimalShelter.Model.Enums;
 using AnimalShelter.Model.Utilities;
+using System;
 
 namespace AnimalShelter.Model.Requests
 {
     public class RegistrationRequest : Request
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string PhoneNumber { get; set; }
@@ -13,13 +13,13 @@ namespace AnimalShelter.Model.Requests
         public string Email { get; set; }
         public string Password { get; set; }
         public Gender Gender { get; set; }
+        public DateTime BirthDate { get; set; }
         public string IdCardNumber { get; set; }
 
         public RegistrationRequest() { RequestType = RequestType.REGISTRATION; }
 
-        public RegistrationRequest(int id, string name, string surname, string phoneNumber, string email, string password, string idCardNumber, Address address, Gender gender)
+        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, Address address, Gender gender, DateTime birthDate)
         {
-            Id = id;
             Name = name;
             Surname = surname;
             PhoneNumber = phoneNumber;
@@ -29,9 +29,10 @@ namespace AnimalShelter.Model.Requests
             IdCardNumber = idCardNumber;
             Address = address;
             Gender = gender;
+            BirthDate = birthDate;
         }
 
-        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, RequestType requestType, Address address, Gender gender)
+        public RegistrationRequest(string name, string surname, string phoneNumber, string email, string password, string idCardNumber, RequestType requestType, Address address, Gender gender, DateTime birthDate)
         {
             Name = name;
             Surname = surname;
@@ -42,6 +43,7 @@ namespace AnimalShelter.Model.Requests
             IdCardNumber = idCardNumber;
             Address = address;
             Gender = gender;
+            BirthDate = birthDate;
         }
 
     }

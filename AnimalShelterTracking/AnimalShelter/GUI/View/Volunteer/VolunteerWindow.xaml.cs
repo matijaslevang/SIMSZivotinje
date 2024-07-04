@@ -46,7 +46,6 @@ namespace AnimalShelter.GUI.View
             homeButton.Foreground = HighlightBrush;
             votingButton.Foreground = NormalBrush;
             requestsButton.Foreground = NormalBrush;
-            profileButton.Foreground = NormalBrush;
             membersButton.Foreground = NormalBrush;
         }
 
@@ -56,7 +55,6 @@ namespace AnimalShelter.GUI.View
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = NormalBrush;
             requestsButton.Foreground = HighlightBrush;
-            profileButton.Foreground = NormalBrush;
             membersButton.Foreground = NormalBrush;
         }
 
@@ -66,7 +64,6 @@ namespace AnimalShelter.GUI.View
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = HighlightBrush;
             requestsButton.Foreground = NormalBrush;
-            profileButton.Foreground = NormalBrush;
             membersButton.Foreground = NormalBrush;
         }
 
@@ -76,12 +73,8 @@ namespace AnimalShelter.GUI.View
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = NormalBrush;
             requestsButton.Foreground = NormalBrush;
-            profileButton.Foreground = NormalBrush;
             membersButton.Foreground = HighlightBrush;
         }
 
-        private void Button_Profile(object sender, RoutedEventArgs e)
-        {
-        }
     }
 }

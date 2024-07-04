@@ -24,9 +24,9 @@ namespace AnimalShelter.GUI.View
             InitializeComponent();
             Homepage homepage = new Homepage();
             frame.Navigate(homepage);
-            //PostBorders borders = new PostBorders(homepage.Border1, homepage.Border2, homepage.Border3, homepage.Border4,
-            //    homepage.Border5, homepage.Border6, homepage.Border7, homepage.Border8, homepage.Border9);
-            //PostsVM postsVM = new PostsVM(borders);
+            PostBorders borders = new PostBorders(homepage.Border1, homepage.Border2, homepage.Border3, homepage.Border4,
+                homepage.Border5, homepage.Border6, homepage.Border7, homepage.Border8, homepage.Border9);
+            PostsVM postsVM = new PostsVM(borders);
             homepage.delete1.Visibility = Visibility.Collapsed;
             homepage.update1.Visibility = Visibility.Collapsed;
 
@@ -53,6 +53,7 @@ namespace AnimalShelter.GUI.View
 
             homepage.delete9.Visibility = Visibility.Collapsed;
             homepage.update9.Visibility = Visibility.Collapsed;
+            DataContext = postsVM;
         }
     }
 }

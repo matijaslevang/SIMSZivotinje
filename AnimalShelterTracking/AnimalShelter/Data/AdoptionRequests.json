@@ -1,1 +1,1 @@
-{}
+{"0":{"Pet":{"Id":0,"Name":"Buddy","HealthStatus":3,"HealthDescription":"missing a leg","Age":2,"Gender":0,"AdoptionStatus":0,"Color":"blue","Location":"ftn","Species":{"Id":0,"Name":"Dog"},"Breed":{"Id":0,"SpeciesId":1,"Name":"Chihuahua"},"MultimediaContent":["/GUI/Images/domestic-dog_thumb_square.webp"]},"Requester":null,"Id":0,"RequestType":1}}

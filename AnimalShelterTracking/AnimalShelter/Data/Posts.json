@@ -27,6 +27,7 @@
       "HealthStatus": 3,
       "HealthDescription": "missing a leg",
       "Age": 2,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "blue",
       "Location": "ftn",
@@ -39,13 +40,13 @@
         "SpeciesId": 1,
         "Name": "Chihuahua"
       },
-      "MultimediaContent": null
-    }
-  }
-,
-"1": {
+      "MultimediaContent": 
+        [ "/GUI/Images/domestic-dog_thumb_square.webp" ]
+      }
+  },
+  "1": {
     "Id": 1,
-    "PostDate": "2024-07-03T10:15:00.0000000+02:00",
+    "PostDate": "2024-07-03T10:15:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -61,16 +62,17 @@
       "IdCardNumber": "ID987654",
       "BirthDate": "1985-05-15T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-03T10:15:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T10:15:00+02:00"
     },
     "Status": 1,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
     "Pet": {
       "Id": 1,
       "Name": "Max",
       "HealthStatus": 2,
       "HealthDescription": "recovering from surgery",
       "Age": 4,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "brown",
       "Location": "hme",
@@ -88,7 +90,7 @@
   },
   "2": {
     "Id": 2,
-    "PostDate": "2024-07-03T11:30:00.0000000+02:00",
+    "PostDate": "2024-07-03T11:30:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -104,16 +106,17 @@
       "IdCardNumber": "ID246810",
       "BirthDate": "1992-10-20T00:00:00",
       "Gender": 1,
-      "DateOfJoining": "2024-07-03T11:30:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T11:30:00+02:00"
     },
     "Status": 0,
-    "LikedBy": [0, 1, 2, 3, 4],
+    "LikedBy": [ 0, 1, 2, 3, 4 ],
     "Pet": {
       "Id": 2,
       "Name": "Whiskers",
       "HealthStatus": 1,
       "HealthDescription": "needs regular check-ups",
       "Age": 6,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "gray",
       "Location": "prk",
@@ -131,7 +134,7 @@
   },
   "3": {
     "Id": 3,
-    "PostDate": "2024-07-03T13:45:00.0000000+02:00",
+    "PostDate": "2024-07-03T13:45:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -147,7 +150,7 @@
       "IdCardNumber": "ID135792",
       "BirthDate": "1988-03-08T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-03T13:45:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T13:45:00+02:00"
     },
     "Status": 2,
     "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7 ],
@@ -157,6 +160,7 @@
       "HealthStatus": 3,
       "HealthDescription": "recovered from illness",
       "Age": 3,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "white",
       "Location": "grdn",
@@ -174,7 +178,7 @@
   },
   "4": {
     "Id": 4,
-    "PostDate": "2024-07-03T15:00:00.0000000+02:00",
+    "PostDate": "2024-07-03T15:00:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -190,16 +194,17 @@
       "IdCardNumber": "ID357911",
       "BirthDate": "1995-12-12T00:00:00",
       "Gender": 1,
-      "DateOfJoining": "2024-07-03T15:00:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T15:00:00+02:00"
     },
     "Status": 1,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
     "Pet": {
       "Id": 4,
       "Name": "Oreo",
       "HealthStatus": 2,
       "HealthDescription": "undergoing training",
       "Age": 1,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "black and white",
       "Location": "cty",
@@ -217,7 +222,7 @@
   },
   "5": {
     "Id": 5,
-    "PostDate": "2024-07-03T16:30:00.0000000+02:00",
+    "PostDate": "2024-07-03T16:30:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -233,16 +238,17 @@
       "IdCardNumber": "ID579113",
       "BirthDate": "1980-08-25T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-03T16:30:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T16:30:00+02:00"
     },
     "Status": 0,
-    "LikedBy": [0, 1, 2],
+    "LikedBy": [ 0, 1, 2 ],
     "Pet": {
       "Id": 5,
       "Name": "Coco",
       "HealthStatus": 1,
       "HealthDescription": "requires special diet",
       "Age": 7,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "brown and white",
       "Location": "trn",
@@ -260,7 +266,7 @@
   },
   "6": {
     "Id": 6,
-    "PostDate": "2024-07-03T18:00:00.0000000+02:00",
+    "PostDate": "2024-07-03T18:00:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -276,16 +282,17 @@
       "IdCardNumber": "ID681357",
       "BirthDate": "1990-04-30T00:00:00",
       "Gender": 1,
-      "DateOfJoining": "2024-07-03T18:00:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T18:00:00+02:00"
     },
     "Status": 2,
-    "LikedBy": [0, 1, 2, 3, 4, 5],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5 ],
     "Pet": {
       "Id": 6,
       "Name": "Milo",
       "HealthStatus": 3,
       "HealthDescription": "recovering from surgery",
       "Age": 5,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "orange",
       "Location": "bech",
@@ -293,7 +300,7 @@
         "Id": 2,
         "Name": "Dog"
       },
-      "Breed":{
+      "Breed": {
         "Id": 6,
         "SpeciesId": 1,
         "Name": "Dachshund"
@@ -303,7 +310,7 @@
   },
   "7": {
     "Id": 7,
-    "PostDate": "2024-07-03T19:15:00.0000000+02:00",
+    "PostDate": "2024-07-03T19:15:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -319,16 +326,17 @@
       "IdCardNumber": "ID791357",
       "BirthDate": "1983-11-18T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-03T19:15:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T19:15:00+02:00"
     },
     "Status": 1,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6 ],
     "Pet": {
       "Id": 7,
       "Name": "Ginger",
       "HealthStatus": 2,
       "HealthDescription": "regular vaccinations",
       "Age": 2,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "orange tabby",
       "Location": "apt",
@@ -346,7 +354,7 @@
   },
   "8": {
     "Id": 8,
-    "PostDate": "2024-07-03T20:30:00.0000000+02:00",
+    "PostDate": "2024-07-03T20:30:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -362,16 +370,17 @@
       "IdCardNumber": "ID913579",
       "BirthDate": "1993-07-05T00:00:00",
       "Gender": 1,
-      "DateOfJoining": "2024-07-03T20:30:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T20:30:00+02:00"
     },
     "Status": 0,
-    "LikedBy": [0, 1, 2, 3],
+    "LikedBy": [ 0, 1, 2, 3 ],
     "Pet": {
       "Id": 8,
       "Name": "Lucky",
       "HealthStatus": 3,
       "HealthDescription": "recently adopted",
       "Age": 1,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "black",
       "Location": "hse",
@@ -389,7 +398,7 @@
   },
   "9": {
     "Id": 9,
-    "PostDate": "2024-07-03T21:45:00.0000000+02:00",
+    "PostDate": "2024-07-03T21:45:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -405,16 +414,17 @@
       "IdCardNumber": "ID135791",
       "BirthDate": "1987-09-22T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-03T21:45:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T21:45:00+02:00"
     },
     "Status": 1,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
     "Pet": {
       "Id": 9,
       "Name": "Misty",
       "HealthStatus": 2,
       "HealthDescription": "requires grooming",
       "Age": 8,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "gray and white",
       "Location": "ghs",
@@ -432,7 +442,7 @@
   },
   "10": {
     "Id": 10,
-    "PostDate": "2024-07-03T23:00:00.0000000+02:00",
+    "PostDate": "2024-07-03T23:00:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -448,16 +458,17 @@
       "IdCardNumber": "ID357924",
       "BirthDate": "1981-12-01T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-03T23:00:00.0000000+02:00"
+      "DateOfJoining": "2024-07-03T23:00:00+02:00"
     },
     "Status": 2,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
     "Pet": {
       "Id": 10,
       "Name": "Rocky",
       "HealthStatus": 3,
       "HealthDescription": "recovering from injury",
       "Age": 4,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "brown and black",
       "Location": "apt",
@@ -475,7 +486,7 @@
   },
   "11": {
     "Id": 11,
-    "PostDate": "2024-07-04T09:15:00.0000000+02:00",
+    "PostDate": "2024-07-04T09:15:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -491,16 +502,17 @@
       "IdCardNumber": "ID791357",
       "BirthDate": "1990-06-10T00:00:00",
       "Gender": 1,
-      "DateOfJoining": "2024-07-04T09:15:00.0000000+02:00"
+      "DateOfJoining": "2024-07-04T09:15:00+02:00"
     },
     "Status": 0,
-    "LikedBy": [0, 1, 2, 3, 4, 5],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5 ],
     "Pet": {
       "Id": 11,
       "Name": "Muffin",
       "HealthStatus": 1,
       "HealthDescription": "special dietary needs",
       "Age": 10,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "gray",
       "Location": "hme",
@@ -518,7 +530,7 @@
   },
   "12": {
     "Id": 12,
-    "PostDate": "2024-07-04T10:30:00.0000000+02:00",
+    "PostDate": "2024-07-04T10:30:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -534,16 +546,17 @@
       "IdCardNumber": "ID357913",
       "BirthDate": "1986-04-15T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-04T10:30:00.0000000+02:00"
+      "DateOfJoining": "2024-07-04T10:30:00+02:00"
     },
     "Status": 1,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6, 7],
+    "LikedBy": [ 0, 1, 2, 3, 4, 5, 6, 7 ],
     "Pet": {
       "Id": 12,
       "Name": "Spike",
       "HealthStatus": 2,
       "HealthDescription": "energetic and playful",
       "Age": 3,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "black and tan",
       "Location": "prk",
@@ -561,7 +574,7 @@
   },
   "13": {
     "Id": 13,
-    "PostDate": "2024-07-04T12:00:00.0000000+02:00",
+    "PostDate": "2024-07-04T12:00:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -577,16 +590,17 @@
       "IdCardNumber": "ID579113",
       "BirthDate": "1994-02-28T00:00:00",
       "Gender": 1,
-      "DateOfJoining": "2024-07-04T12:00:00.0000000+02:00"
+      "DateOfJoining": "2024-07-04T12:00:00+02:00"
     },
     "Status": 0,
-    "LikedBy": [0, 1, 2],
+    "LikedBy": [ 0, 1, 2 ],
     "Pet": {
       "Id": 13,
       "Name": "Charlie",
       "HealthStatus": 1,
       "HealthDescription": "recently rescued",
       "Age": 2,
+      "Gender": 0,
       "AdoptionStatus": 2,
       "Color": "white",
       "Location": "grdn",
@@ -604,7 +618,7 @@
   },
   "14": {
     "Id": 14,
-    "PostDate": "2024-07-04T13:15:00.0000000+02:00",
+    "PostDate": "2024-07-04T13:15:00+02:00",
     "Author": {
       "IsBlacklisted": false,
       "AdoptedPets": [],
@@ -620,16 +634,17 @@
       "IdCardNumber": "ID681357",
       "BirthDate": "1989-08-20T00:00:00",
       "Gender": 0,
-      "DateOfJoining": "2024-07-04T13:15:00.0000000+02:00"
+      "DateOfJoining": "2024-07-04T13:15:00+02:00"
     },
     "Status": 2,
-    "LikedBy": [0, 1, 2, 3, 4],
+    "LikedBy": [ 0, 1, 2, 3, 4 ],
     "Pet": {
       "Id": 14,
       "Name": "Bella",
       "HealthStatus": 3,
       "HealthDescription": "adjusting to new home",
       "Age": 6,
+      "Gender": 0,
       "AdoptionStatus": 0,
       "Color": "brown and white",
       "Location": "cty",
@@ -641,49 +656,6 @@
         "Id": 14,
         "SpeciesId": 1,
         "Name": "Shih Tzu"
-      },
-      "MultimediaContent": null
-    }
-  },
-  "15": {
-    "Id": 15,
-    "PostDate": "2024-07-04T14:30:00.0000000+02:00",
-    "Author": {
-      "IsBlacklisted": false,
-      "AdoptedPets": [],
-      "Id": 15,
-      "Account": {
-        "Email": "sophia.hall@example.com",
-        "Password": "s0ph!@h@ll",
-        "Role": 0
-      },
-      "Name": "Sophia",
-      "Surname": "Hall",
-      "PhoneNumber": "567890123",
-      "IdCardNumber": "ID913579",
-      "BirthDate": "1991-03-05T00:00:00",
-      "Gender": 1,
-      "DateOfJoining": "2024-07-04T14:30:00.0000000+02:00"
-    },
-    "Status": 1,
-    "LikedBy": [0, 1, 2, 3, 4, 5, 6],
-    "Pet": {
-      "Id": 15,
-      "Name": "Tiger",
-      "HealthStatus": 2,
-      "HealthDescription": "active and playful",
-      "Age": 2,
-      "AdoptionStatus": 2,
-      "Color": "orange tabby",
-      "Location": "apt",
-      "Species": {
-        "Id": 1,
-        "Name": "Cat"
-      },
-      "Breed": {
-        "Id": 15,
-        "SpeciesId": 2,
-        "Name": "Siberian"
       },
       "MultimediaContent": null
     }

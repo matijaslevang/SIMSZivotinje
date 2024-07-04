@@ -5,18 +5,17 @@ using System.Windows;
 
 namespace AnimalShelter.GUI.View
 {
-    /// <summary>
-    /// Interaction logic for LoginWindow.xaml
-    /// </summary>
     public partial class LoginWindow : Window
     {
         public LoginViewModel ViewModel { get; set; }
         public UserService UserService { get; set; }
         public User LoggedUser { get; set; }
+        public MainWindow MainWindow { get; set; }
 
-        public LoginWindow()
+        public LoginWindow(MainWindow mainWindow)
         {
             InitializeComponent();
+            MainWindow = mainWindow;
 
             ViewModel = new LoginViewModel();
             UserService = new UserService();
@@ -48,6 +47,9 @@ namespace AnimalShelter.GUI.View
                         adminWindow.Show();
                     }
                     Close();
+
+                    MainWindow.Close();
+                    
                 }
 
                 else

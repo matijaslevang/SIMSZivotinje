@@ -106,11 +106,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\Guest\GuestWindow.xaml">
+    <Page Include="GUI\View\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\LoginWindow.xaml">
+    <Page Include="GUI\View\Member\CommentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,27 +158,29 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GUI\ViewModel\Helper\PollReasons.cs" />
     <Compile Include="GUI\ViewModel\LoginViewModel.cs" />
     <Compile Include="GUI\ViewModel\AdoptionRequestVM.cs" />
     <Compile Include="GUI\ViewModel\Helper\PostBorders.cs" />
     <Compile Include="GUI\ViewModel\MembersVM.cs" />
+    <Compile Include="GUI\ViewModel\PollsVM.cs" />
     <Compile Include="GUI\ViewModel\PostRequestVM.cs" />
     <Compile Include="GUI\ViewModel\PostsVM.cs" />
+    <Compile Include="GUI\ViewModel\RegistrationVM.cs" />
     <Compile Include="GUI\ViewModel\RelayCommand.cs" />
     <Compile Include="GUI\ViewModel\RequestsVM.cs" />
     <Compile Include="GUI\ViewModel\TemporaryCareRequestVM.cs" />
-    <Compile Include="GUI\ViewModel\VotesVM.cs" />
     <Compile Include="GUI\View\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\Member\AdoptionRequestWindow.xaml.cs">
       <DependentUpon>AdoptionRequestWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\Guest\GuestWindow.xaml.cs">
-      <DependentUpon>GuestWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="GUI\View\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Member\CommentWindow.xaml.cs">
+      <DependentUpon>CommentWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\Member\MemberWindow.xaml.cs">
       <DependentUpon>MemberWindow.xaml</DependentUpon>
@@ -257,8 +259,8 @@
     <Compile Include="Model\Utilities\Address.cs" />
     <Compile Include="Model\Utilities\Contact.cs" />
     <Compile Include="Model\Utilities\MultimediaContent.cs" />
-    <Compile Include="Model\Votes\Vote.cs" />
-    <Compile Include="Model\Votes\VoteService.cs" />
+    <Compile Include="Model\Votes\Poll.cs" />
+    <Compile Include="Model\Votes\PollService.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\JSONRepository.cs" />
     <Compile Include="Repository\UsersJSONRepository.cs" />
@@ -287,6 +289,7 @@
     <None Include="Data\Members.json" />
     <None Include="Data\Payments.json" />
     <None Include="Data\Pets.json" />
+    <None Include="Data\Polls.json" />
     <None Include="Data\PostRequests.json" />
     <None Include="Data\Posts.json" />
     <None Include="Data\Ratings.json" />

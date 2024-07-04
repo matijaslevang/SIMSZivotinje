@@ -3,27 +3,27 @@ using System.Collections.Generic;
 
 namespace AnimalShelter.Model.Votes
 {
-    public class VoteService
+    public class PollService
     {
-        private readonly IRepository<Vote> _repository;
-        private const string filePath = "..\\..\\Data\\Votes.json";
+        private readonly IRepository<Poll> _repository;
+        private const string filePath = "..\\..\\Data\\Polls.json";
 
-        public VoteService()
+        public PollService()
         {
-            _repository = new JSONRepository<Vote>(filePath);
+            _repository = new JSONRepository<Poll>(filePath);
         }
 
-        public void Add(Vote newVote)
+        public void Add(Poll newVote)
         {
             _repository.Add(newVote);
         }
 
-        public void Update(int voteId, Vote newVote)
+        public void Update(int voteId, Poll newVote)
         {
             _repository.Update(voteId, newVote);
         }
 
-        public Vote Get(int voteId)
+        public Poll Get(int voteId)
         {
             return _repository.Get(voteId);
         }
@@ -33,7 +33,7 @@ namespace AnimalShelter.Model.Votes
             _repository.Delete(voteId);
         }
 
-        public List<Vote> GetAll()
+        public List<Poll> GetAll()
         {
             return _repository.GetAll();
         }

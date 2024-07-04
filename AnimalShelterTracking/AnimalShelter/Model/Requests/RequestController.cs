@@ -80,19 +80,19 @@ namespace AnimalShelter.Model.Requests
         {
             if (type == RequestType.ADOPTION)
             {
-                _adoptionRequestService.Get(requestId);
+                _adoptionRequestService.Delete(requestId);
             }
             else if (type == RequestType.POST)
             {
-                _postRequestService.Get(requestId);
+                _postRequestService.Delete(requestId);
             }
             else if (type == RequestType.TEMPORARY_CARE)
             {
-                _temporaryCareRequestService.Get(requestId);
+                _temporaryCareRequestService.Delete(requestId);
             }
             else
             {
-                _registrationRequestService.Get(requestId);
+                _registrationRequestService.Delete(requestId);
             }
 
         }

@@ -86,6 +86,10 @@ namespace AnimalShelter.GUI.ViewModel
                 {
                     Borders.Registered(i);
                 }
+                else
+                {
+                    Borders.NotRegistered(i);
+                }
             }
         }
 

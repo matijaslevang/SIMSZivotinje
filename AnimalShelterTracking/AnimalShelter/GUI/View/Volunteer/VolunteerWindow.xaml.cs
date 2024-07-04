@@ -1,4 +1,5 @@
 ﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Users;
 using System;
 using System.Collections.Generic;
@@ -24,16 +25,15 @@ namespace AnimalShelter.GUI.View
         public Homepage Homepage { get; set; }
         public SolidColorBrush HighlightBrush { get; set; }
         public SolidColorBrush NormalBrush { get; set; }
-
         public Volunteer Volunteer { get; set; }
         
         public VolunteerWindow(Volunteer volunteer)
         {
             InitializeComponent();
+            this.Homepage = new Homepage(volunteer);
             this.MemberListPage = new MemberListPage();
             this.RequestsPage = new RequestsPage();
             this.VotingPage = new VotingPage();
-            this.Homepage = new Homepage(volunteer);
             frame.Navigate(Homepage);
             this.HighlightBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
             this.NormalBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#edb580"));
@@ -43,7 +43,7 @@ namespace AnimalShelter.GUI.View
 
         private void Button_Home(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(Homepage);
+            frame.Navigate(new Homepage(Volunteer));
             homeButton.Foreground = HighlightBrush;
             votingButton.Foreground = NormalBrush;
             requestsButton.Foreground = NormalBrush;
@@ -52,7 +52,7 @@ namespace AnimalShelter.GUI.View
 
         private void Button_Requests(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(RequestsPage);
+            frame.Navigate(new RequestsPage());
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = NormalBrush;
             requestsButton.Foreground = HighlightBrush;
@@ -61,7 +61,7 @@ namespace AnimalShelter.GUI.View
 
         private void Button_Voting(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(VotingPage);
+            frame.Navigate(new VotingPage());
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = HighlightBrush;
             requestsButton.Foreground = NormalBrush;
@@ -70,8 +70,8 @@ namespace AnimalShelter.GUI.View
 
         private void Button_Members(object sender, RoutedEventArgs e)
         {
-            MemberListPage.DataContext = new MembersVM();
-            frame.Navigate(MemberListPage);
+            //MemberListPage.DataContext = new MembersVM();
+            frame.Navigate(new MemberListPage());
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = NormalBrush;
             requestsButton.Foreground = NormalBrush;

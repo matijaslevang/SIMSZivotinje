@@ -2,7 +2,6 @@
 using System;
 using System.Windows;
 using AnimalShelter.GUI.View;
-using AnimalShelter.GUI.View.Member;
 using AnimalShelter.Model.Enums;
 using AnimalShelter.Model.Pets;
 using AnimalShelter.Model.Posts;

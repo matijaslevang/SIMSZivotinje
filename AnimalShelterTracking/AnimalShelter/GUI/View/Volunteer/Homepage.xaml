@@ -73,7 +73,6 @@
                 </Grid>
             </Grid>
         </Border>
-
         <Border x:Name="Border2" Grid.Row="1" Grid.Column="2" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -109,8 +108,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[1].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[1].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like2"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment2"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="1" x:Name="adopt2" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="1" x:Name="temporaryCare2" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -158,8 +157,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[2].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[2].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like3"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment3"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="2" x:Name="adopt3" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="2" x:Name="temporaryCare3" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -172,8 +171,6 @@
                 </Grid>
             </Grid>
         </Border>
-
-
         <Border x:Name="Border4" Grid.Row="2" Grid.Column="1" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -209,8 +206,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[3].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[3].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like4"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment4"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="3" x:Name="adopt4" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="3" x:Name="temporaryCare4" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -258,8 +255,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[4].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[4].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like5"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment5"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="4" x:Name="adopt5" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="4" x:Name="temporaryCare5" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -307,8 +304,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[5].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[5].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like6"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment6"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="5" x:Name="adopt6" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="5" x:Name="temporaryCare6" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -321,7 +318,6 @@
                 </Grid>
             </Grid>
         </Border>
-
         <Border x:Name="Border7" Grid.Row="3" Grid.Column="1" Background="#faedcd" Margin="10,10,10,10"  CornerRadius="20">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -357,8 +353,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[6].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[6].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like7"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment7"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="6" x:Name="adopt7" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="6" x:Name="temporaryCare7" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -406,8 +402,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[7].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[7].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like8"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment8"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="7" x:Name="adopt8" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="7" x:Name="temporaryCare8" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">
@@ -455,8 +451,8 @@
                     <TextBlock Foreground="#d4a373" Grid.Row="6" Text="{Binding Posts[8].Pet.HealthDescription}"/>
                     <TextBlock Foreground="#d4a373" Grid.Row="7" Text="{Binding Posts[8].Pet.Color}"/>
                 </Grid>
-                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2"/>
-                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3"/>
+                <Button Style="{DynamicResource NavigationButton}" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="2" x:Name="like9"/>
+                <Button  Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="3" x:Name="comment9"/>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="8" x:Name="adopt9" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="8" x:Name="temporaryCare9" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>
                 <Grid Grid.Row="2">

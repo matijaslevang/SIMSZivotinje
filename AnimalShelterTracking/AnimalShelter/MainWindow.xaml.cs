@@ -48,6 +48,49 @@ namespace AnimalShelter
             homepage.delete9.Visibility = Visibility.Collapsed;
             homepage.update9.Visibility = Visibility.Collapsed;
 
+            
+            homepage.adopt1.Visibility = Visibility.Collapsed;
+            homepage.adopt2.Visibility = Visibility.Collapsed;
+            homepage.adopt3.Visibility = Visibility.Collapsed;
+            homepage.adopt4.Visibility = Visibility.Collapsed;
+            homepage.adopt5.Visibility = Visibility.Collapsed;
+            homepage.adopt6.Visibility = Visibility.Collapsed;
+            homepage.adopt7.Visibility = Visibility.Collapsed;
+            homepage.adopt8.Visibility = Visibility.Collapsed;
+            homepage.adopt9.Visibility = Visibility.Collapsed;
+            homepage.adopt2.Visibility = Visibility.Collapsed;
+
+            homepage.temporaryCare1.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare2.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare3.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare4.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare5.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare6.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare7.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare8.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare9.Visibility = Visibility.Collapsed;
+
+            homepage.like1.Visibility = Visibility.Collapsed;
+            homepage.like2.Visibility = Visibility.Collapsed;
+            homepage.like3.Visibility = Visibility.Collapsed;
+            homepage.like4.Visibility = Visibility.Collapsed;
+            homepage.like5.Visibility = Visibility.Collapsed;
+            homepage.like6.Visibility = Visibility.Collapsed;
+            homepage.like7.Visibility = Visibility.Collapsed;
+            homepage.like8.Visibility = Visibility.Collapsed;
+            homepage.like9.Visibility = Visibility.Collapsed;
+
+            homepage.comment1.Visibility = Visibility.Collapsed;
+            homepage.comment2.Visibility = Visibility.Collapsed;
+            homepage.comment3.Visibility = Visibility.Collapsed;
+            homepage.comment4.Visibility = Visibility.Collapsed;
+            homepage.comment5.Visibility = Visibility.Collapsed;
+            homepage.comment6.Visibility = Visibility.Collapsed;
+            homepage.comment7.Visibility = Visibility.Collapsed;
+            homepage.comment8.Visibility = Visibility.Collapsed;
+            homepage.comment9.Visibility = Visibility.Collapsed;
+
+
             //RegistrationRequest regReq = new RegistrationRequest();
             //regReq.Show();
             //PostRequest postReq = new PostRequest();

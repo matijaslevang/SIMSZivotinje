@@ -26,7 +26,7 @@
             <Button Grid.Column="2" x:Name="requestsButton"  Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="📩" FontSize="30" Click="Button_Requests"/>
             <Button Grid.Column="3" x:Name="votingButton" Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="🗳️" FontSize="30" Click="Button_Voting"/>
             <Button Grid.Column="4" x:Name="membersButton" Foreground="#edb580" Style="{DynamicResource NavigationButton}" Content="👥" FontSize="30" Click="Button_Members"/>
-            <Button Grid.Column="5" Style="{DynamicResource CancelButton}" Content="LOG OUT" Width="80"/>
+            <Button Grid.Column="5" Style="{DynamicResource CancelButton}" Content="LOG OUT" Width="80" Click="Button_Click"/>
             <TextBlock Grid.Column="6" Text="Volunteer" Foreground="#edb580" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </Grid>

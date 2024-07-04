@@ -1,5 +1,4 @@
 ﻿using AnimalShelter.GUI.View;
-using AnimalShelter.GUI.View.Member;
 using AnimalShelter.Model.Users;
 using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Posts;
@@ -78,7 +77,7 @@ namespace AnimalShelter.GUI.ViewModel
             }
         }
 
-        private void UpdateCollection()
+        public void UpdateCollection()
         {
             Borders.HideAllBorders();
             

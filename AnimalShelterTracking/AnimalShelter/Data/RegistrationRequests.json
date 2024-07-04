@@ -1,1 +1,39 @@
-{"2":{"Name":"Jane","Surname":"Smith","PhoneNumber":"987654321","Address":{"Country":"USA","Town":"Greenville","Street":"456 Oak Ave","HouseNumber":"2B","PostalNumber":"29601"},"Email":"jane.smith@example.com","Password":"securepass321","Gender":1,"BirthDate":"1985-03-15T00:00:00","IdCardNumber":"ID654321","Id":2,"RequestType":0},"3":{"Name":"Michael","Surname":"Johnson","PhoneNumber":"555123987","Address":{"Country":"USA","Town":"Hillsboro","Street":"789 Pine St","HouseNumber":"3C","PostalNumber":"97123"},"Email":"michael.johnson@example.com","Password":"mikepass456","Gender":0,"BirthDate":"1990-07-20T00:00:00","IdCardNumber":"ID789012","Id":3,"RequestType":0},"6":{"Name":"Sarah","Surname":"Lee","PhoneNumber":"777888999","Address":{"Country":"USA","Town":"Seattle","Street":"123 Pine Lane","HouseNumber":"6F","PostalNumber":"98101"},"Email":"sarah.lee@example.com","Password":"sarahpass777","Gender":1,"BirthDate":"1995-12-18T00:00:00","IdCardNumber":"ID777888","Id":6,"RequestType":0}}
+{
+  "3": {
+    "Name": "Michael",
+    "Surname": "Johnson",
+    "PhoneNumber": "555123987",
+    "Address": {
+      "Country": "USA",
+      "Town": "Hillsboro",
+      "Street": "789 Pine St",
+      "HouseNumber": "3C",
+      "PostalNumber": "97123"
+    },
+    "Email": "michael.johnson@example.com",
+    "Password": "mikepass456",
+    "Gender": 0,
+    "BirthDate": "1990-07-20T00:00:00",
+    "IdCardNumber": "ID789012",
+    "Id": 3,
+    "RequestType": 0
+  },
+  "6": {
+    "Name": "Sarah",
+    "Surname": "Lee",
+    "PhoneNumber": "777888999",
+    "Address": {
+      "Country": "USA",
+      "Town": "Seattle",
+      "Street": "123 Pine Lane",
+      "HouseNumber": "6F",
+      "PostalNumber": "98101"
+    },
+    "Email": "sarah.lee@example.com",
+    "Password": "sarahpass777",
+    "Gender": 1,
+    "BirthDate": "1995-12-18T00:00:00",
+    "IdCardNumber": "ID777888",
+    "Id": 6,
+    "RequestType": 0
+  }}

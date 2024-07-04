@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AnimalShelter.GUI.View.Member
+namespace AnimalShelter.GUI.View
 {
     public partial class CommentWindow : Window
     {

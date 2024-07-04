@@ -1,1 +1,148 @@
-{"4":{"Id":4,"Name":"Oreo","HealthStatus":2,"HealthDescription":"undergoing training","Age":1,"Gender":0,"AdoptionStatus":2,"Color":"black and white","Location":"cty","Species":{"Id":2,"Name":"Dog"},"Breed":{"Id":4,"SpeciesId":1,"Name":"Golden Retriever"},"MultimediaContent":"/GUI/Images/corgihihi.jpg"},"6":{"Id":6,"Name":"Milo","HealthStatus":3,"HealthDescription":"recovering from surgery","Age":5,"Gender":0,"AdoptionStatus":1,"Color":"orange","Location":"bech","Species":{"Id":2,"Name":"Dog"},"Breed":{"Id":6,"SpeciesId":1,"Name":"Dachshund"},"MultimediaContent":"/GUI/Images/d4b72aa44e7fff0ef0dbb7036ffe5fd1.jpg"},"7":{"Id":7,"Name":"Ginger","HealthStatus":2,"HealthDescription":"regular vaccinations","Age":2,"Gender":0,"AdoptionStatus":1,"Color":"orange tabby","Location":"apt","Species":{"Id":1,"Name":"Cat"},"Breed":{"Id":7,"SpeciesId":2,"Name":"Bengal"},"MultimediaContent":"/GUI/Images/Gen-the-Corgi-with-funny-face-6.webp"},"5":{"Id":5,"Name":"Coco","HealthStatus":1,"HealthDescription":"requires special diet","Age":7,"Gender":0,"AdoptionStatus":1,"Color":"brown and white","Location":"trn","Species":{"Id":1,"Name":"Cat"},"Breed":{"Id":5,"SpeciesId":2,"Name":"Siamese"},"MultimediaContent":"/GUI/Images/cute-cat-photos-1593441022.jpg"},"3":{"Id":3,"Name":"Spot","HealthStatus":3,"HealthDescription":"recovered from illness","Age":3,"Gender":0,"AdoptionStatus":1,"Color":"white","Location":"grdn","Species":{"Id":2,"Name":"Dog"},"Breed":{"Id":3,"SpeciesId":1,"Name":"Labrador Retriever"},"MultimediaContent":"/GUI/Images/doggybow.jpg"},"13":{"Id":13,"Name":"Charlie","HealthStatus":1,"HealthDescription":"recently rescued","Age":2,"Gender":0,"AdoptionStatus":1,"Color":"white","Location":"grdn","Species":{"Id":1,"Name":"Cat"},"Breed":{"Id":13,"SpeciesId":2,"Name":"Scottish Fold"},"MultimediaContent":"/GUI/Images/CuteDoggy.jpg"}}
+{
+  "4": {
+    "Id": 4,
+    "Name": "Oreo",
+    "HealthStatus": 2,
+    "HealthDescription": "undergoing training",
+    "Age": 1,
+    "Gender": 0,
+    "AdoptionStatus": 1,
+    "Color": "black and white",
+    "Location": "cty",
+    "Species": {
+      "Id": 2,
+      "Name": "Dog"
+    },
+    "Breed": {
+      "Id": 4,
+      "SpeciesId": 1,
+      "Name": "Golden Retriever"
+    },
+    "MultimediaContent": "/GUI/Images/corgihihi.jpg"
+  },
+  "6": {
+    "Id": 6,
+    "Name": "Milo",
+    "HealthStatus": 3,
+    "HealthDescription": "recovering from surgery",
+    "Age": 5,
+    "Gender": 0,
+    "AdoptionStatus": 1,
+    "Color": "orange",
+    "Location": "bech",
+    "Species": {
+      "Id": 2,
+      "Name": "Dog"
+    },
+    "Breed": {
+      "Id": 6,
+      "SpeciesId": 1,
+      "Name": "Dachshund"
+    },
+    "MultimediaContent": "/GUI/Images/d4b72aa44e7fff0ef0dbb7036ffe5fd1.jpg"
+  },
+  "7": {
+    "Id": 7,
+    "Name": "Ginger",
+    "HealthStatus": 2,
+    "HealthDescription": "regular vaccinations",
+    "Age": 2,
+    "Gender": 0,
+    "AdoptionStatus": 1,
+    "Color": "orange tabby",
+    "Location": "apt",
+    "Species": {
+      "Id": 1,
+      "Name": "Cat"
+    },
+    "Breed": {
+      "Id": 7,
+      "SpeciesId": 2,
+      "Name": "Bengal"
+    },
+    "MultimediaContent": "/GUI/Images/Gen-the-Corgi-with-funny-face-6.webp"
+  },
+  "5": {
+    "Id": 5,
+    "Name": "Coco",
+    "HealthStatus": 1,
+    "HealthDescription": "requires special diet",
+    "Age": 7,
+    "Gender": 0,
+    "AdoptionStatus": 1,
+    "Color": "brown and white",
+    "Location": "trn",
+    "Species": {
+      "Id": 1,
+      "Name": "Cat"
+    },
+    "Breed": {
+      "Id": 5,
+      "SpeciesId": 2,
+      "Name": "Siamese"
+    },
+    "MultimediaContent": "/GUI/Images/cute-cat-photos-1593441022.jpg"
+  },
+  "3": {
+    "Id": 3,
+    "Name": "Spot",
+    "HealthStatus": 3,
+    "HealthDescription": "recovered from illness",
+    "Age": 3,
+    "Gender": 0,
+    "AdoptionStatus": 1,
+    "Color": "white",
+    "Location": "grdn",
+    "Species": {
+      "Id": 2,
+      "Name": "Dog"
+    },
+    "Breed": {
+      "Id": 3,
+      "SpeciesId": 1,
+      "Name": "Labrador Retriever"
+    },
+    "MultimediaContent": "/GUI/Images/doggybow.jpg"
+  },
+  "13": {
+    "Id": 13,
+    "Name": "Charlie",
+    "HealthStatus": 1,
+    "HealthDescription": "recently rescued",
+    "Age": 2,
+    "Gender": 0,
+    "AdoptionStatus": 1,
+    "Color": "white",
+    "Location": "grdn",
+    "Species": {
+      "Id": 1,
+      "Name": "Cat"
+    },
+    "Breed": {
+      "Id": 13,
+      "SpeciesId": 2,
+      "Name": "Scottish Fold"
+    },
+    "MultimediaContent": "/GUI/Images/CuteDoggy.jpg"
+  },
+  "0": {
+    "Id": 0,
+    "Name": "Happy corgi",
+    "HealthStatus": 0,
+    "HealthDescription": "very happy dog",
+    "Age": 3,
+    "Gender": 0,
+    "AdoptionStatus": 2,
+    "Color": "brown",
+    "Location": "novi sad, ntp",
+    "Species": {
+      "Id": 1,
+      "Name": "Dog"
+    },
+    "Breed": {
+      "Id": 0,
+      "SpeciesId": 1,
+      "Name": "Corgi"
+    },
+    "MultimediaContent": "/GUI/Images/corgihihi.jpg"
+  }}

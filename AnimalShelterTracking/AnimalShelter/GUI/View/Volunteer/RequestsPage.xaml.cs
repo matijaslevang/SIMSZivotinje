@@ -1,4 +1,5 @@
-﻿using AnimalShelter.GUI.ViewModel;
+﻿using AnimalShelter.Model.Users;
+using AnimalShelter.GUI.ViewModel;
 using AnimalShelter.GUI.ViewModel.Helper;
 using System;
 using System.Collections.Generic;
@@ -22,8 +23,8 @@ namespace AnimalShelter.GUI.View
         public RequestsPage()
         {
             InitializeComponent();
-            PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, null);
-            RequestsVM requestsVM = new RequestsVM(borders);
+            PostBorders bordersRequest = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, null);
+            RequestsVM requestsVM = new RequestsVM(bordersRequest);
             DataContext = requestsVM;
         }
     }

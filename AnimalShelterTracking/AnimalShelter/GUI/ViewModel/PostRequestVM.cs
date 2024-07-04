@@ -1,4 +1,4 @@
-﻿using AnimalShelter.GUI.View.Member;
+﻿using AnimalShelter.GUI.View;
 using AnimalShelter.Model.Enums;
 using AnimalShelter.Model.Pets;
 using AnimalShelter.Model.Requests;

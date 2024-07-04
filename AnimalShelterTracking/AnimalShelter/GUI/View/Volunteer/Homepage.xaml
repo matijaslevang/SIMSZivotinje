@@ -5,16 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AnimalShelter.GUI.View" xmlns:guest="clr-namespace:AnimalShelter.GUI.ViewModel" d:DataContext="{d:DesignInstance Type=guest:PostsVM}"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1200"
+      d:DesignHeight="750" d:DesignWidth="1200"
       Title="VolunteerHomepage">
     <Grid Background="#edb57f">
         <Grid.RowDefinitions>
-            <RowDefinition Height="105*"/>
+            <RowDefinition Height="80*"/>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="55*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="19*"/>
@@ -457,7 +457,7 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{Binding Posts[8].LikedBy.Count}" Foreground="#6d543b" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                    <TextBlock Text="{Binding Posts[7].LikedBy.Count}" Foreground="#6d543b" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
                     <Button Style="{DynamicResource NavigationButton}" Command="{Binding LikeCommand}" CommandParameter="7" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="1" x:Name="like8"/>
                     <Button Style="{DynamicResource NavigationButton}" Command="{Binding CommentCommand}" CommandParameter="7" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="2" x:Name="comment8"/>
                 </Grid>
@@ -515,8 +515,8 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="{Binding Posts[8].LikedBy.Count}" Foreground="#6d543b" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                    <Button Style="{DynamicResource NavigationButton}" Command="{Binding LikeCommand}" CommandParameter="7" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="1" x:Name="like9"/>
-                    <Button Style="{DynamicResource NavigationButton}" Command="{Binding CommentCommand}" CommandParameter="7" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="2" x:Name="comment9"/>
+                    <Button Style="{DynamicResource NavigationButton}" Command="{Binding LikeCommand}" CommandParameter="8" Foreground="#6d543b" HorizontalAlignment="Right" Content="❤️" FontSize="30" FontWeight="ExtraBold" Grid.Row="2" Grid.Column="1" x:Name="like9"/>
+                    <Button Style="{DynamicResource NavigationButton}" Command="{Binding CommentCommand}" CommandParameter="8" HorizontalAlignment="Left" Foreground="#6d543b" Content="💬" FontWeight="ExtraBold" FontSize="30" Grid.Row="2" Grid.Column="2" x:Name="comment9"/>
                 </Grid>
                 <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="8" x:Name="adopt9" VerticalAlignment="Bottom" Command="{Binding AdoptCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Adopt" FontSize="11"/>
                 <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" CommandParameter="8" x:Name="temporaryCare9" Command="{Binding TemporaryCareCommand}" Style="{DynamicResource CancelButton}" Width="100" Content="Temporary care" FontSize="11"/>

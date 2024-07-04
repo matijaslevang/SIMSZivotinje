@@ -16,6 +16,7 @@ using AnimalShelter.Model.Users;
 using System.Windows;
 using System.Windows.Media;
 using AnimalShelter.Model.Pets;
+using AnimalShelter.GUI.View;
 
 namespace AnimalShelter.GUI.ViewModel
 {
@@ -56,6 +57,8 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand DeniedCommand { get; set; }
         public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
         public ICommand NextPageCommand => new RelayCommand(NextPage);
+        public PostsVM PostsVM { get; set; }
+        public Homepage Homepage { get; set; }
         public PostBorders Borders { get; set; }
         public RequestController requestController { get; set; }
 
@@ -104,6 +107,7 @@ namespace AnimalShelter.GUI.ViewModel
             requestController = new RequestController();
 
             UpdateCollection();
+           
 
         }
         private void AcceptClick(object parameter)
@@ -145,7 +149,7 @@ namespace AnimalShelter.GUI.ViewModel
                 default: break;
             }
             UpdateCollection();
-
+            
         }
 
         private void DeniedClick(object parameter)

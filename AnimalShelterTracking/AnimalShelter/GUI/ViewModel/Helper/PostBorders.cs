@@ -53,9 +53,19 @@ namespace AnimalShelter.GUI.ViewModel.Helper
 
         public void Hide(int placeholder)
         {
-            Border border = BordersList()[placeholder];
-            border.Visibility = Visibility.Collapsed;
+            if (Border9 != null)
+            {
+                Border border = BordersList()[placeholder];
+                border.Visibility = Visibility.Collapsed;
+            }
+
         }
+        public void ShowRequests(int placeholder)
+        {
+            Border border = BordersList()[placeholder];
+            border.Visibility = Visibility.Visible;
+        }
+
 
         public void Show(int placeholder)
         {
@@ -79,33 +89,55 @@ namespace AnimalShelter.GUI.ViewModel.Helper
         }
         public void NotAdopted(int placeholder)
         {
-            Border border = BordersList()[placeholder];
-            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#a74e47"));
-            border.Background = brush;
+            if (Border9 != null)
+            {
+                Border border = BordersList()[placeholder];
+                SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#a74e47"));
+                border.Background = brush;
+            }
+
+                
         }
         public void Adopted(int placeholder)
         {
-            Border border = BordersList()[placeholder];
-            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5c9962"));
-            border.Background = brush;
+            if (Border9 != null)
+            {
+                Border border = BordersList()[placeholder];
+                SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5c9962"));
+                border.Background = brush;
+            }
+                
         }
         public void TemporaryCare(int placeholder)
         {
-            Border border = BordersList()[placeholder];
-            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
-            border.Background = brush;
+            if (Border9 != null)
+            {
+                Border border = BordersList()[placeholder];
+                SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
+                border.Background = brush;
+            }
+
+                
         }
         public void Registered(int placeholder)
         {
-            Border border = BordersList()[placeholder];
-            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffc389"));
-            border.Background = brush;
+            
+                Border border = BordersList()[placeholder];
+                SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffc389"));
+                border.Background = brush;
+            
+
+                
         }
         public void NotRegistered(int placeholder)
         {
-            Border border = BordersList()[placeholder];
-            SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#b98e64"));
-            border.Background = brush;
+
+                Border border = BordersList()[placeholder];
+                SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#b98e64"));
+                border.Background = brush;
+            
+
+                
         }
     }
 

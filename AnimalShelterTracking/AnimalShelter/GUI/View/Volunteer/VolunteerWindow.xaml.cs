@@ -1,4 +1,5 @@
-﻿using AnimalShelter.Model.Users;
+﻿using AnimalShelter.GUI.ViewModel;
+using AnimalShelter.Model.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +70,7 @@ namespace AnimalShelter.GUI.View
 
         private void Button_Members(object sender, RoutedEventArgs e)
         {
+            MemberListPage.DataContext = new MembersVM();
             frame.Navigate(MemberListPage);
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = NormalBrush;

@@ -50,7 +50,16 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[0].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[0].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[0].Post.Pet.Color}"/>
-
+                
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[0].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[0].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[0].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[0].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[0].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[0].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[0].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[0].Pet.Color}"/>
+                
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="3" Text="ID Card Number: "/>
@@ -104,6 +113,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[1].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[1].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[1].Post.Pet.Color}"/>
+
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[1].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[1].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[1].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[1].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[1].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[1].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[1].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[1].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
@@ -159,6 +177,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[2].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[2].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[2].Post.Pet.Color}"/>
+                                                                                                                     
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[2].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[2].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[2].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[2].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[2].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[2].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[2].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[2].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
@@ -214,6 +241,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[3].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[3].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[3].Post.Pet.Color}"/>
+                                                                                                                     
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[3].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[3].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[3].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[3].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[3].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[3].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[3].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[3].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
@@ -268,6 +304,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[4].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[4].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[4].Post.Pet.Color}"/>
+                                                                                                                     
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[4].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[4].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[4].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[4].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[4].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[4].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[4].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[4].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
@@ -323,6 +368,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[5].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[5].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[5].Post.Pet.Color}"/>
+                                                                                                                     
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[5].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[5].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[5].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[5].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[5].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[5].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[5].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[5].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
@@ -378,6 +432,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[6].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[6].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[6].Post.Pet.Color}"/>
+                                                                                                                     
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[6].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[6].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[6].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[6].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[6].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[6].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[6].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[6].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>
@@ -433,6 +496,15 @@
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[7].Post.Pet.HealthStatus}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[7].Post.Pet.HealthDescription}"/>
                 <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[7].Post.Pet.Color}"/>
+                                                                                                                     
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="1" Text="{Binding Requests[7].Pet.Name}" FontSize="15" FontWeight="Bold"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding Requests[7].Pet.Age}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="3" Text="{Binding Requests[7].Pet.Species.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding Requests[7].Pet.Breed.Name}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding Requests[7].Pet.Location}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="6" Text="{Binding Requests[7].Pet.HealthStatus}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="7" Text="{Binding Requests[7].Pet.HealthDescription}"/>
+                <TextBlock Foreground="#523e2c" HorizontalAlignment="Center"  Grid.Row="8" Text="{Binding Requests[7].Pet.Color}"/>
 
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="1" Text="First Name: "/>
                 <TextBlock Foreground="#b98e64" Panel.ZIndex="-1" Grid.Row="2" Text="Last Name: "/>

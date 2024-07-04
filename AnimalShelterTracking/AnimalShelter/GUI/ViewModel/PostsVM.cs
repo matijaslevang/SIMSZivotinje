@@ -2,6 +2,7 @@
 using AnimalShelter.GUI.View.Member;
 using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Posts;
+using AnimalShelter.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -83,7 +84,7 @@ namespace AnimalShelter.GUI.ViewModel
             for (int i = 0; i < Posts.Count; i++)
             {
                 Borders.Show(i);
-                if (!Posts[i].Pet.IsAdopted)
+                if (Posts[i].Pet.AdoptionStatus == AdoptionStatus.NOT_ADOPTED)
                 {
                     Borders.NotAdopted(i);
                 }

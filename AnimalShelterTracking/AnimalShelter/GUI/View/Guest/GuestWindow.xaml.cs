@@ -51,11 +51,34 @@ namespace AnimalShelter.GUI.View
 
             homepage.delete9.Visibility = Visibility.Collapsed;
             homepage.update9.Visibility = Visibility.Collapsed;
+
+            homepage.adopt1.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare1.Visibility = Visibility.Collapsed;
+
+            homepage.adopt2.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare2.Visibility = Visibility.Collapsed;
+
+            homepage.adopt3.Visibility = Visibility.Collapsed;
+            homepage.adopt4.Visibility = Visibility.Collapsed;
+            homepage.adopt5.Visibility = Visibility.Collapsed;
+            homepage.adopt6.Visibility = Visibility.Collapsed;
+            homepage.adopt7.Visibility = Visibility.Collapsed;
+            homepage.adopt8.Visibility = Visibility.Collapsed;
+            homepage.adopt9.Visibility = Visibility.Collapsed;
+            homepage.adopt2.Visibility = Visibility.Collapsed;
+
+            homepage.temporaryCare3.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare4.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare5.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare6.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare7.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare8.Visibility = Visibility.Collapsed;
+            homepage.temporaryCare9.Visibility = Visibility.Collapsed;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(null, this);
             loginWindow.DataContext = loginWindow;
             loginWindow.Show();
         }

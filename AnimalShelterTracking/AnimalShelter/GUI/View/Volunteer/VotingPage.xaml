@@ -56,7 +56,7 @@
                         <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource NavigationButton}" Command="{Binding YesCommand}" CommandParameter="0"  Content="👍" FontSize="25" Foreground="DarkGreen"/>
                     </Grid>
                 </Grid>
-                    
+
             </Border>
             <Border x:Name="Border2" Grid.Column="1" CornerRadius="20" Background="#b2935f" Margin="15">
                 <Grid>
@@ -275,6 +275,20 @@
                     </Grid>
                 </Grid>
             </Border>
+            <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="◀" Style="{DynamicResource NavigationButton}" Foreground="#d4a373" FontSize="30" Command="{Binding PreviousPageCommand}" Margin="131,0,27,0" Grid.ColumnSpan="2"/>
+                <TextBlock Text="{Binding CurrentPage}" Foreground="#d4a373" FontSize="30" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Text="/" Foreground="#d4a373" FontSize="30" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding TotalPages}" Foreground="#d4a373" FontSize="30" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button Content="▶" Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Grid.Column="4" Foreground="#d4a373" FontSize="30" Command="{Binding NextPageCommand}"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

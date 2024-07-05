@@ -1,4 +1,6 @@
 ﻿using AnimalShelter.GUI.ViewModel.Helper;
+using AnimalShelter.Model.Enums;
+using AnimalShelter.Model.Requests;
 using AnimalShelter.Model.Users;
 using AnimalShelter.Model.Votes;
 using System;
@@ -17,12 +19,43 @@ namespace AnimalShelter.GUI.ViewModel
 {
     public class PollsVM : INotifyPropertyChanged
     {
+        private const int PAGE_SIZE = 8;
+        private int _totalPages;
+        private int _currentPage = 1;
+
+        public int CurrentPage
+        {
+            get => _currentPage;
+            set
+            {
+                if (_currentPage != value)
+                {
+                    _currentPage = value;
+                    OnPropertyChanged();
+                    UpdateCollection();
+                }
+            }
+        }
+
+        public int TotalPages
+        {
+            get => _totalPages;
+            set
+            {
+                if (_totalPages != value)
+                {
+                    _totalPages = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
         private ObservableCollection<Poll> _polls;
         private PollService pollService;
 
-
         public ICommand YesCommand { get; set; }
         public ICommand NoCommand { get; set; }
+        public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
+        public ICommand NextPageCommand => new RelayCommand(NextPage);
 
         public Volunteer Voter { get; set; }
         public PostBorders Borders { get; set; }
@@ -48,8 +81,12 @@ namespace AnimalShelter.GUI.ViewModel
             Voter = voter;
             pollService = new PollService();
             borders.HideAllBorders();
-            
-            Polls = new ObservableCollection<Poll>(pollService.GetAll());
+
+            int startIndex = (CurrentPage - 1) * PAGE_SIZE;
+            Polls = new ObservableCollection<Poll>(pollService.GetAll().Skip(startIndex).Take(PAGE_SIZE));
+            int totalRequestsCount = pollService.GetAll().Count;
+            TotalPages = (int)Math.Ceiling((double)totalRequestsCount / PAGE_SIZE);
+
             List<Poll> finishedPolls = new List<Poll>();
 
             for (int i = 0;i< Polls.Count;i++)
@@ -150,10 +187,31 @@ namespace AnimalShelter.GUI.ViewModel
         public void UpdateCollection()
         {
             Borders.HideAllBorders();
-            Polls = new ObservableCollection<Poll>(pollService.GetAll());
+            int startIndex = (CurrentPage - 1) * PAGE_SIZE;
+            Polls = new ObservableCollection<Poll>(pollService.GetAll().Skip(startIndex).Take(PAGE_SIZE));
+
+            int totalRequestsCount = pollService.GetAll().Count;
+            TotalPages = (int)Math.Ceiling((double)totalRequestsCount / PAGE_SIZE);
+
             for (int i = 0; i < Polls.Count; i++)
             {
                 Borders.Show(i);
+            } 
+        }
+
+        private void PreviousPage(object parameter)
+        {
+            if (CurrentPage > 1)
+            {
+                CurrentPage--;
+            }
+        }
+
+        private void NextPage(object parameter)
+        {
+            if (CurrentPage < TotalPages)
+            {
+                CurrentPage++;
             }
         }
 

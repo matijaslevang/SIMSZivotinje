@@ -85,18 +85,22 @@ namespace AnimalShelter.GUI.ViewModel
                 if (poll.IsBeingPromoted)
                 {
                     if (poll.VotesFor > poll.VotesAgainst)
+                    {
                         content += "Member " + poll.VotingFor.Name + " (number " + poll.VotingFor.Id + ") became a volunteer.";
+
+                        Member exMember = poll.VotingFor;
+                        userService.Delete(exMember.Id);
+                        exMember.Account.Role = Model.Enums.Role.VOLUNTEER;
+                        Volunteer newVol = new Volunteer(exMember.Account, exMember.Name, exMember.Surname, exMember.PhoneNumber, exMember.IdCardNumber, exMember.BirthDate, exMember.Gender);
+
+                        userService.Add(newVol);
+                    }
                     else
                         content += "Member " + poll.VotingFor.Name + " (number " + poll.VotingFor.Id + ") rejected as a volunteer.";
                     ;
                     content += "\n - Voted for: " + poll.VotesFor +
                             "\n - Voted against: " + poll.VotesAgainst + "\n";
-                    Member exMember = poll.VotingFor;
-                    userService.Delete(exMember.Id);
-                    exMember.Account.Role = Model.Enums.Role.VOLUNTEER;
-                    Volunteer newVol = new Volunteer(exMember.Account, exMember.Name, exMember.Surname, exMember.PhoneNumber, exMember.IdCardNumber, exMember.BirthDate, exMember.Gender);
-
-                    userService.Add(newVol);
+                   
                     pollService.Delete(poll.Id);
                 }
             }

@@ -72,3 +72,11 @@ Atributi:
 * Preko polja za svrhu uplate se specificira zivotinja za koju se donira novac
 * Mi pokrivamo jedno udruzenje   
 
+
+Nefunkcionalni zahtevi:
+
+- broj korisnika: oko 20 volontera i par hiljada registrovanih clanova
+- Aplikacija nije previse opterecena u vidu istovremenog pristupanja
+- Performanse nisu od velike vaznosti
+- Bitno je da aplikacija moze da radi 24/7
+- security (potreban enkoding licnih podataka)

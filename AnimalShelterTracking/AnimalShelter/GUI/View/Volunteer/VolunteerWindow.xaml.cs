@@ -33,7 +33,9 @@ namespace AnimalShelter.GUI.View
             this.Homepage = new Homepage(volunteer);
             this.MemberListPage = new MemberListPage();
             this.RequestsPage = new RequestsPage();
-            this.VotingPage = new VotingPage();
+            this.VotingPage = new VotingPage(volunteer);
+            this.Homepage = new Homepage(volunteer);
+
             frame.Navigate(Homepage);
             this.HighlightBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#faedcd"));
             this.NormalBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#edb580"));
@@ -61,7 +63,7 @@ namespace AnimalShelter.GUI.View
 
         private void Button_Voting(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(new VotingPage());
+            frame.Navigate(new VotingPage(Volunteer));
             homeButton.Foreground = NormalBrush;
             votingButton.Foreground = HighlightBrush;
             requestsButton.Foreground = NormalBrush;

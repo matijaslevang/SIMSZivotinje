@@ -1,28 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using AnimalShelter.GUI.View;
 using AnimalShelter.Model.Users;
 
 namespace AnimalShelter.Model.Votes
 {
-    public class Poll
+    public class Poll : INotifyPropertyChanged
     {
         public int Id { get; set; }
         public DateTime TimeLimit { get; set; }
-        public int VotesFor { get; set; }
-        public int VotesAgainst { get; set; }
-        public Member VotingFor { get; set; }
+        
         public bool IsBeingPromoted { get; set; }
-        public List<int> Voters { get; set; }
+        public ObservableCollection<int> VoterIdsFor { get; set; }
+        public ObservableCollection<int> VoterIdsAgainst { get; set; }
+        public int VotesFor => VoterIdsFor.Count;
+        public int VotesAgainst => VoterIdsAgainst.Count;
+        public Member VotingFor { get; set; }
+
         public Poll() { }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public Poll(Member votingFor, bool isBeingPromoted) 
         {
             TimeLimit = DateTime.Now.AddDays(7);
-            VotesFor = 0;
-            VotesAgainst = 0;
-            Voters = new List<int>();
+            VoterIdsFor = new ObservableCollection<int>();
+            VoterIdsAgainst = new ObservableCollection<int>();
             VotingFor = votingFor;
             IsBeingPromoted = isBeingPromoted;
         }
@@ -30,27 +42,25 @@ namespace AnimalShelter.Model.Votes
         public Poll(Member votingFor, bool isBeingPromoted, int daysToVote)
         {
             TimeLimit = DateTime.Now.AddDays(daysToVote);
-            VotesFor = 0;
-            VotesAgainst = 0;
-            Voters = new List<int>();
+            VoterIdsFor = new ObservableCollection<int>();
+            VoterIdsAgainst = new ObservableCollection<int>();
             VotingFor = votingFor;
             IsBeingPromoted = isBeingPromoted;
         }
 
-        public Poll(int id, DateTime timeLimit, int votesFor, int votesAgainst, List<int> voters, Member votingFor, bool isBeingPromoted)
+        public Poll(int id, DateTime timeLimit, ObservableCollection<int> voterIdsFor, ObservableCollection<int> voterIdsAgainst, Member votingFor, bool isBeingPromoted)
         {
             Id = id;
             TimeLimit = timeLimit;
-            VotesFor = votesFor;
-            VotesAgainst = votesAgainst;
-            Voters = voters;
+            VoterIdsFor = voterIdsFor;
+            VoterIdsAgainst = voterIdsAgainst;
             VotingFor = votingFor;
             IsBeingPromoted = isBeingPromoted;
         }
 
         public bool HasVoted(int volunteerId)
         {
-            return Voters.Any(v => v == volunteerId);
+            return VoterIdsFor.Any(v => v == volunteerId) || VoterIdsAgainst.Any(v => v == volunteerId);
         }
     }
 }

@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using AnimalShelter.GUI.View.Volunteer;
 
 namespace AnimalShelter.GUI.ViewModel
 {
@@ -60,6 +61,7 @@ namespace AnimalShelter.GUI.ViewModel
         public ICommand TemporaryCareCommand { get; set; }
         public ICommand PostRequestCommand { get; set; }
         public ICommand PromoteCommand { get; set; }
+        public ICommand KickCommand { get; set; }
         public ICommand CommentCommand { get; set; }
         public ICommand LikeCommand { get; set; }
         public ICommand PreviousPageCommand => new RelayCommand(PreviousPage);
@@ -126,6 +128,7 @@ namespace AnimalShelter.GUI.ViewModel
             TemporaryCareCommand = new RelayCommand(TemporaryCareClick);
             PostRequestCommand = new RelayCommand(PostRequestClick);
             PromoteCommand = new RelayCommand(PromoteClick);
+            KickCommand = new RelayCommand(KickClick);
             CommentCommand = new RelayCommand(CommentClick);
             LikeCommand = new RelayCommand(LikeClick);
             UpdateCollection();
@@ -200,6 +203,12 @@ namespace AnimalShelter.GUI.ViewModel
             PollService service = new PollService();
             service.Add(poll);
             MessageBox.Show("You applicated for a volunteer successfully.", "Announcement");
+        }
+
+        public void KickClick(object parameter)
+        {
+            KickList list = new KickList();
+            list.Show();
         }
 
         private void PreviousPage(object parameter)

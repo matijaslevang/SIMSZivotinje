@@ -15,13 +15,15 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AnimalShelter.GUI.ViewModel.Helper;
 using AnimalShelter.Model.Users;
+using Vol = AnimalShelter.Model.Users;
+
 
 
 namespace AnimalShelter.GUI.View
 {
     public partial class VotingPage : Page
     {
-        public VotingPage(Volunteer volunteer)
+        public VotingPage(Vol.Volunteer volunteer)
         {
             InitializeComponent();
             PostBorders borders = new PostBorders(Border1, Border2, Border3, Border4, Border5, Border6, Border7, Border8, null);

@@ -134,6 +134,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\View\Volunteer\KickList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\View\Volunteer\MemberListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -198,6 +202,9 @@
     </Compile>
     <Compile Include="GUI\View\Volunteer\Homepage.xaml.cs">
       <DependentUpon>Homepage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Volunteer\KickList.xaml.cs">
+      <DependentUpon>KickList.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\Volunteer\MemberListPage.xaml.cs">
       <DependentUpon>MemberListPage.xaml</DependentUpon>

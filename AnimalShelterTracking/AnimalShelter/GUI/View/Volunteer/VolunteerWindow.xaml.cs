@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Vol = AnimalShelter.Model.Users;
+
 
 namespace AnimalShelter.GUI.View
 {
@@ -25,9 +27,9 @@ namespace AnimalShelter.GUI.View
         public Homepage Homepage { get; set; }
         public SolidColorBrush HighlightBrush { get; set; }
         public SolidColorBrush NormalBrush { get; set; }
-        public Volunteer Volunteer { get; set; }
+        public Vol.Volunteer Volunteer { get; set; }
         
-        public VolunteerWindow(Volunteer volunteer)
+        public VolunteerWindow(Vol.Volunteer volunteer)
         {
             InitializeComponent();
             this.Homepage = new Homepage(volunteer);

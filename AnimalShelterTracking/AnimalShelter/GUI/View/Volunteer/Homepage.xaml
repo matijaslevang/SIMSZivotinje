@@ -544,6 +544,10 @@
             <TextBlock Text="{Binding TotalPages}" Foreground="#faedcd" FontSize="30" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Button Content="▶" Style="{DynamicResource NavigationButton}" HorizontalAlignment="Left" Grid.Column="4" Foreground="#faedcd" FontSize="30" Command="{Binding NextPageCommand}"/>
         </Grid>
+        <Grid Grid.Row="4" Grid.Column="4">
+            <Button Background="Transparent" Style="{DynamicResource NavigationButton}" Foreground="#faedcd" BorderBrush="Transparent" Content="⬇️" FontSize="45" Command="{Binding KickCommand}" CommandParameter="0" />
+        </Grid>
+
     </Grid>
 
 </Page>

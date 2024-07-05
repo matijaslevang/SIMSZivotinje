@@ -1,6 +1,8 @@
 ﻿using AnimalShelter.GUI.ViewModel;
 using AnimalShelter.Model.Enums;
 using AnimalShelter.Model.Users;
+using Vol = AnimalShelter.Model.Users;
+
 using System.Windows;
 
 namespace AnimalShelter.GUI.View
@@ -37,7 +39,7 @@ namespace AnimalShelter.GUI.View
 
                     else if (LoggedUser.Account.Role == Role.VOLUNTEER)
                     {
-                        VolunteerWindow volunteerWindow = new VolunteerWindow((Volunteer) LoggedUser);
+                        VolunteerWindow volunteerWindow = new VolunteerWindow((Vol.Volunteer) LoggedUser);
                         volunteerWindow.Show();
                     }
 
